@@ -37,7 +37,7 @@ def run_tests():
                 print(f"  [FAIL] {label}: Missing")
                 assert tag in html, f"Missing required element: {label}"
 
-    # 2. Courses API: Verify all 8 courses with 6 modules each and zero fees
+    # 2. Courses API: Verify all 8 courses with 6 modules each and merit track
     with urllib.request.urlopen(f"{base}/api/courses") as res:
         data = json.loads(res.read().decode("utf-8"))
         courses = data.get("data", [])
@@ -50,7 +50,7 @@ def run_tests():
             syllabus = c.get("syllabus", [])
             print(f"  [OK] [{code}] {title} | Modules: {len(syllabus)}/6 | Model: {model[:35]}...")
             assert len(syllabus) == 6, f"Course {code} must have 6 modules!"
-            assert "Zero Tuition Fee" in model, f"Course {code} must be free/industry-sponsored!"
+            assert "Industry-Sponsored" in model, f"Course {code} must be free/industry-sponsored!"
 
     # 3. Staffing API Check: GET, POST, PATCH, DELETE
     print(f"\n[PASS] Testing Worker for Client Staffing API (/api/staffing):")

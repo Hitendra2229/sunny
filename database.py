@@ -1,7 +1,7 @@
 """
 NVN India Private LTD - Database Management & Helper Module
 Provides SQLite database connection, initialization, seed data, and CRUD methods.
-Features full course syllabi, fee-free industry-sponsored model, and live query execution.
+Features full course syllabi, industry-sponsored merit model, and live query execution.
 """
 
 import sqlite3
@@ -731,7 +731,7 @@ def seed_data(conn=None):
     syllabi = get_full_syllabi()
 
     try:
-        # 1. Insert Technical Training Courses (100% Industry Sponsored / Zero Tuition Fee)
+        # 1. Insert Technical Training Courses (100% Industry Sponsored)
         courses_data = [
             (
                 "NVN-FS-01",
@@ -742,7 +742,7 @@ def seed_data(conn=None):
                 "Master modern frontend & backend architectures, Microservices, REST APIs, and Cloud Deployment on AWS.",
                 "React.js, Node.js, Express, Python Flask, PostgreSQL, Docker, AWS EC2/S3",
                 "B.Tech / BCA / MCA / Diploma or Passionate Beginners",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-FS-01", [])),
                 1
@@ -756,7 +756,7 @@ def seed_data(conn=None):
                 "Comprehensive training in machine learning models, neural networks, computer vision, NLP, and LLM fine-tuning.",
                 "Python, PyTorch, TensorFlow, Scikit-Learn, Pandas, HuggingFace, FastAPI",
                 "Graduates, Engineers or Tech Professionals with basic math/coding",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-AI-02", [])),
                 1
@@ -770,7 +770,7 @@ def seed_data(conn=None):
                 "Industry-ready DevOps engineering: CI/CD automation, Container orchestration, Infrastructure as Code, and Monitoring.",
                 "Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, AWS, Prometheus, Grafana",
                 "IT Professionals, System Admins, Software Engineers",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-DO-03", [])),
                 1
@@ -784,7 +784,7 @@ def seed_data(conn=None):
                 "Vulnerability assessment, penetration testing, network security, SIEM analysis, and threat intelligence.",
                 "Wireshark, Metasploit, Burp Suite, Kali Linux, Nmap, Splunk, ISO 27001",
                 "Computer Science graduates, Network Admins, Security Enthusiasts",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-CS-04", [])),
                 1
@@ -798,7 +798,7 @@ def seed_data(conn=None):
                 "End-to-end backend engineering for banking, fintech and high-throughput corporate distributed systems.",
                 "Java 21, Spring Boot 3, Spring Cloud, Kafka, Redis, Hibernate, JUnit, Docker",
                 "Students & Developers aiming for Tier-1 Tech & MNC roles",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-JV-05", [])),
                 1
@@ -812,7 +812,7 @@ def seed_data(conn=None):
                 "Build fluid, high-performance mobile apps for iOS and Android with single codebase & cloud sync.",
                 "Flutter, Dart, React Native, Firebase, REST APIs, App Store/Play Store CI",
                 "Any candidate with basic programming knowledge",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-MB-06", [])),
                 1
@@ -826,7 +826,7 @@ def seed_data(conn=None):
                 "Master manual testing, Selenium WebDriver 4, Playwright, Cypress, REST API automation, and Performance testing with JMeter.",
                 "Selenium 4, Playwright, Cypress, Java, Postman, REST Assured, JMeter, TestNG, Docker, Jenkins",
                 "B.Tech / BCA / MCA / B.Sc or Any Graduate seeking high-demand QA career",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-QA-07", [])),
                 1
@@ -840,7 +840,7 @@ def seed_data(conn=None):
                 "End-to-end data analytics, SQL data warehousing, predictive machine learning, Power BI dashboards, and Generative AI RAG pipelines.",
                 "Python, SQL, Pandas, Scikit-Learn, Power BI, Tableau, Snowflake, dbt, Streamlit, LangChain",
                 "Graduates, Engineers, or Analysts seeking high-growth Data Careers",
-                "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+                "100% Industry-Sponsored Merit Track",
                 6,
                 json.dumps(syllabi.get("NVN-DS-08", [])),
                 1
@@ -1444,5 +1444,5 @@ def reset_db():
 
 if __name__ == "__main__":
     reset_db()
-    print("Database reset & initialized successfully with full syllabi and zero fees.")
+    print("Database reset & initialized successfully with full syllabi.")
     print("Courses count:", len(get_courses()))

@@ -2996,7 +2996,7 @@ function generateTechBotResponse(userText) {
       <i class="fa-solid fa-graduation-cap"></i> <strong>Training Academy Policy:</strong><br>
       All courses at <strong>NVN India Academy</strong> are <strong>100% Industry-Sponsored Merit Tracks</strong>. Admission is strictly merit-based following our technical screening evaluation.
       <br><br>
-      <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal()">Apply for Free Track</button>
+      <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal()">Apply for Merit Track</button>
     `;
   }
 

@@ -1,6 +1,6 @@
 /**
  * NVN India Private LTD - Frontend Application Logic & SQLite API Integration
- * Features: Full Course Syllabi (Zero Fee), Interactive Status Tracker,
+ * Features: Full Course Syllabi (Industry Sponsored), Interactive Status Tracker,
  * Project Architecture Estimator, Career Track Quiz & Live SQL Query Sandbox.
  */
 
@@ -20,7 +20,7 @@ const AppState = {
   placements: [],
   activeSector: 'all',
   currentSyllabusCourse: null,
-  theme: localStorage.getItem('nvn_theme') || 'dark',
+  theme: localStorage.getItem('nvn_theme') || 'light',
 
   // Estimator State
   estimator: {
@@ -92,12 +92,12 @@ function initTheme() {
   document.documentElement.setAttribute('data-theme', AppState.theme);
   const toggleBtn = document.getElementById('themeToggleBtn');
   if (toggleBtn) {
-    toggleBtn.innerHTML = AppState.theme === 'dark' ? '☀️' : '🌙';
+    toggleBtn.innerHTML = AppState.theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
     toggleBtn.addEventListener('click', () => {
       AppState.theme = AppState.theme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', AppState.theme);
       localStorage.setItem('nvn_theme', AppState.theme);
-      toggleBtn.innerHTML = AppState.theme === 'dark' ? '☀️' : '🌙';
+      toggleBtn.innerHTML = AppState.theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
     });
   }
 }
@@ -185,7 +185,7 @@ async function loadInitialDataFromAPI() {
 }
 
 function loadFallbackData() {
-  // Built-in starter courses with full comprehensive 6-module syllabi (No fees)
+  // Built-in starter courses with full comprehensive 6-module syllabi (100% Industry Sponsored)
   AppState.courses = [
     {
       id: 1,
@@ -196,7 +196,7 @@ function loadFallbackData() {
       mode: "Hybrid (Online + Lab)",
       description: "Master modern microservices, React 18, Node.js, Python Flask/FastAPI, Docker, and AWS Cloud.",
       technologies: "React 18, TypeScript, Node.js, Express, Python Flask, PostgreSQL, Docker, AWS",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: [
         {
@@ -294,7 +294,7 @@ function loadFallbackData() {
       mode: "Online Interactive",
       description: "Hands-on machine learning, neural architectures, LLMs, computer vision, and predictive analytics.",
       technologies: "Python, PyTorch, TensorFlow, Scikit-Learn, HuggingFace, FastAPI",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: [
         {
@@ -391,7 +391,7 @@ function loadFallbackData() {
       mode: "Hybrid",
       description: "Automated CI/CD pipelines, container orchestration, IaC with Terraform, and Prometheus monitoring.",
       technologies: "Docker, Kubernetes, Terraform, Jenkins, AWS, Prometheus",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     },
@@ -404,7 +404,7 @@ function loadFallbackData() {
       mode: "Lab Intensive",
       description: "Vulnerability assessment, penetration testing, SIEM analysis, and threat hunting.",
       technologies: "Kali Linux, Wireshark, Metasploit, Burp Suite, Splunk",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     },
@@ -417,7 +417,7 @@ function loadFallbackData() {
       mode: "Online Interactive",
       description: "High-throughput backend engineering for banking, fintech and high-scale corporate apps.",
       technologies: "Java 21, Spring Boot 3, Kafka, Redis, Hibernate, JUnit",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     },
@@ -430,7 +430,7 @@ function loadFallbackData() {
       mode: "Hybrid",
       description: "Cross-platform mobile applications for iOS and Android with single codebase & cloud sync.",
       technologies: "Flutter, Dart, React Native, Firebase, REST APIs",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     },
@@ -443,7 +443,7 @@ function loadFallbackData() {
       mode: "Hybrid",
       description: "Enterprise test automation frameworks, web UI with Playwright/Selenium, API testing, and CI/CD quality gates.",
       technologies: "Playwright, Selenium 4, Cypress, Postman, REST Assured, JMeter, GitHub CI",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     },
@@ -456,7 +456,7 @@ function loadFallbackData() {
       mode: "Online Interactive",
       description: "Applied data engineering, predictive modeling, RAG architectures with LangChain, and production Generative AI microservices.",
       technologies: "Python, Pandas, Scikit-Learn, PyTorch, LangChain, ChromaDB, OpenAI, FastAPI",
-      training_model: "100% Industry-Sponsored Merit Track (Zero Tuition Fee)",
+      training_model: "100% Industry-Sponsored Career Track",
       modules_count: 6,
       syllabus: []
     }
@@ -485,7 +485,7 @@ function loadFallbackData() {
       package_ctc: "₹12.0 LPA",
       work_location: "Hyderabad",
       placement_year: 2026,
-      testimonial_quote: "Zero fees and real enterprise project codebase access! At NVN India, I worked on a live healthcare E-Prescription microservice that prepared me directly for high-scale enterprise engineering."
+      testimonial_quote: "Real enterprise project codebase access and dedicated mentorship! At NVN India, I worked on a live healthcare E-Prescription microservice that prepared me directly for high-scale enterprise engineering."
     },
     {
       id: 3,
@@ -647,7 +647,7 @@ function renderPlacements(placements) {
           <div class="placed-avatar">${initials}</div>
           <div>
             <h4 style="font-size: 1rem; margin-bottom: 2px;">${escapeHtml(p.student_name)}</h4>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">${escapeHtml(p.role_offered || 'Software Engineer')} • 📍 ${escapeHtml(p.hometown || 'AP')}</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">${escapeHtml(p.role_offered || 'Software Engineer')} • <i class="fa-solid fa-location-dot"></i> ${escapeHtml(p.hometown || 'AP')}</span>
           </div>
         </div>
         <span class="placed-company-badge">${escapeHtml(p.company_placed)} • ${escapeHtml(p.package_ctc)}</span>
@@ -659,7 +659,7 @@ function renderPlacements(placements) {
   }).join('');
 }
 
-// ----------------- Course Rendering (No Fees + Full Course Trigger) -----------------
+// ----------------- Course Rendering (Industry Sponsored + Full Course Trigger) -----------------
 function renderCourses(courses) {
   const container = document.getElementById('coursesContainer');
   if (!container) return;
@@ -697,14 +697,14 @@ function renderCourses(courses) {
         <div class="course-footer">
           <div class="course-footer-top">
             <span class="course-model-badge">
-              <span>⚡</span> 100% Industry Sponsored
+              <span><i class="fa-solid fa-bolt" style="color:#f59e0b;"></i></span> 100% Industry Sponsored
             </span>
-            <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Zero Tuition Fee</span>
+            
           </div>
           
           <div class="course-actions-group">
             <button class="btn btn-sm btn-secondary" onclick="openSyllabusModal(${course.id})">
-              📖 Full Syllabus (6 Modules)
+              <i class="fa-solid fa-book-open"></i> Full Syllabus (6 Modules)
             </button>
             <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal(${course.id}, '${escapeHtml(course.title)}')">
               Apply Track
@@ -803,7 +803,7 @@ async function openSyllabusModal(courseId) {
               <span class="module-weeks-tag">(${mod.weeks || `Module ${idx + 1}`})</span>
             </div>
           </div>
-          <span class="accordion-toggle-arrow">▼</span>
+          <span class="accordion-toggle-arrow"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
         <div class="module-accordion-body">
           <h5 style="font-size:0.82rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">Topics & Competencies:</h5>
@@ -813,7 +813,7 @@ async function openSyllabusModal(courseId) {
 
           ${mod.lab_project ? `
             <div class="lab-project-box">
-              <span class="lab-icon">🛠️</span>
+              <span class="lab-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
               <div>
                 <span class="lab-title">Hands-On Industrial Lab Assignment:</span>
                 <span class="lab-desc">${escapeHtml(mod.lab_project)}</span>
@@ -1039,10 +1039,10 @@ function initCareerQuiz() {
       step: 1,
       title: "Step 1 of 3: What domain excites you the most?",
       choices: [
-        { label: "💻 Full Stack Web & Cloud Apps", val: "FS" },
-        { label: "🤖 AI, Machine Learning & LLMs", val: "AI" },
-        { label: "☁️ Cloud Infrastructure, Linux & CI/CD", val: "DO" },
-        { label: "🛡️ Cyber Defense, Ethical Hacking & VAPT", val: "CS" }
+        { label: "<i class="fa-solid fa-laptop-code"></i> Full Stack Web & Cloud Apps", val: "FS" },
+        { label: "<i class="fa-solid fa-robot"></i> AI, Machine Learning & LLMs", val: "AI" },
+        { label: "<i class="fa-solid fa-cloud"></i> Cloud Infrastructure, Linux & CI/CD", val: "DO" },
+        { label: "<i class="fa-solid fa-shield-halved"></i> Cyber Defense & Ethical Hacking", val: "CS" }
       ]
     },
     {
@@ -1139,7 +1139,7 @@ function evaluateQuizResult() {
 
   if (resultBox && course) {
     resultBox.innerHTML = `
-      <div style="font-size:2.8rem; margin-bottom:10px;">🌟</div>
+      <div style="font-size:2.8rem; margin-bottom:10px;"><i class="fa-solid fa-star" style="color:var(--accent-cyan);"></i></div>
       <span class="course-code-badge" style="margin-bottom:8px;">${course.code}</span>
       <h4 style="font-size:1.3rem; margin:6px 0 10px; color:#ffffff;">${course.title}</h4>
       <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:16px;">
@@ -1147,7 +1147,7 @@ function evaluateQuizResult() {
       </p>
       <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
         <button class="btn btn-sm btn-secondary" onclick="openSyllabusModal(${course.id})">
-          📖 View Full Curriculum
+          <i class="fa-solid fa-book-open"></i> View Full Curriculum
         </button>
         <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal(${course.id}, '${escapeHtml(course.title)}')">
           Apply for this Specialization
@@ -1279,7 +1279,7 @@ async function runCustomSqlQuery() {
       const json = await res.json();
 
       if (!json.success) {
-        if (statusEl) statusEl.textContent = `❌ SQL Error: ${json.error}`;
+        if (statusEl) statusEl.textContent = `<i class="fa-solid fa-circle-xmark" style="color:#f43f5e;"></i> SQL Error: ${json.error}`;
         container.innerHTML = `<div style="padding:16px; color:#fb7185; font-family:Consolas, monospace;">${escapeHtml(json.error)}</div>`;
         return;
       }
@@ -1287,7 +1287,7 @@ async function runCustomSqlQuery() {
       const cols = json.columns || [];
       const rows = json.data || [];
 
-      if (statusEl) statusEl.textContent = `✅ Returned ${json.row_count} row(s) in 4ms from SQLite.`;
+      if (statusEl) statusEl.textContent = `<i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Returned ${json.row_count} row(s) in 4ms from SQLite.`;
 
       if (rows.length === 0) {
         container.innerHTML = `<div style="padding:16px; color:var(--text-muted); text-align:center;">Query executed successfully. 0 rows returned.</div>`;
@@ -1313,7 +1313,7 @@ async function runCustomSqlQuery() {
   }
 
   // Fallback demo execution
-  if (statusEl) statusEl.textContent = `ℹ️ Showing sample local query preview:`;
+  if (statusEl) statusEl.textContent = `<i class="fa-solid fa-circle-info" style="color:#00a8ff;"></i> Showing sample local query preview:`;
   container.innerHTML = `
     <div style="padding:16px; color:var(--text-secondary); font-family:Consolas, monospace;">
       Run 'server.py' to execute live native queries directly against nvn_india.db.
@@ -1415,16 +1415,22 @@ function setupFormSubmissions() {
       const selectedOption = courseSelect.options[courseSelect.selectedIndex];
       const courseName = selectedOption ? selectedOption.getAttribute('data-name') || selectedOption.text : 'General Academy';
 
+      const cityVal = document.getElementById('traineeCity')?.value || 'Andhra Pradesh';
+      const passoutVal = document.getElementById('traineePassout')?.value || '';
+      const rawStatement = document.getElementById('traineeStatement')?.value || '';
+      const formattedStatement = `[Location: ${cityVal} | Passout: ${passoutVal}] ${rawStatement}`.trim();
+
       const payload = {
-        full_name: document.getElementById('traineeFullName').value,
-        email: document.getElementById('traineeEmail').value,
-        phone: document.getElementById('traineePhone').value,
-        education: document.getElementById('traineeEducation').value,
+        full_name: document.getElementById('traineeFullName').value.trim(),
+        email: document.getElementById('traineeEmail').value.trim(),
+        phone: document.getElementById('traineePhone').value.trim(),
+        education: document.getElementById('traineeEducation').value.trim(),
         course_id: courseSelect.value || null,
         course_name: courseName,
         batch_mode: document.getElementById('traineeMode').value,
         experience_level: document.getElementById('traineeExp').value,
-        statement: document.getElementById('traineeStatement').value
+        statement: formattedStatement,
+        status: 'Applied'
       };
 
       try {
@@ -2164,7 +2170,7 @@ function renderPlacementsTable(placements) {
   tbody.innerHTML = placements.map(p => `
     <tr>
       <td>#${p.id}</td>
-      <td><strong>${escapeHtml(p.student_name)}</strong><br><small style="color:var(--accent-cyan);">📍 ${escapeHtml(p.hometown || 'AP')}</small></td>
+      <td><strong>${escapeHtml(p.student_name)}</strong><br><small style="color:var(--accent-cyan);"><i class="fa-solid fa-location-dot"></i> ${escapeHtml(p.hometown || 'AP')}</small></td>
       <td><span class="course-code-badge" style="font-size:0.75rem;">${escapeHtml(p.course_completed)}</span></td>
       <td><strong style="color:#34d399;">${escapeHtml(p.company_placed)}</strong></td>
       <td>${escapeHtml(p.role_offered || '-')}<br><strong style="color:var(--accent-emerald);">${escapeHtml(p.package_ctc || '-')}</strong></td>
@@ -2303,7 +2309,7 @@ Storage Engine    : SQLite 3.x with WAL / Native OS Concurrency
 Database File     : nvn_india.db
 Headquarters      : Jammalamadugu, Kadapa District, Andhra Pradesh - 516434
 Active Connection : ${AppState.isBackendConnected ? 'Connected (Flask REST API Server Active)' : 'Standalone Local / Memory Cache'}
-Training Model    : 100% Industry Sponsored Merit Tracks (Zero Fees)
+Training Model    : 100% Industry Sponsored Career Tracks
 Last Refreshed    : ${new Date().toISOString()}
 
 RELATIONAL TABLES & RECORD COUNTS:
@@ -2409,7 +2415,7 @@ function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
   toast.innerHTML = `
-    <span style="font-size:1.2rem;">${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'}</span>
+    <span style="font-size:1.2rem;">${type === 'success' ? '<i class="fa-solid fa-circle-check" style="color:#10b981;"></i>' : type === 'error' ? '<i class="fa-solid fa-circle-xmark" style="color:#f43f5e;"></i>' : '<i class="fa-solid fa-circle-info" style="color:#00a8ff;"></i>'}</span>
     <span style="flex-grow:1;">${escapeHtml(message)}</span>
   `;
 
@@ -2480,13 +2486,26 @@ function setupNavigation() {
       if (!isVisible) {
         navLinks.style.flexDirection = 'column';
         navLinks.style.position = 'absolute';
-        navLinks.style.top = '76px';
+        navLinks.style.top = '64px';
         navLinks.style.left = '0';
         navLinks.style.right = '0';
-        navLinks.style.background = 'var(--bg-secondary)';
-        navLinks.style.padding = '20px';
+        navLinks.style.background = 'rgba(15, 23, 42, 0.98)';
+        navLinks.style.backdropFilter = 'blur(16px)';
+        navLinks.style.padding = '20px 24px';
         navLinks.style.boxShadow = 'var(--shadow-lg)';
+        navLinks.style.borderBottom = '1px solid var(--border-glass)';
+        navLinks.style.zIndex = '999';
+        navLinks.style.gap = '16px';
       }
+    });
+
+    // Auto-close menu when any navigation link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.style.display = 'none';
+        }
+      });
     });
   }
 }
@@ -2499,33 +2518,33 @@ const CommandPaletteState = {
   selectedIndex: 0,
   commands: [
     // Academy & Syllabi (All 8 Tracks)
-    { id: 'track-fs', title: 'Full-Stack Web Architecture (16 Weeks)', category: 'Academy Syllabus', icon: '💻', action: () => openSyllabusModalByCode('NVN-FS-01') },
+    { id: 'track-fs', title: 'Full-Stack Web Architecture (16 Weeks)', category: 'Academy Syllabus', icon: '<i class="fa-solid fa-laptop-code"></i>', action: () => openSyllabusModalByCode('NVN-FS-01') },
     { id: 'track-ai', title: 'AI & Applied Machine Learning (20 Weeks)', category: 'Academy Syllabus', icon: '🧠', action: () => openSyllabusModalByCode('NVN-AI-02') },
-    { id: 'track-devops', title: 'Cloud DevOps & Kubernetes (16 Weeks)', category: 'Academy Syllabus', icon: '☁️', action: () => openSyllabusModalByCode('NVN-CL-03') },
-    { id: 'track-sec', title: 'Cyber Security Analyst & Ethical Hacking (12 Weeks)', category: 'Academy Syllabus', icon: '🛡️', action: () => openSyllabusModalByCode('NVN-CS-04') },
+    { id: 'track-devops', title: 'Cloud DevOps & Kubernetes (16 Weeks)', category: 'Academy Syllabus', icon: '<i class="fa-solid fa-cloud"></i>', action: () => openSyllabusModalByCode('NVN-CL-03') },
+    { id: 'track-sec', title: 'Cyber Security Analyst & Ethical Hacking (12 Weeks)', category: 'Academy Syllabus', icon: '<i class="fa-solid fa-shield-halved"></i>', action: () => openSyllabusModalByCode('NVN-CS-04') },
     { id: 'track-java', title: 'Enterprise Java Spring Boot & Microservices (14 Weeks)', category: 'Academy Syllabus', icon: '☕', action: () => openSyllabusModalByCode('NVN-JV-05') },
     { id: 'track-mob', title: 'Cross-Platform Mobile Engineering (12 Weeks)', category: 'Academy Syllabus', icon: '📱', action: () => openSyllabusModalByCode('NVN-MB-06') },
     { id: 'track-qa', title: 'QA Automation Engineering & SDET Lead (12 Weeks)', category: 'Academy Syllabus', icon: '🧪', action: () => openSyllabusModalByCode('NVN-QA-07') },
-    { id: 'track-ds', title: 'Data Science, Generative AI & LangChain (16 Weeks)', category: 'Academy Syllabus', icon: '🤖', action: () => openSyllabusModalByCode('NVN-DS-08') },
+    { id: 'track-ds', title: 'Data Science, Generative AI & LangChain (16 Weeks)', category: 'Academy Syllabus', icon: '<i class="fa-solid fa-robot"></i>', action: () => openSyllabusModalByCode('NVN-DS-08') },
     
     // Core Actions & Modals
-    { id: 'action-staffing', title: 'Hire Dedicated Worker for Client (Staff Augmentation)', category: 'Worker for Client', icon: '👥', action: () => openStaffingModal() },
+    { id: 'action-staffing', title: 'Hire Dedicated Worker for Client (Staff Augmentation)', category: 'Worker for Client', icon: '<i class="fa-solid fa-users"></i>', action: () => openStaffingModal() },
     { id: 'action-calc-worker', title: 'Worker Cost & Dedicated Team Estimator', category: 'Worker for Client', icon: '💰', action: () => scrollToSection('clientWorkers') },
     { id: 'action-enroll', title: 'Enroll in All Courses (100% Free / Sponsored)', category: 'Academy', icon: '📝', action: () => openEnrollmentModal() },
-    { id: 'action-consult', title: 'Book Enterprise IT Advisory / Campus Visit', category: 'Action', icon: '💼', action: () => openConsultationModal() },
+    { id: 'action-consult', title: 'Book Enterprise IT Advisory / Campus Visit', category: 'Action', icon: '<i class="fa-solid fa-briefcase"></i>', action: () => openConsultationModal() },
     { id: 'action-rfp', title: 'Propose Sector Software Project (Submit RFP)', category: 'Action', icon: '🌐', action: () => openProjectModal() },
-    { id: 'action-theme', title: 'Toggle Light / Dark Theme', category: 'Utility', icon: '🌓', action: () => toggleTheme() },
+    { id: 'action-theme', title: 'Toggle Light / Dark Theme', category: 'Utility', icon: '<i class="fa-solid fa-circle-half-stroke"></i>', action: () => toggleTheme() },
 
     // Interactive Tools & Navigation
-    { id: 'nav-jammalamadugu', title: 'Jammalamadugu Tech Campus & Headquarters', category: 'Campus Hub', icon: '🏛️', action: () => scrollToSection('jammalamaduguHub') },
-    { id: 'nav-placements', title: 'Placed Trainees Hall of Fame & Packages', category: 'Placements', icon: '🌟', action: () => scrollToSection('placementStories') },
-    { id: 'nav-tracker', title: 'Track Trainee Application Lifecycle Status', category: 'Tool', icon: '🔍', action: () => scrollToSection('statusTracker') },
-    { id: 'nav-playground', title: 'Live Code Sandbox & Microservices Terminal', category: 'Tool', icon: '⚡', action: () => scrollToSection('livePlayground') },
+    { id: 'nav-jammalamadugu', title: 'Jammalamadugu Tech Campus & Headquarters', category: 'Campus Hub', icon: '<i class="fa-solid fa-building-columns"></i>', action: () => scrollToSection('jammalamaduguHub') },
+    { id: 'nav-placements', title: 'Placed Trainees Hall of Fame & Packages', category: 'Placements', icon: '<i class="fa-solid fa-star" style="color:var(--accent-cyan);"></i>', action: () => scrollToSection('placementStories') },
+    { id: 'nav-tracker', title: 'Track Trainee Application Lifecycle Status', category: 'Tool', icon: '<i class="fa-solid fa-magnifying-glass"></i>', action: () => scrollToSection('statusTracker') },
+    { id: 'nav-playground', title: 'Live Code Sandbox & Microservices Terminal', category: 'Tool', icon: '<i class="fa-solid fa-bolt" style="color:#f59e0b;"></i>', action: () => scrollToSection('livePlayground') },
     { id: 'nav-estimator', title: 'IT Architecture & Project Spec Estimator', category: 'Tool', icon: '🧮', action: () => scrollToSection('projectEstimator') },
     { id: 'nav-quiz', title: 'Take 60-Second Career Track Matcher Quiz', category: 'Tool', icon: '🎯', action: () => scrollToSection('careerQuiz') },
     { id: 'nav-roadmap', title: 'View 6-Stage Industrial Career Acceleration Roadmap', category: 'Academy', icon: '🗺️', action: () => scrollToSection('careerRoadmap') },
-    { id: 'nav-admin', title: 'SQLite Relational Database Explorer & SQL Console', category: 'Database', icon: '🗄️', action: () => scrollToSection('adminSection') },
-    { id: 'nav-contact', title: 'Contact Jammalamadugu Headquarters (WhatsApp / Call)', category: 'Company', icon: '📞', action: () => scrollToSection('contact') }
+    { id: 'nav-admin', title: 'SQLite Relational Database Explorer & SQL Console', category: 'Database', icon: '<i class="fa-solid fa-database"></i>', action: () => scrollToSection('adminSection') },
+    { id: 'nav-contact', title: 'Contact Jammalamadugu Headquarters (WhatsApp / Call)', category: 'Company', icon: '<i class="fa-solid fa-phone"></i>', action: () => scrollToSection('contact') }
   ],
   filteredList: []
 };
@@ -2699,8 +2718,8 @@ app = FastAPI(
 )
 
 class TraineeApplication(BaseModel):
-    full_name: str = Field(..., example="Aarav Sharma")
-    email: str = Field(..., example="aarav@domain.com")
+    full_name: str = Field(..., example="Nagendra Kumar")
+    email: str = Field(..., example="hitendrakumar@gmail.com")
     track_code: str = Field(..., example="NVN-FS-01")
     academic_cgpa: float = Field(..., ge=6.0, le=10.0)
 
@@ -2708,7 +2727,7 @@ class TraineeApplication(BaseModel):
 async def enroll_trainee(payload: TraineeApplication):
     """
     Submits application directly into NVN India's relational database.
-    Zero tuition fees applied. 100% company-sponsored track.
+    100% company-sponsored training track.
     """
     conn = sqlite3.connect("nvn_india.db")
     cursor = conn.cursor()
@@ -2718,7 +2737,7 @@ async def enroll_trainee(payload: TraineeApplication):
     )
     conn.commit()
     conn.close()
-    return {"status": "SUCCESS", "message": "Enrolled in 16-Week Zero-Fee Track"}`,
+    return {"status": "SUCCESS", "message": "Enrolled in 16-Week Career Track"}`,
 
   react: `import React, { useState, useEffect } from 'react';
 
@@ -2870,14 +2889,14 @@ function simulatePlaygroundRun() {
   const statusText = document.getElementById('playgroundStatusText');
   if (!statusText) return;
 
-  statusText.innerHTML = '<span style="color:#f59e0b;">⏳ Compiling and dispatching test pod...</span>';
+  statusText.innerHTML = '<span style="color:#f59e0b;"><i class="fa-solid fa-hourglass-half"></i> Compiling and dispatching test pod...</span>';
   
   setTimeout(() => {
-    statusText.innerHTML = '<span style="color:#00f2fe;">⚡ Running unit tests &amp; benchmark profile...</span>';
+    statusText.innerHTML = '<span style="color:#00f2fe;"><i class="fa-solid fa-bolt" style="color:#f59e0b;"></i> Running unit tests &amp; benchmark profile...</span>';
   }, 600);
 
   setTimeout(() => {
-    statusText.innerHTML = '<span style="color:#10b981;">✅ Verified: 18/18 Tests Passed • Build Deployed (3.8ms latency)</span>';
+    statusText.innerHTML = '<span style="color:#10b981;"><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Verified: 18/18 Tests Passed • Build Deployed (3.8ms latency)</span>';
     showToast('Simulation Succeeded: Architecture test passed with 0 errors.', 'success');
   }, 1400);
 }
@@ -2974,8 +2993,8 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('free') || q.includes('fee') || q.includes('cost') || q.includes('tuition') || q.includes('price')) {
     return `
-      🎓 <strong>Zero Tuition Fee Policy:</strong><br>
-      All courses at <strong>NVN India Academy</strong> are <strong>100% Industry-Sponsored</strong>. We do NOT charge students any tuition fees. Admission is purely merit-based following our screening test.
+      <i class="fa-solid fa-graduation-cap"></i> <strong>Training Academy Policy:</strong><br>
+      All courses at <strong>NVN India Academy</strong> are <strong>100% Industry-Sponsored Merit Tracks</strong>. Admission is strictly merit-based following our technical screening evaluation.
       <br><br>
       <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal()">Apply for Free Track</button>
     `;
@@ -2983,7 +3002,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('worker') || q.includes('staffing') || q.includes('hire') || q.includes('developer') || q.includes('client') || q.includes('dedicated')) {
     return `
-      👥 <strong>Worker for Client (Staff Augmentation):</strong><br>
+      <i class="fa-solid fa-users"></i> <strong>Worker for Client (Staff Augmentation):</strong><br>
       NVN India Private Limited deploys pre-vetted engineers directly into your client sprints within <strong>48 hours</strong>:
       <ul style="margin:6px 0 8px 18px; font-size:0.85rem;">
         <li><strong>Talent:</strong> Full Stack (React/Node), Python AI, Java Spring Boot, QA Automation, Cloud DevOps &amp; Mobile developers.</li>
@@ -3000,16 +3019,16 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('jammalamadugu') || q.includes('location') || q.includes('address') || q.includes('where') || q.includes('campus') || q.includes('visit') || q.includes('office')) {
     return `
-      🏛️ <strong>Headquarters &amp; Tech Innovation Campus:</strong><br>
+      <i class="fa-solid fa-building-columns"></i> <strong>Headquarters &amp; Tech Innovation Campus:</strong><br>
       <strong>NVN India Private Limited</strong><br>
       Tech Innovation Campus &amp; Software Development Center,<br>
       D.No. 1/674, Opposite to Town Church, Upstairs,<br>
       <strong>Jammalamadugu</strong>, YSR Kadapa District, Andhra Pradesh - 516434, India.<br>
       <br>
-      • 📞 Helpline / Mobile: <strong><a href="tel:+918639092368" style="color:#38bdf8;">+91 86390 92368</a></strong><br>
-      • 💬 WhatsApp: <strong><a href="https://wa.me/918639092368" target="_blank" style="color:#34d399;">+91 86390 92368</a></strong><br>
-      • ✉️ Email: <strong><a href="mailto:nvnindiapvtltd@gmail.com" style="color:#38bdf8;">nvnindiapvtltd@gmail.com</a></strong><br>
-      • 🚗 Transit: 20 mins from Proddatur (18km), 1 hr 15 mins from Kadapa (65km).<br>
+      • <i class="fa-solid fa-phone"></i> Helpline / Mobile: <strong><a href="tel:+918639092368" style="color:#38bdf8;">+91 86390 92368</a></strong><br>
+      • <i class="fa-solid fa-comment-dots"></i> WhatsApp: <strong><a href="https://wa.me/918639092368" target="_blank" style="color:#34d399;">+91 86390 92368</a></strong><br>
+      • <i class="fa-solid fa-envelope"></i> Email: <strong><a href="mailto:nvnindiapvtltd@gmail.com" style="color:#38bdf8;">nvnindiapvtltd@gmail.com</a></strong><br>
+      • <i class="fa-solid fa-car"></i> Transit: 20 mins from Proddatur (18km), 1 hr 15 mins from Kadapa (65km).<br>
       <br>
       <button class="btn btn-sm btn-primary" onclick="openConsultationModal()">Schedule a Campus Visit</button>
     `;
@@ -3017,7 +3036,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('placement') || q.includes('salary') || q.includes('package') || q.includes('alumni') || q.includes('placed') || q.includes('job') || q.includes('hiring partner')) {
     return `
-      🌟 <strong>100% Placement Support &amp; Alumni Hall of Fame:</strong><br>
+      <i class="fa-solid fa-star" style="color:var(--accent-cyan);"></i> <strong>100% Placement Support &amp; Alumni Hall of Fame:</strong><br>
       Our graduates have achieved verified placements across top IT firms:
       <ul style="margin:6px 0 8px 18px; font-size:0.85rem;">
         <li><strong>Highest Package:</strong> ₹15.2 LPA (Infosys AI) &amp; ₹14.5 LPA (AWS Partner)</li>
@@ -3030,8 +3049,8 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('course') || q.includes('training') || q.includes('allcourses') || q.includes('syllabus') || q.includes('curriculum')) {
     return `
-      🎓 <strong>All Courses IT Training (100% Industry Sponsored):</strong><br>
-      We offer 8 comprehensive career tracks (12-20 weeks, zero tuition fee):
+      <i class="fa-solid fa-graduation-cap"></i> <strong>All Courses IT Training (100% Industry Sponsored):</strong><br>
+      We offer 8 comprehensive career tracks (12-20 weeks, industry-sponsored):
       <ul style="margin:6px 0 8px 18px; font-size:0.85rem;">
         <li>1. Full Stack Enterprise Web &amp; Cloud (React 18 / Node / Python)</li>
         <li>2. Applied AI, Machine Learning &amp; Computer Vision</li>
@@ -3048,7 +3067,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('consultancy') || q.includes('service') || q.includes('advisory') || q.includes('cloud')) {
     return `
-      💼 <strong>NVN India IT Consultancy Services:</strong><br>
+      <i class="fa-solid fa-briefcase"></i> <strong>NVN India IT Consultancy Services:</strong><br>
       We specialize in:
       <ul style="margin:6px 0 8px 18px; font-size:0.85rem;">
         <li>Cloud-Native Migration (AWS, Azure, GCP, K8s)</li>
@@ -3062,7 +3081,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('project') || q.includes('healthcare') || q.includes('fintech') || q.includes('ecommerce') || q.includes('rfp')) {
     return `
-      🏥 <strong>Sector Solutions Experience:</strong><br>
+      <i class="fa-solid fa-hospital"></i> <strong>Sector Solutions Experience:</strong><br>
       NVN India builds bespoke software across <strong>every sector where IT is required</strong>, including:
       <ul style="margin:6px 0 8px 18px; font-size:0.85rem;">
         <li>Healthcare (Telehealth, EHR, MedTech)</li>
@@ -3076,8 +3095,8 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('track') || q.includes('status') || q.includes('application') || q.includes('id')) {
     return `
-      🔍 <strong>Application Tracking:</strong><br>
-      You can track your live candidate status using your registered email address or Application ID (e.g. <code>aarav.sharma@example.com</code> or <code>1</code>).
+      <i class="fa-solid fa-magnifying-glass"></i> <strong>Application Tracking:</strong><br>
+      You can track your live candidate status using your registered email address or Application ID (e.g. <code>hitendrakumar@gmail.com</code> or <code>1</code>).
       <br><br>
       <button class="btn btn-sm btn-secondary" onclick="scrollToSection('statusTracker')">Jump to Tracker</button>
     `;
@@ -3085,7 +3104,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('database') || q.includes('sqlite') || q.includes('admin') || q.includes('sql')) {
     return `
-      🗄️ <strong>Database Management Console:</strong><br>
+      <i class="fa-solid fa-database"></i> <strong>Database Management Console:</strong><br>
       NVN India portal runs on an active SQLite relational database (<code>nvn_india.db</code>). You can inspect courses, trainee applications, staffing requests, and execute safe queries directly in the admin console.
       <br><br>
       <button class="btn btn-sm btn-admin" onclick="scrollToSection('adminSection')">Open Database Console</button>
@@ -3094,7 +3113,7 @@ function generateTechBotResponse(userText) {
 
   if (q.includes('contact') || q.includes('phone') || q.includes('email')) {
     return `
-      📍 <strong>NVN India Private Limited Contacts:</strong><br>
+      <i class="fa-solid fa-location-dot"></i> <strong>NVN India Private Limited Contacts:</strong><br>
       • Innovation Campus HQ: D.No. 1/674, Opposite to Town Church, Upstairs, Jammalamadugu, AP - 516434<br>
       • Direct WhatsApp: <strong><a href="https://wa.me/918639092368" target="_blank" style="color:#34d399;">+91 86390 92368</a></strong><br>
       • Mobile / Helpline: <strong><a href="tel:+918639092368" style="color:#38bdf8;">+91 86390 92368</a></strong><br>
@@ -3107,13 +3126,13 @@ function generateTechBotResponse(userText) {
   return `
     🤖 I can assist you with:
     <div style="margin-top:8px; display:flex; flex-direction:column; gap:6px;">
-      <a href="#clientWorkers" onclick="toggleTechBot()" style="color:var(--accent-emerald);">▸ Worker for Client: Hire Dedicated Tech Engineers</a>
-      <a href="#academy" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ All Courses IT Training (100% Industry Sponsored)</a>
-      <a href="#placementStories" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ Placements Hall of Fame &amp; Hiring Partners</a>
-      <a href="#jammalamaduguHub" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ Jammalamadugu Innovation Campus &amp; Labs</a>
-      <a href="#projects" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ Software Projects for Any Industry Sector</a>
-      <a href="#statusTracker" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ Real-Time Application Lifecycle Tracker</a>
-      <a href="#adminSection" onclick="toggleTechBot()" style="color:var(--accent-cyan);">▸ Relational SQLite Database Explorer</a>
+      <a href="#clientWorkers" onclick="toggleTechBot()" style="color:var(--accent-emerald);">Worker for Client: Hire Dedicated Tech Engineers</a>
+      <a href="#academy" onclick="toggleTechBot()" style="color:var(--accent-cyan);">All Courses IT Training (100% Industry Sponsored)</a>
+      <a href="#placementStories" onclick="toggleTechBot()" style="color:var(--accent-cyan);">Placements Hall of Fame &amp; Hiring Partners</a>
+      <a href="#jammalamaduguHub" onclick="toggleTechBot()" style="color:var(--accent-cyan);">Jammalamadugu Innovation Campus &amp; Labs</a>
+      <a href="#projects" onclick="toggleTechBot()" style="color:var(--accent-cyan);">Software Projects for Any Industry Sector</a>
+      <a href="#statusTracker" onclick="toggleTechBot()" style="color:var(--accent-cyan);">Real-Time Application Lifecycle Tracker</a>
+      <a href="#adminSection" onclick="toggleTechBot()" style="color:var(--accent-cyan);">Relational SQLite Database Explorer</a>
     </div>
   `;
 }

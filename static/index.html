@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,10 @@
   <link rel="icon" type="image/png" href="images/nvn-logo-favicon.png">
   <link rel="apple-touch-icon" href="images/nvn-logo-emblem.jpg">
 
+  <!-- Font Awesome 6.5.1 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -27,18 +29,18 @@
   <!-- Top Corporate Credentials & Direct Helpline Bar -->
   <aside class="top-notice-bar" aria-label="Corporate Registration and Official Contact">
     <div class="container notice-content">
-      <div style="display:flex; align-items:center; gap:16px;">
-        <span style="display:inline-flex; align-items:center; gap:6px;">
-          🇮🇳 <strong>Govt. Registered Enterprise:</strong> CIN: U72900AP2024PTC189000 • Jammalamadugu, AP
+      <div class="notice-left">
+        <span class="notice-item">
+          <i class="fa-solid fa-building-columns" style="color:var(--brand-blue); margin-right:4px;"></i> <strong>Govt. Registered:</strong> CIN: U72900AP2024PTC189000
         </span>
         <span id="dbConnectionStatus" class="db-status-badge">
-          <span class="pulse-indicator"></span> Connecting to Relational Database...
+          <span class="pulse-indicator"></span> Live DB Connected
         </span>
       </div>
-      <div style="display:flex; align-items:center; gap:18px;">
-        <a href="tel:+918639092368" style="color:inherit; text-decoration:none;"><span>📞 Mobile: +91 86390 92368</span></a>
-        <a href="mailto:nvnindiapvtltd@gmail.com" style="color:inherit; text-decoration:none;"><span>✉️ nvnindiapvtltd@gmail.com</span></a>
-        <a href="#adminSection" class="btn btn-sm btn-admin" style="padding:2px 10px; font-size:0.75rem;">Portal Engine</a>
+      <div class="notice-right">
+        <a href="tel:+918639092368" class="notice-link"><span><i class="fa-solid fa-phone" style="margin-right:4px;"></i> +91 86390 92368</span></a>
+        <a href="mailto:nvnindiapvtltd@gmail.com" class="notice-link"><span><i class="fa-solid fa-envelope" style="margin-right:4px;"></i> nvnindiapvtltd@gmail.com</span></a>
+        <a href="/admin" class="btn btn-sm btn-admin notice-admin-btn"><span><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i></span> Admin Console / Enquiries</a>
       </div>
     </div>
   </aside>
@@ -49,7 +51,7 @@
       <nav class="navbar" aria-label="Main Navigation">
         <!-- Brand Logo -->
         <a href="#" class="brand-logo" id="navBrandLogo">
-          <img src="images/nvn-logo-realistic.jpg" alt="NVN India Private Limited Official Insignia" class="brand-logo-img" width="46" height="46">
+          <img src="images/nvn-logo-official.jpg" alt="NVN India Private Limited Official Insignia" class="brand-logo-img" width="46" height="46">
           <div class="brand-text-block">
             <span class="brand-name">NVN INDIA</span>
             <span class="brand-sub">PRIVATE LIMITED • JAMMALAMADUGU</span>
@@ -65,19 +67,24 @@
           <li><a href="#jammalamaduguHub" class="nav-link">Campus Hub</a></li>
           <li><a href="#about" class="nav-link">About Company</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-only-nav-item"><a href="/admin" class="nav-link nav-link-admin"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i> Admin Console / Enquiries</a></li>
+          <li class="mobile-only-nav-item"><a href="tel:+918639092368" class="nav-link nav-link-phone"><i class="fa-solid fa-phone" style="margin-right:4px;"></i> Call: +91 86390 92368</a></li>
         </ul>
 
         <!-- Action CTAs -->
         <div class="nav-actions">
-          <button class="btn btn-sm btn-secondary" onclick="openCommandPalette()" style="display:inline-flex; align-items:center; gap:6px;" title="Quick Search (Ctrl+K)">
-            <span>🔍</span> <span>Search</span> <span class="command-kbd-badge" style="font-size:0.65rem; padding:1px 5px;">Ctrl+K</span>
+          <button class="btn btn-sm btn-secondary nav-action-desktop" onclick="openCommandPalette()" style="display:inline-flex; align-items:center; gap:6px;" title="Quick Search (Ctrl+K)">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span> <span>Search</span> <span class="command-kbd-badge" style="font-size:0.65rem; padding:1px 5px;">Ctrl+K</span>
           </button>
-          <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">☀️</button>
-          <button class="btn btn-emerald" onclick="openStaffingModal()" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:0.88rem;">
-            <span>👥</span> Hire Developers
+          <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button>
+          <a href="tel:+918639092368" class="btn btn-sm btn-emerald nav-call-btn" title="Call NVN India" style="display:inline-flex; align-items:center; gap:5px; padding:6px 12px; font-size:0.8rem;">
+            <span><i class="fa-solid fa-phone" style="margin-right:4px;"></i></span> <span class="nav-call-label">Call</span>
+          </a>
+          <button class="btn btn-emerald nav-action-desktop" onclick="openStaffingModal()" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:0.88rem;">
+            <span><i class="fa-solid fa-users"></i></span> Hire Developers
           </button>
-          <button class="btn btn-primary" onclick="openEnrollmentModal()" style="padding:8px 16px; font-size:0.88rem;">Apply for Training</button>
-          <button id="mobileMenuToggle" class="mobile-menu-btn" aria-label="Toggle Mobile Menu">☰</button>
+          <button class="btn btn-primary nav-action-desktop" onclick="openEnrollmentModal()" style="padding:8px 16px; font-size:0.88rem;">Apply for Training</button>
+          <button id="mobileMenuToggle" class="mobile-menu-btn" aria-label="Toggle Mobile Menu"><i class="fa-solid fa-bars"></i></button>
         </div>
       </nav>
     </div>
@@ -93,10 +100,15 @@
       
       <!-- 1. The Main Brand Centerpiece Masthead -->
       <div class="grand-hero-masthead">
+        <!-- 3D Brand Insignia Floating Emblem -->
+        <div class="grand-hero-emblem-badge" title="NVN India Official Insignia">
+          <img src="images/nvn-logo-official.jpg" alt="NVN India 3D Official Insignia" class="grand-hero-emblem-img">
+        </div>
+
         <div class="grand-gov-capsule">
-          <span class="capsule-flag">🇮🇳</span>
+          <span class="capsule-flag"><i class="fa-solid fa-building-columns" style="color:var(--brand-blue); margin-right:4px;"></i></span>
           <span class="capsule-live-dot"></span>
-          <span class="capsule-text">GOVERNMENT REGISTERED SOFTWARE ENTERPRISE • JAMMALAMADUGU, AP</span>
+          <span class="capsule-text">GOVT REGISTERED SOFTWARE ENTERPRISE • JAMMALAMADUGU</span>
           <span class="capsule-cin">CIN: U72900AP2024PTC189000</span>
         </div>
 
@@ -113,35 +125,35 @@
         <!-- Trust & Credentials Ribbon -->
         <div class="grand-trust-ribbon">
           <div class="trust-ribbon-pill">
-            📍 <strong>Campus:</strong> D.No. 1/674, Opposite to Town Church, Upstairs, Jammalamadugu - 516434
+            <i class="fa-solid fa-location-dot" style="color:var(--accent-rose);"></i> <strong>Campus:</strong> D.No. 1/674, Opposite to Town Church, Upstairs, Jammalamadugu - 516434
           </div>
           <span class="trust-ribbon-dot">•</span>
           <div class="trust-ribbon-pill">
-            ⚡ <strong>48h SLA:</strong> Pre-Vetted Dedicated Workers for Client
+            <i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> <strong>48h SLA:</strong> Pre-Vetted Dedicated Workers for Client
           </div>
           <span class="trust-ribbon-dot">•</span>
           <div class="trust-ribbon-pill">
-            🎓 <strong>100% Placements:</strong> Top MNCs &amp; Zero Upfront Tuition
+            <i class="fa-solid fa-graduation-cap"></i> <strong>100% Placements:</strong> Top MNCs &amp; Direct Hiring Drives
           </div>
           <span class="trust-ribbon-dot">•</span>
           <div class="trust-ribbon-pill">
-            💻 <strong>Turnkey Projects:</strong> Web, Cloud, AI &amp; Enterprise Apps
+            <i class="fa-solid fa-laptop-code"></i> <strong>Turnkey Projects:</strong> Web, Cloud, AI &amp; Enterprise Apps
           </div>
         </div>
 
         <!-- Grand CTA Action Bar -->
         <div class="grand-hero-cta-group">
           <button class="btn-hero btn-hero-primary" onclick="openStaffingModal()">
-            <span>👥</span> Hire Worker for Client
+            <span><i class="fa-solid fa-users"></i></span> Hire Worker for Client
           </button>
           <button class="btn-hero btn-hero-brand" onclick="openEnrollmentModal()">
-            <span>🎓</span> All Courses IT Training (100% Placement)
+            <span><i class="fa-solid fa-graduation-cap"></i></span> All Courses IT Training (100% Placement)
           </button>
           <a href="#projects" class="btn-hero btn-hero-glass">
-            <span>💻</span> Explore Software Projects
+            <span><i class="fa-solid fa-laptop-code"></i></span> Explore Software Projects
           </a>
           <a href="tel:+918639092368" class="btn-hero btn-hero-call">
-            <span>📞</span> +91 86390 92368
+            <span><i class="fa-solid fa-phone" style="margin-right:4px;"></i></span> +91 86390 92368
           </a>
         </div>
       </div>
@@ -150,21 +162,21 @@
       <div class="real-showcase-wrapper">
         <div class="showcase-tabs">
           <button class="showcase-tab-btn active" data-tab="campus" onclick="switchShowcaseTab('campus')">
-            <span class="tab-icon">🏛️</span>
+            <span class="tab-icon"><i class="fa-solid fa-landmark"></i></span>
             <span class="tab-text">
               <strong>Corporate Tech Headquarters</strong>
               <small>Jammalamadugu, AP • 50k Sq. Ft. Facility</small>
             </span>
           </button>
           <button class="showcase-tab-btn" data-tab="workers" onclick="switchShowcaseTab('workers')">
-            <span class="tab-icon">👥</span>
+            <span class="tab-icon"><i class="fa-solid fa-users"></i></span>
             <span class="tab-text">
               <strong>"Worker for Client" Tech Squads</strong>
               <small>Pre-Vetted Dedicated Developers in 48h</small>
             </span>
           </button>
           <button class="showcase-tab-btn" data-tab="academy" onclick="switchShowcaseTab('academy')">
-            <span class="tab-icon">🎓</span>
+            <span class="tab-icon"><i class="fa-solid fa-graduation-cap"></i></span>
             <span class="tab-text">
               <strong>Tech Academy &amp; Placement Lab</strong>
               <small>100% Job Guarantee &amp; MNC Drives</small>
@@ -178,14 +190,14 @@
             <div class="showcase-img-box">
               <img src="images/campus.jpg" alt="NVN India Private Limited Corporate Headquarters in Jammalamadugu Andhra Pradesh" class="showcase-img">
               <div class="showcase-badge-overlay top-left">
-                <span class="overlay-icon">🏢</span>
+                <span class="overlay-icon"><i class="fa-solid fa-building"></i></span>
                 <div>
                   <strong>NVN Corporate IT Headquarters</strong>
                   <span>1/674 Opposite to Town Church (Upstairs), Jammalamadugu - 516434</span>
                 </div>
               </div>
               <div class="showcase-badge-overlay bottom-right">
-                <span class="overlay-icon">⚡</span>
+                <span class="overlay-icon"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i></span>
                 <div>
                   <strong>500+ Developer Workstations</strong>
                   <span>Fiber Gigabit Labs • 24/7 Power • Tier-3 DC Backup</span>
@@ -209,14 +221,14 @@
             <div class="showcase-img-box">
               <img src="images/engineers.jpg" alt="NVN India Dedicated Software Engineers for Clients" class="showcase-img">
               <div class="showcase-badge-overlay top-left">
-                <span class="overlay-icon">👥</span>
+                <span class="overlay-icon"><i class="fa-solid fa-users"></i></span>
                 <div>
                   <strong>Dedicated Software Engineers</strong>
                   <span>Full-Stack .NET, React, Python AI &amp; Cloud</span>
                 </div>
               </div>
               <div class="showcase-badge-overlay bottom-right">
-                <span class="overlay-icon">🛡️</span>
+                <span class="overlay-icon"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i></span>
                 <div>
                   <strong>Deployed in 48 Hours</strong>
                   <span>Strict NDA, Full IP Transfer &amp; Agile Integration</span>
@@ -240,14 +252,14 @@
             <div class="showcase-img-box">
               <img src="images/academy.jpg" alt="NVN India Tech Academy Training Lab Jammalamadugu" class="showcase-img">
               <div class="showcase-badge-overlay top-left">
-                <span class="overlay-icon">🎓</span>
+                <span class="overlay-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                 <div>
                   <strong>NVN India Tech Academy</strong>
                   <span>8 Career Tracks with 100% Placement Support</span>
                 </div>
               </div>
               <div class="showcase-badge-overlay bottom-right">
-                <span class="overlay-icon">🏆</span>
+                <span class="overlay-icon"><i class="fa-solid fa-trophy" style="color:var(--accent-amber);"></i></span>
                 <div>
                   <strong>528+ Alumni Placed</strong>
                   <span>TCS, Infosys, Wipro, Cognizant, Tech Mahindra</span>
@@ -257,7 +269,7 @@
             <div class="showcase-caption">
               <div class="caption-info">
                 <h3>All-Courses IT Training &amp; 100% Placement Support</h3>
-                <p>16-week intensive software engineering bootcamps with hands-on coding, live enterprise capstone projects, and guaranteed job placement drives with top MNCs and high-growth tech startups. Zero upfront tuition fee merit track available.</p>
+                <p>16-week intensive software engineering bootcamps with hands-on coding, live enterprise capstone projects, and guaranteed job placement drives with top MNCs and high-growth tech startups. 100% Industry-Sponsored Merit Track with guaranteed career placement drives.</p>
               </div>
               <div class="caption-actions">
                 <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal()">Enroll in Training</button>
@@ -332,10 +344,10 @@
         </p>
       </div>
 
-      <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="pillars-grid">
         <!-- Pillar 1: Trainee Academy & All Courses Training -->
         <article class="pillar-card">
-          <div class="pillar-icon-box">🎓</div>
+          <div class="pillar-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
           <h3 class="pillar-title">1. All Courses Training &amp; 100% Placement</h3>
           <p class="pillar-desc">
             Transforming students and freshers into hireable software engineers. Full-stack curricula, live capstone projects, and guaranteed placement drives with top tier MNCs and high-growth startups.
@@ -355,7 +367,7 @@
             </li>
             <li>
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              <span>Zero-fee merit tracks &amp; corporate certifications</span>
+              <span>Corporate certifications &amp; hiring partner network</span>
             </li>
           </ul>
           <button class="btn btn-primary" onclick="openEnrollmentModal()">Enroll in All Courses</button>
@@ -363,7 +375,7 @@
 
         <!-- Pillar 2: Software Projects for Clients -->
         <article class="pillar-card">
-          <div class="pillar-icon-box">💻</div>
+          <div class="pillar-icon-box"><i class="fa-solid fa-code"></i></div>
           <h3 class="pillar-title">2. Software Projects &amp; Custom Solutions</h3>
           <p class="pillar-desc">
             End-to-end software development for businesses of all scales. We architect, build, test, and deploy resilient digital products across healthcare, fintech, e-commerce, and enterprise automation.
@@ -391,7 +403,7 @@
 
         <!-- Pillar 3: Worker for Client (Staff Augmentation) -->
         <article class="pillar-card" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.04);">
-          <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">👥</div>
+          <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);"><i class="fa-solid fa-users"></i></div>
           <h3 class="pillar-title">3. Worker for Client (Staff Augmentation)</h3>
           <p class="pillar-desc">
             Instantly hire dedicated developers, QA testers, and cloud engineers from NVN India. Pre-vetted, fluent in English, and ready to deploy into your client teams within 48 hours.
@@ -419,7 +431,7 @@
 
         <!-- Pillar 4: Enterprise IT Consultancy -->
         <article class="pillar-card">
-          <div class="pillar-icon-box">🛡️</div>
+          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i></div>
           <h3 class="pillar-title">4. IT Consultancy &amp; Cloud Security</h3>
           <p class="pillar-desc">
             High-level technological guidance for modern enterprises. Cloud migration (AWS/Azure/GCP), Kubernetes containerization, DevOps automation, and VAPT cybersecurity audits.
@@ -452,17 +464,17 @@
   <section class="section" id="academy" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">100% Industry-Sponsored Merit Tracks • Zero Tuition Fee</span>
+        <span class="section-tag">100% Industry-Sponsored Career Programs</span>
         <h2 class="section-title">NVN Tech Academy &amp; <span class="gradient-text">Full Industrial Curricula</span></h2>
         <p class="section-desc">
-          Zero tuition fees. All flagship tracks are 100% company-sponsored and merit-based. Trainees build enterprise systems, submit pull requests to production codebases, and earn authentic corporate experience with placement support.
+          All flagship tracks are 100% company-sponsored and merit-based. Trainees build enterprise systems, submit pull requests to production codebases, and earn authentic corporate experience with placement support.
         </p>
       </div>
 
       <!-- Course Search & Category Filter Toolbar -->
       <div class="course-filter-toolbar">
         <div class="search-input-wrapper">
-          <span class="search-icon-decor">🔍</span>
+          <span class="search-icon-decor"><i class="fa-solid fa-magnifying-glass"></i></span>
           <input type="text" id="courseSearchInput" class="course-search-input" placeholder="Search track by tech (e.g. React, Python, Kubernetes, AWS)..." oninput="filterCoursesBySearch(this.value)">
         </div>
         <div class="course-cat-pills" id="courseCategoryPills">
@@ -480,7 +492,7 @@
 
       <!-- Dynamic Course Cards Loaded from SQLite DB -->
       <div class="courses-grid" id="coursesContainer">
-        <!-- Rendered dynamically by app.js with full syllabus triggers and zero fee badges -->
+        <!-- Rendered dynamically by app.js with full syllabus triggers and merit track badges -->
       </div>
 
       <!-- =====================================================================
@@ -492,16 +504,16 @@
             <span class="section-tag" style="font-size:0.75rem;">Real-Time Lifecycle Tracking</span>
             <h3 style="font-size:1.6rem; margin-top:6px;">Check Your Admission &amp; Internship Status</h3>
             <p style="color:var(--text-secondary); font-size:0.9rem; max-width:600px;">
-              Enter your registered email address or Application ID (e.g. <code>aarav.sharma@example.com</code> or <code>1</code>) to check screening results, assigned mentor, and upcoming batch milestones.
+              Enter your registered email address or Application ID (e.g. <code>hitendrakumar@gmail.com</code> or <code>1006</code>) to check screening results, assigned mentor, and upcoming batch milestones.
             </p>
           </div>
           <div style="background:rgba(0,242,254,0.1); border:1px solid rgba(0,242,254,0.3); padding:8px 16px; border-radius:var(--radius-full); font-size:0.8rem; color:var(--accent-cyan);">
-            ⚡ Live Relational Lookup
+            <i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Live Relational Lookup
           </div>
         </div>
 
         <div class="tracker-search-bar">
-          <input type="text" id="trackerQueryInput" class="form-input" placeholder="Enter Registered Email or Application ID (#)..." style="font-size:0.95rem;">
+          <input type="text" id="trackerQueryInput" class="form-input" placeholder="Enter Registered Email or Mobile Number..." style="font-size:0.95rem;">
           <button class="btn btn-primary" onclick="lookupTraineeStatus()">Track Application</button>
         </div>
 
@@ -531,12 +543,12 @@
         </div>
 
         <div class="quiz-result-box" id="quizResultBox">
-          <div style="font-size:2.8rem; margin-bottom:10px;">🎯</div>
+          <div style="font-size:2.8rem; margin-bottom:10px;"><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i></div>
           <h4 style="font-size:1.25rem; margin-bottom:8px;">Ready for Your Tech Career?</h4>
           <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:16px;">
             Select your preferences on the left to reveal your tailored specialization.
           </p>
-          <span style="font-size:0.8rem; color:var(--accent-cyan);">100% Industry Sponsored • Zero Tuition Barrier</span>
+          <span style="font-size:0.85rem; font-weight:600; color:var(--brand-blue);"><i class="fa-solid fa-award"></i> 100% Industry Sponsored · Direct Merit Track</span>
         </div>
       </div>
 
@@ -619,7 +631,7 @@
             </div>
             <span class="placed-company-badge">TCS Digital Hub • ₹12.0 LPA</span>
             <p class="placed-quote">
-              "Zero fees and real enterprise project codebase access! At NVN India, I worked on a live healthcare E-Prescription microservice that prepared me directly for high-scale enterprise engineering."
+              "Real enterprise project codebase access and dedicated mentorship! At NVN India, I worked on a live healthcare E-Prescription microservice that prepared me directly for high-scale enterprise engineering."
             </p>
           </div>
 
@@ -688,22 +700,22 @@
 
             <div class="consult-domain-cards">
               <div class="domain-card">
-                <div class="domain-icon">☁️</div>
+                <div class="domain-icon"><i class="fa-solid fa-cloud"></i></div>
                 <h4 class="domain-title">Cloud Infrastructure</h4>
                 <p class="domain-desc">AWS, Azure &amp; GCP multi-cloud strategy, cost optimization, automated IaC with Terraform.</p>
               </div>
               <div class="domain-card">
-                <div class="domain-icon">🛡️</div>
+                <div class="domain-icon"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i></div>
                 <h4 class="domain-title">Cyber Security &amp; VAPT</h4>
                 <p class="domain-desc">Penetration testing, threat modeling, SOC 2, HIPAA, ISO 27001 compliance readiness.</p>
               </div>
               <div class="domain-card">
-                <div class="domain-icon">🔄</div>
+                <div class="domain-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
                 <h4 class="domain-title">DevOps &amp; CI/CD</h4>
                 <p class="domain-desc">Docker containerization, Kubernetes cluster management, automated release pipelines.</p>
               </div>
               <div class="domain-card">
-                <div class="domain-icon">⚡</div>
+                <div class="domain-icon"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i></div>
                 <h4 class="domain-title">High-Scale Architecture</h4>
                 <p class="domain-desc">Microservices decomposition, Kafka event streaming, database indexing &amp; sharding.</p>
               </div>
@@ -719,22 +731,22 @@
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="consultClientName">Full Name *</label>
-                  <input type="text" id="consultClientName" class="form-input" placeholder="e.g. Rajesh Varma" required>
+                  <input type="text" id="consultClientName" class="form-input" placeholder="Client Full Name" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="consultOrganization">Organization / Company *</label>
-                  <input type="text" id="consultOrganization" class="form-input" placeholder="e.g. Apex Health Systems" required>
+                  <input type="text" id="consultOrganization" class="form-input" placeholder="Company / Healthcare / Sector Name" required>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="consultEmail">Corporate Email *</label>
-                  <input type="email" id="consultEmail" class="form-input" placeholder="name@company.com" required>
+                  <input type="email" id="consultEmail" class="form-input" placeholder="Business Email Address" required>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="consultPhone">Contact Phone *</label>
-                  <input type="tel" id="consultPhone" class="form-input" placeholder="+91 98765 43210" required>
+                  <input type="tel" id="consultPhone" class="form-input" placeholder="10-Digit Mobile / WhatsApp (+91)" required>
                 </div>
               </div>
 
@@ -787,7 +799,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);">
-          ⚡ Dedicated Tech Talent On-Demand
+          <i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Dedicated Tech Talent On-Demand
         </span>
         <h2 class="section-title">
           Worker for Client: <span class="gradient-text" style="background: linear-gradient(135deg, #10b981 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hire Dedicated Software Engineers</span>
@@ -800,22 +812,22 @@
       <!-- Trust & Service Guarantees Strip -->
       <div class="worker-guarantees-grid">
         <div class="worker-guarantee-card">
-          <div class="guarantee-icon">⚡</div>
+          <div class="guarantee-icon"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i></div>
           <h4>48-Hour Rapid Onboarding</h4>
           <p>Hand-picked, vetted candidates ready for immediate technical screening and sprint deployment.</p>
         </div>
         <div class="worker-guarantee-card">
-          <div class="guarantee-icon">🛡️</div>
+          <div class="guarantee-icon"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i></div>
           <h4>1-Week Risk-Free Trial</h4>
           <p>Assess our engineer directly in your codebase for 5 working days before any long-term commitment.</p>
         </div>
         <div class="worker-guarantee-card">
-          <div class="guarantee-icon">🔐</div>
+          <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
           <h4>100% IP &amp; Strict NDA</h4>
           <p>Full assignment of intellectual property rights, non-disclosure contracts, and secure access protocols.</p>
         </div>
         <div class="worker-guarantee-card">
-          <div class="guarantee-icon">🌐</div>
+          <div class="guarantee-icon"><i class="fa-solid fa-globe"></i></div>
           <h4>Timezone Aligned &amp; Fluent</h4>
           <p>Seamless overlap with US (EST/PST), UK/EU (GMT/CET), and India (IST) time zones with daily agile standups.</p>
         </div>
@@ -829,7 +841,7 @@
             <p style="color:var(--text-secondary); font-size:0.9rem;">Pre-vetted developers from our Jammalamadugu innovation center ready to start immediately</p>
           </div>
           <button class="btn btn-emerald" onclick="openStaffingModal()">
-            <span>📋</span> Post Custom Staffing Requirement
+            <span><i class="fa-solid fa-clipboard-list"></i></span> Post Custom Staffing Requirement
           </button>
         </div>
 
@@ -851,9 +863,9 @@
               <span>React 18</span><span>Node.js</span><span>TypeScript</span><span>Python FastAPI</span><span>PostgreSQL</span><span>Docker</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('Full Stack Developer', 1)">Hire Full Stack Worker</button>
           </div>
@@ -875,9 +887,9 @@
               <span>Python</span><span>PyTorch</span><span>LangChain</span><span>FastAPI</span><span>ChromaDB</span><span>OpenAI API</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('Python & AI Engineer', 1)">Hire Python AI Worker</button>
           </div>
@@ -899,9 +911,9 @@
               <span>Java 21</span><span>Spring Boot 3</span><span>Kafka</span><span>PostgreSQL</span><span>Hibernate</span><span>Microservices</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('Java Microservices Lead', 1)">Hire Java Worker</button>
           </div>
@@ -923,9 +935,9 @@
               <span>Playwright</span><span>Selenium 4</span><span>Cypress</span><span>Postman</span><span>JMeter</span><span>GitHub CI</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('QA Automation Engineer', 1)">Hire QA Worker</button>
           </div>
@@ -947,9 +959,9 @@
               <span>AWS</span><span>Kubernetes</span><span>Docker</span><span>Terraform</span><span>GitHub Actions</span><span>Grafana</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('Cloud/DevOps Specialist', 1)">Hire DevOps Worker</button>
           </div>
@@ -971,9 +983,9 @@
               <span>Flutter</span><span>Dart</span><span>React Native</span><span>Firebase</span><span>iOS / Android</span><span>REST APIs</span>
             </div>
             <div class="worker-meta-row">
-              <span>⏱️ Ready in 48h</span>
-              <span>⭐ Mid/Sr Level</span>
-              <span>🎯 160 hrs/mo</span>
+              <span><i class="fa-solid fa-clock"></i> Ready in 48h</span>
+              <span><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Mid/Sr Level</span>
+              <span><i class="fa-solid fa-bullseye" style="color:var(--accent-blue);"></i> 160 hrs/mo</span>
             </div>
             <button class="btn btn-outline-emerald" onclick="openStaffingModal('Mobile App Engineer', 1)">Hire Mobile Worker</button>
           </div>
@@ -989,7 +1001,7 @@
             <p style="color:var(--text-secondary); font-size:0.88rem;">Select your requirements below to see transparent monthly rates and estimated savings</p>
           </div>
           <div style="background:rgba(16,185,129,0.15); color:var(--accent-emerald); padding:6px 14px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600;">
-            💰 Saves up to 65% vs Local Hiring
+            <i class="fa-solid fa-money-bill-trend-up"></i> Saves up to 65% vs Local Hiring
           </div>
         </div>
 
@@ -1074,7 +1086,7 @@
             </div>
 
             <button class="btn btn-emerald" style="width:100%; margin-top:16px;" onclick="applyWorkerCalcToModal()">
-              <span>🚀</span> Book These Workers for Client
+              <span><i class="fa-solid fa-rocket"></i></span> Book These Workers for Client
             </button>
             <div style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:8px;">
               Direct from NVN India Jammalamadugu Innovation Center • No Recruiters
@@ -1168,7 +1180,7 @@
           <div class="estimator-spec-card">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
               <span class="course-code-badge" id="specBadge">NVN-ARCH-SPEC</span>
-              <span style="font-size:0.75rem; color:#34d399;">✓ Architecture Generated</span>
+              <span style="font-size:0.75rem; color:#34d399;"><i class="fa-solid fa-check"></i> Architecture Generated</span>
             </div>
 
             <h4 style="font-size:1.2rem; margin-bottom:6px;" id="specTitle">HIPAA Telehealth &amp; EHR Platform</h4>
@@ -1201,7 +1213,7 @@
             </div>
 
             <button class="btn btn-emerald" style="width:100%; margin-top:10px;" onclick="applyEstimatorSpecToModal()">
-              <span>📝</span> Submit Proposal with this Architecture Spec
+              <span><i class="fa-solid fa-file-pen"></i></span> Submit Proposal with this Architecture Spec
             </button>
           </div>
         </div>
@@ -1210,7 +1222,7 @@
       <!-- Call to Action -->
       <div style="text-align: center; margin-top: 50px;">
         <button class="btn btn-lg btn-secondary" onclick="openProjectModal()">
-          <span>📝</span> Propose a Custom Bespoke IT Project
+          <span><i class="fa-solid fa-file-pen"></i></span> Propose a Custom Bespoke IT Project
         </button>
       </div>
     </div>
@@ -1234,29 +1246,29 @@
 
           <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
             <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
-              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span style="color:var(--accent-cyan); font-weight:bold;"><i class="fa-solid fa-check"></i></span>
               <span><strong>FastAPI Asynchronous Microservices:</strong> High-throughput, sub-millisecond I/O APIs.</span>
             </div>
             <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
-              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span style="color:var(--accent-cyan); font-weight:bold;"><i class="fa-solid fa-check"></i></span>
               <span><strong>React 18 Concurrent UI:</strong> Reactive state management, glassmorphism design tokens.</span>
             </div>
             <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
-              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span style="color:var(--accent-cyan); font-weight:bold;"><i class="fa-solid fa-check"></i></span>
               <span><strong>Kubernetes Cloud-Native Orchestration:</strong> Zero-downtime rolling updates &amp; auto-scaling.</span>
             </div>
             <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
-              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span style="color:var(--accent-cyan); font-weight:bold;"><i class="fa-solid fa-check"></i></span>
               <span><strong>PyTorch Neural Networks:</strong> Real-time industrial computer vision &amp; predictive analytics.</span>
             </div>
           </div>
 
           <div style="display:flex; gap:14px; flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="simulatePlaygroundRun()">
-              <span>▶</span> Run Simulation in Sandbox
+              <span><i class="fa-solid fa-play"></i></span> Run Simulation in Sandbox
             </button>
             <button class="btn btn-secondary" onclick="copyPlaygroundSnippet()">
-              <span>📋</span> Copy Snippet
+              <span><i class="fa-solid fa-clipboard-list"></i></span> Copy Snippet
             </button>
           </div>
         </div>
@@ -1266,23 +1278,50 @@
           <!-- Terminal Tabs -->
           <div class="playground-tabs-bar">
             <button class="playground-tab-btn active" id="tabFastAPI" onclick="switchPlaygroundTab('fastapi')">
-              <span>🐍</span> main.py (FastAPI)
+              <span><i class="fa-brands fa-python" style="color:#38bdf8;"></i></span> main.py (FastAPI)
             </button>
             <button class="playground-tab-btn" id="tabReact" onclick="switchPlaygroundTab('react')">
-              <span>⚛️</span> Dashboard.tsx (React 18)
+              <span><i class="fa-brands fa-react" style="color:#00f2fe;"></i></span> Dashboard.tsx (React 18)
             </button>
             <button class="playground-tab-btn" id="tabK8s" onclick="switchPlaygroundTab('k8s')">
-              <span>☸️</span> deployment.yaml (K8s)
+              <span><i class="fa-brands fa-docker" style="color:#38bdf8;"></i></span> deployment.yaml (K8s)
             </button>
             <button class="playground-tab-btn" id="tabPyTorch" onclick="switchPlaygroundTab('pytorch')">
-              <span>🧠</span> train_model.py (PyTorch)
+              <span><i class="fa-solid fa-brain" style="color:#f43f5e;"></i></span> train_model.py (PyTorch)
             </button>
           </div>
 
           <!-- Code Preview Display -->
-          <div class="code-preview-area" id="codePreviewArea">
-            <!-- Populated dynamically by app.js -->
-          </div>
+          <div class="code-preview-area" id="codePreviewArea">from fastapi import FastAPI, Depends, HTTPException, status
+from pydantic import BaseModel, Field
+import sqlite3
+
+app = FastAPI(
+    title="NVN India Enterprise API Gateway",
+    version="3.4.0",
+    description="High-Throughput Microservice Architecture"
+)
+
+class TraineeApplication(BaseModel):
+    full_name: str = Field(..., example="Nagendra Kumar")
+    email: str = Field(..., example="hitendrakumar@gmail.com")
+    track_code: str = Field(..., example="NVN-FS-01")
+    academic_cgpa: float = Field(..., ge=6.0, le=10.0)
+
+@app.post("/api/v1/trainees/enroll", status_code=status.HTTP_201_CREATED)
+async def enroll_trainee(payload: TraineeApplication):
+    """
+    Submits application directly into NVN India's relational database.
+    100% company-sponsored training track.
+    """
+    conn = sqlite3.connect("nvn_india.db")
+    cursor = conn.cursor()
+    cursor.execute(
+        "INSERT INTO trainees (name, email, course_code, status) VALUES (?, ?, ?, 'Under Review')",
+        (payload.full_name, payload.email, payload.track_code)
+    )
+    conn.commit()
+    return {"status": "Accepted", "message": "Enrolled in NVN India Talent Cohort"}</div>
 
           <!-- Terminal Status Footer -->
           <div class="code-terminal-footer">
@@ -1303,14 +1342,14 @@
   <!-- About NVN India Private Limited Section -->
   <section class="section" id="about">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+      <div class="about-grid">
         <div>
           <span class="section-tag">Corporate Profile</span>
           <h2 class="section-title" style="margin-top: 10px;">About <span class="gradient-text">NVN India Private Limited</span></h2>
 
           <!-- Official Corporate Brand Identity Card -->
           <div class="about-brand-card">
-            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Official 3D Master Corporate Logo" class="about-brand-emblem">
+            <img src="images/nvn-logo-official.jpg" alt="NVN India Official 3D Master Corporate Logo" class="about-brand-emblem">
             <div>
               <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;">
                 <h4 style="font-size: 1.18rem; color: var(--text-primary); margin-bottom: 0;">NVN India Private Limited</h4>
@@ -1329,14 +1368,14 @@
             Our hybrid ecosystem enables ambitious students to train on production codebases side-by-side with senior tech leads, while giving enterprises access to vetted software engineering teams and custom turnkey software delivery.
           </p>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="about-stats-grid">
             <div style="background: var(--bg-card); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
               <h4 style="color: var(--accent-cyan); font-size: 1.1rem; margin-bottom: 6px;">Vision</h4>
               <p style="color: var(--text-secondary); font-size: 0.85rem;">To position Jammalamadugu on the global tech map by training 10,000+ engineers with 100% placement outcomes and architecting scalable digital products for global enterprises.</p>
             </div>
             <div style="background: var(--bg-card); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
               <h4 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 6px;">Values</h4>
-              <p style="color: var(--text-secondary); font-size: 0.85rem;">Clean code architecture, radical transparency with clients, zero tuition barrier for deserving talent, and client workforce excellence.</p>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Clean code architecture, radical transparency with clients, merit-based career elevation for deserving talent, and client workforce excellence.</p>
             </div>
           </div>
         </div>
@@ -1378,7 +1417,7 @@
 
           <!-- Master 3D Brand Insignia Showcase Box -->
           <div style="margin-top: 24px; padding: 20px; background: rgba(7, 11, 20, 0.7); border: 1.5px solid rgba(0, 242, 254, 0.35); border-radius: var(--radius-md); display: flex; align-items: center; gap: 20px;">
-            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Master Brand 3D Insignia" style="width: 84px; height: 84px; border-radius: 16px; object-fit: cover; border: 1.5px solid rgba(0, 242, 254, 0.5); box-shadow: 0 0 24px rgba(0, 242, 254, 0.4); flex-shrink: 0;">
+            <img src="images/nvn-logo-official.jpg" alt="NVN India Master Brand 3D Insignia" style="width: 84px; height: 84px; border-radius: 16px; object-fit: cover; border: 1.5px solid rgba(0, 242, 254, 0.5); box-shadow: 0 0 24px rgba(0, 242, 254, 0.4); flex-shrink: 0;">
             <div>
               <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-cyan); font-weight: 700; margin-bottom: 4px;">Official Master Corporate Insignia</div>
               <h5 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 4px; font-family: var(--font-heading);">The NVN Hex-Nexus 3D Emblem</h5>
@@ -1399,7 +1438,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" style="background: rgba(0,242,254,0.12); color: var(--accent-cyan); border-color: rgba(0,242,254,0.3);">
-          📍 Innovation Campus &amp; Headquarters
+          <i class="fa-solid fa-location-dot" style="color:var(--accent-rose);"></i> Innovation Campus &amp; Headquarters
         </span>
         <h2 class="section-title">
           Our Technology Campus in <span class="gradient-text">Jammalamadugu, Andhra Pradesh</span>
@@ -1412,7 +1451,7 @@
       <!-- Campus Features Grid -->
       <div class="jmd-campus-grid">
         <div class="jmd-facility-card">
-          <div class="jmd-icon-box">🚀</div>
+          <div class="jmd-icon-box"><i class="fa-solid fa-rocket"></i></div>
           <h4 style="font-size:1.15rem; margin-bottom:8px;">Gigabit Fiber Coding Labs</h4>
           <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
             100+ developer workstations equipped with high-speed leased line internet, dual-monitor programming terminals, and Linux/Unix development environments.
@@ -1420,7 +1459,7 @@
         </div>
 
         <div class="jmd-facility-card">
-          <div class="jmd-icon-box">☁️</div>
+          <div class="jmd-icon-box"><i class="fa-solid fa-cloud"></i></div>
           <h4 style="font-size:1.15rem; margin-bottom:8px;">Cloud Sandbox &amp; Microservices Clusters</h4>
           <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
             Local bare-metal clusters and simulated AWS/Azure clouds allowing trainees and project engineers to build, test, and stress-test high-traffic systems.
@@ -1428,7 +1467,7 @@
         </div>
 
         <div class="jmd-facility-card">
-          <div class="jmd-icon-box">🎙️</div>
+          <div class="jmd-icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
           <h4 style="font-size:1.15rem; margin-bottom:8px;">Dedicated Placement &amp; Interview Studios</h4>
           <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
             Acoustic-isolated pods for remote technical interviews, system design presentations, and live coding assessments with MNC technical panels.
@@ -1436,7 +1475,7 @@
         </div>
 
         <div class="jmd-facility-card">
-          <div class="jmd-icon-box">🌐</div>
+          <div class="jmd-icon-box"><i class="fa-solid fa-globe"></i></div>
           <h4 style="font-size:1.15rem; margin-bottom:8px;">Global Client Telepresence Suite</h4>
           <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
             High-definition video conference rooms for daily scrum standups, client architecture walkthroughs, and sprint demos for international clients.
@@ -1444,9 +1483,8 @@
         </div>
       </div>
 
-      <!-- Campus Location Card with Interactive Details & Map -->
-      <div class="jmd-location-wrapper" style="margin-top:40px; background:var(--bg-card); border:1px solid var(--border-glass); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-lg);">
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:36px; align-items:center;">
+      <div class="jmd-location-wrapper">
+        <div class="jmd-hub-grid">
           <div>
             <span class="section-tag" style="font-size:0.75rem;">Official Headquarters Details</span>
             <h3 style="font-size:1.6rem; margin:8px 0 12px;">Visit NVN India in Jammalamadugu</h3>
@@ -1464,19 +1502,19 @@
             <div style="margin-bottom:20px;">
               <strong style="color:var(--accent-emerald); display:block; margin-bottom:4px; font-size:1rem;">Transit &amp; Regional Connectivity:</strong>
               <ul style="color:var(--text-secondary); font-size:0.88rem; line-height:1.8; list-style:none; padding-left:0;">
-                <li>🚗 <strong>From Proddatur:</strong> 18 km (20 mins via SH 28)</li>
-                <li>🚗 <strong>From Kadapa (YSR District HQ):</strong> 65 km (1 hr 15 mins via NH 67)</li>
-                <li>🚗 <strong>From Kurnool:</strong> 105 km (2 hrs via NH 40)</li>
-                <li>🚆 <strong>From Hyderabad &amp; Bengaluru:</strong> Direct overnight trains &amp; luxury buses to Jammalamadugu / Yerraguntla junction.</li>
+                <li><i class="fa-solid fa-car"></i> <strong>From Proddatur:</strong> 18 km (20 mins via SH 28)</li>
+                <li><i class="fa-solid fa-car"></i> <strong>From Kadapa (YSR District HQ):</strong> 65 km (1 hr 15 mins via NH 67)</li>
+                <li><i class="fa-solid fa-car"></i> <strong>From Kurnool:</strong> 105 km (2 hrs via NH 40)</li>
+                <li><i class="fa-solid fa-train"></i> <strong>From Hyderabad &amp; Bengaluru:</strong> Direct overnight trains &amp; luxury buses to Jammalamadugu / Yerraguntla junction.</li>
               </ul>
             </div>
 
             <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
               <a href="https://maps.google.com/?q=Jammalamadugu,+Andhra+Pradesh+516434" target="_blank" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:6px;">
-                <span>📍</span> Open Google Maps Directions
+                <span><i class="fa-solid fa-location-dot" style="color:var(--accent-rose);"></i></span> Open Google Maps Directions
               </a>
               <a href="https://wa.me/918639092368?text=Hello%20NVN%20India%20Jammalamadugu%2C%20I%20would%20like%20to%20schedule%20a%20campus%20visit" target="_blank" class="btn btn-emerald" style="display:inline-flex; align-items:center; gap:6px;">
-                <span>💬</span> WhatsApp (+91 86390 92368)
+                <span><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i></span> WhatsApp (+91 86390 92368)
               </a>
             </div>
           </div>
@@ -1493,7 +1531,7 @@
 
             <!-- Stylized Coordinates / Map graphic -->
             <div style="background:rgba(2,132,199,0.08); border:1px dashed rgba(0,242,254,0.4); border-radius:var(--radius-sm); padding:20px; text-align:center; margin-bottom:16px;">
-              <div style="font-size:2.5rem; margin-bottom:6px;">🏛️</div>
+              <div style="font-size:2.5rem; margin-bottom:6px;"><i class="fa-solid fa-landmark"></i></div>
               <h4 style="color:#00f2fe; font-size:1.1rem; margin-bottom:4px;">NVN India Tech Campus</h4>
               <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:0;">
                 Coordinates: 14.8340° N, 78.3846° E • Elevation: 169m<br>
@@ -1501,19 +1539,19 @@
               </p>
             </div>
 
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:0.82rem; color:#cbd5e1; margin-bottom:16px;">
+            <div class="jmd-hours-grid">
               <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:6px;">
-                <strong>🕒 Working Hours:</strong><br>
+                <strong><i class="fa-solid fa-clock"></i> Working Hours:</strong><br>
                 Mon - Sat: 9:00 AM - 7:30 PM IST
               </div>
               <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:6px;">
-                <strong>📞 Desk Helpline / Mobile:</strong><br>
+                <strong><i class="fa-solid fa-phone" style="margin-right:4px;"></i> Desk Helpline / Mobile:</strong><br>
                 +91 86390 92368
               </div>
             </div>
 
             <button class="btn btn-primary" style="width:100%;" onclick="openConsultationModal()">
-              <span>📅</span> Schedule a Campus Tour &amp; Career Counseling
+              <span><i class="fa-solid fa-calendar-check"></i></span> Schedule a Campus Tour &amp; Career Counseling
             </button>
           </div>
         </div>
@@ -1528,7 +1566,7 @@
     <div class="container">
       <div class="admin-header-row">
         <div>
-          <span class="admin-badge">🛡️ ISO/IEC 27001 &amp; SOC-2 AUDIT SUITE • REAL-TIME OPERATIONS</span>
+          <span class="admin-badge"><i class="fa-solid fa-shield-halved" style="margin-right:4px;"></i> ISO/IEC 27001 &amp; SOC-2 AUDIT SUITE • REAL-TIME OPERATIONS</span>
           <h2 style="font-size: 2rem; margin-top: 8px;">Enterprise Operations &amp; Relational Transaction Engine</h2>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">
             Secure administrative telemetry and relational database inspector for NVN India Private Limited (Jammalamadugu Innovation Center). Live tracking of student applications, dedicated client staffing, turnkey RFPs, and system audit logs.
@@ -1536,13 +1574,13 @@
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <button id="btnExportDatabase" class="btn btn-secondary">
-            <span>💾</span> Export System Snapshot (JSON)
+            <span><i class="fa-solid fa-floppy-disk"></i></span> Export System Snapshot (JSON)
           </button>
           <button onclick="exportTableToCSV('traineesAdminTable', 'nvn_trainees.csv')" class="btn btn-secondary">
-            <span>📊</span> Export Trainee Registry (CSV)
+            <span><i class="fa-solid fa-file-csv"></i></span> Export Trainee Registry (CSV)
           </button>
           <button id="btnResetDatabase" class="btn btn-admin">
-            <span>🔄</span> Sync &amp; Re-Seed Database
+            <span><i class="fa-solid fa-arrows-rotate"></i></span> Sync &amp; Re-Seed Database
           </button>
         </div>
       </div>
@@ -1737,7 +1775,7 @@
               <h4 style="font-size:1.15rem; color:var(--accent-cyan); margin-bottom:2px;">Live SQLite Query Console</h4>
               <p style="font-size:0.8rem; color:var(--text-secondary);">Direct interactive read-only SQL engine connected to <code>nvn_india.db</code>.</p>
             </div>
-            <button class="btn btn-sm btn-primary" onclick="runCustomSqlQuery()">▶ Execute Query</button>
+            <button class="btn btn-sm btn-primary" onclick="runCustomSqlQuery()"><i class="fa-solid fa-play"></i> Execute Query</button>
           </div>
 
           <!-- Query Presets -->
@@ -1774,7 +1812,7 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px;">
+      <div class="contact-section-grid">
         <!-- Left: Office & Contact Info -->
         <div>
           <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Corporate Headquarters &amp; Operations</h3>
@@ -1784,7 +1822,7 @@
             <div style="display:inline-block; background:rgba(0,242,254,0.15); color:var(--accent-cyan); font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px; margin-bottom:8px;">
               OFFICIAL CORPORATE HEADQUARTERS &amp; TECH CAMPUS
             </div>
-            <h4 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 8px;">📍 Jammalamadugu Innovation Center</h4>
+            <h4 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 8px;"><i class="fa-solid fa-location-dot" style="color:var(--accent-rose);"></i> Jammalamadugu Innovation Center</h4>
             <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">
               <strong>NVN India Private Limited</strong><br>
               D.No. 1/674, Opposite to Town Church, Upstairs,<br>
@@ -1792,24 +1830,24 @@
             </p>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
               <a href="https://wa.me/918639092368?text=Hello%20NVN%20India%2C%20I%20am%20interested%20in%20visiting%20your%20Jammalamadugu%20campus" target="_blank" class="btn btn-sm btn-emerald" style="display:inline-flex; align-items:center; gap:6px;">
-                <span>💬</span> WhatsApp: +91 86390 92368
+                <span><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i></span> WhatsApp: +91 86390 92368
               </a>
               <a href="tel:+918639092368" class="btn btn-sm btn-secondary" style="display:inline-flex; align-items:center; gap:6px;">
-                <span>📞</span> Call: +91 86390 92368
+                <span><i class="fa-solid fa-phone" style="margin-right:4px;"></i></span> Call: +91 86390 92368
               </a>
             </div>
           </div>
 
           <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 20px;">
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <span style="font-size:1.4rem;">📞</span>
+              <span style="font-size:1.4rem;"><i class="fa-solid fa-phone" style="margin-right:4px;"></i></span>
               <div>
                 <strong style="display:block; font-size:0.95rem;">Direct Helpline / Mobile</strong>
                 <span style="color:var(--text-secondary); font-size:0.85rem;"><a href="tel:+918639092368" style="color:inherit; text-decoration:none;">+91 86390 92368</a></span>
               </div>
             </div>
             <div style="display:flex; align-items:center; gap:12px;">
-              <span style="font-size:1.4rem;">✉️</span>
+              <span style="font-size:1.4rem;"><i class="fa-solid fa-envelope" style="margin-right:4px;"></i></span>
               <div>
                 <strong style="display:block; font-size:0.95rem;">Official Email Communication</strong>
                 <span style="color:var(--text-secondary); font-size:0.85rem;"><a href="mailto:nvnindiapvtltd@gmail.com" style="color:inherit; text-decoration:none;">nvnindiapvtltd@gmail.com</a></span>
@@ -1827,22 +1865,22 @@
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="contactName">Your Name *</label>
-                <input type="text" id="contactName" class="form-input" placeholder="e.g. Ramesh Chandran" required>
+                <input type="text" id="contactName" class="form-input" placeholder="Your Full Name" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="contactEmail">Email Address *</label>
-                <input type="email" id="contactEmail" class="form-input" placeholder="name@domain.com" required>
+                <input type="email" id="contactEmail" class="form-input" placeholder="Your Official Email Address" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label class="form-label" for="contactPhone">Phone Number</label>
-                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98112 33445">
+                <input type="tel" id="contactPhone" class="form-input" placeholder="Your 10-Digit Mobile Number">
               </div>
               <div class="form-group">
                 <label class="form-label" for="contactSubject">Subject *</label>
-                <input type="text" id="contactSubject" class="form-input" placeholder="e.g. Training Inquiry or Project RFP" required>
+                <input type="text" id="contactSubject" class="form-input" placeholder="Subject / Purpose of Inquiry" required>
               </div>
             </div>
 
@@ -1867,7 +1905,7 @@
         <!-- Col 1 -->
         <div>
           <a href="#" class="brand-logo">
-            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Private Limited Insignia" class="brand-logo-img" width="48" height="48">
+            <img src="images/nvn-logo-official.jpg" alt="NVN India Private Limited Insignia" class="brand-logo-img" width="48" height="48">
             <div class="brand-text-block">
               <span class="brand-name">NVN INDIA</span>
               <span class="brand-sub">PRIVATE LIMITED • JAMMALAMADUGU, AP</span>
@@ -1923,7 +1961,7 @@
         <div style="display:flex; gap:16px;">
           <a href="#hero">Privacy Policy</a>
           <a href="#hero">Terms of Service</a>
-          <a href="#adminSection">Enterprise Console</a>
+          <a href="/admin">Enterprise Console</a>
         </div>
       </div>
     </div>
@@ -1943,28 +1981,45 @@
       <form id="traineeEnrollForm">
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="traineeFullName">Full Name *</label>
-            <input type="text" id="traineeFullName" class="form-input" placeholder="e.g. Aarav Sharma" required>
+            <label class="form-label" for="traineeFullName"><i class="fa-solid fa-user" style="color:var(--brand-blue); margin-right:4px;"></i> Candidate Full Name *</label>
+            <input type="text" id="traineeFullName" class="form-input" placeholder="Full Name (as per certificates / Aadhaar)" required autocomplete="name">
           </div>
           <div class="form-group">
-            <label class="form-label" for="traineeEmail">Email Address *</label>
-            <input type="email" id="traineeEmail" class="form-input" placeholder="aarav@example.com" required>
+            <label class="form-label" for="traineeEmail"><i class="fa-solid fa-envelope" style="color:var(--brand-blue); margin-right:4px;"></i> Email Address *</label>
+            <input type="email" id="traineeEmail" class="form-input" placeholder="candidate.email@gmail.com" required autocomplete="email">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="traineePhone">Phone / WhatsApp Number *</label>
-            <input type="tel" id="traineePhone" class="form-input" placeholder="+91 98765 43210" required>
+            <label class="form-label" for="traineePhone"><i class="fa-brands fa-whatsapp" style="color:#25d366; margin-right:4px;"></i> WhatsApp / Calling Number (+91) *</label>
+            <input type="tel" id="traineePhone" class="form-input" placeholder="10-digit mobile number (e.g. 8639092368)" required pattern="[0-9]{10}" title="Please enter valid 10-digit mobile number" autocomplete="tel">
           </div>
           <div class="form-group">
-            <label class="form-label" for="traineeEducation">Current Education / Degree *</label>
-            <input type="text" id="traineeEducation" class="form-input" placeholder="e.g. B.Tech CSE (3rd/4th Year) or BCA" required>
+            <label class="form-label" for="traineeCity"><i class="fa-solid fa-location-dot" style="color:var(--accent-rose); margin-right:4px;"></i> Native Place / District *</label>
+            <input type="text" id="traineeCity" class="form-input" placeholder="e.g. Jammalamadugu, Kadapa, Proddatur, Kurnool, etc." required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="traineeEducation"><i class="fa-solid fa-graduation-cap" style="color:var(--brand-blue); margin-right:4px;"></i> Qualification &amp; College Name *</label>
+            <input type="text" id="traineeEducation" class="form-input" placeholder="e.g. B.Tech CSE / Degree (College Name)" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="traineePassout"><i class="fa-solid fa-calendar-check" style="color:var(--brand-blue); margin-right:4px;"></i> Passout Year / Status *</label>
+            <select id="traineePassout" class="form-select">
+              <option value="2027 (Currently Studying)">2027 (Currently Studying)</option>
+              <option value="2026 (Final Year)">2026 (Final Year)</option>
+              <option value="2025 (Recent Graduate)" selected>2025 (Recent Graduate)</option>
+              <option value="2024 (Graduate)">2024 (Graduate)</option>
+              <option value="2023 or Earlier">2023 or Earlier</option>
+            </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="modalCourseSelect">Desired Training Specialization *</label>
+          <label class="form-label" for="modalCourseSelect"><i class="fa-solid fa-laptop-code" style="color:var(--brand-blue); margin-right:4px;"></i> Desired Training Specialization *</label>
           <select id="modalCourseSelect" class="form-select" required>
             <option value="">Select Training Specialization...</option>
           </select>
@@ -1972,30 +2027,30 @@
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="traineeMode">Preferred Learning Mode</label>
+            <label class="form-label" for="traineeMode"><i class="fa-solid fa-landmark" style="color:var(--brand-blue); margin-right:4px;"></i> Preferred Learning Mode</label>
             <select id="traineeMode" class="form-select">
-              <option value="Hybrid (Online + Lab)">Hybrid (Online + Tech Lab)</option>
-              <option value="Online Interactive">Online Live Interactive</option>
-              <option value="Classroom Intensive">Classroom / Offline Intensive</option>
+              <option value="Offline at Jammalamadugu Campus" selected>Offline at Jammalamadugu Tech Campus</option>
+              <option value="Online Live Interactive">Online Live Interactive</option>
+              <option value="Hybrid (Online + Weekend Labs)">Hybrid (Online + Weekend Labs)</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label" for="traineeExp">Experience Level</label>
+            <label class="form-label" for="traineeExp"><i class="fa-solid fa-user-tie" style="color:var(--brand-blue); margin-right:4px;"></i> Current Profile</label>
             <select id="traineeExp" class="form-select">
-              <option value="Student / Fresher">Student / Fresher</option>
-              <option value="Career Transition">Career Transition / Self-Taught</option>
-              <option value="Working Professional">Working Professional (1-2 yrs)</option>
+              <option value="College Student / Fresher" selected>College Student / Fresher</option>
+              <option value="Career Transition (Non-IT to IT)">Career Transition (Non-IT to IT)</option>
+              <option value="Working Professional (1-2 yrs)">Working Professional (1-2 yrs)</option>
             </select>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="traineeStatement">Career Goal / Brief Note</label>
-          <textarea id="traineeStatement" class="form-textarea" placeholder="Tell us why you want to join NVN Tech Academy and what you hope to build..."></textarea>
+          <label class="form-label" for="traineeStatement"><i class="fa-solid fa-comment-dots" style="color:var(--brand-blue); margin-right:4px;"></i> Career Goal / Notes</label>
+          <textarea id="traineeStatement" class="form-textarea" placeholder="Tell us your career goals, coding background, or any questions for our tech trainers..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%;">
-          Submit Application to SQLite Database
+        <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.05rem; padding:14px; font-weight:700;">
+          <i class="fa-solid fa-paper-plane" style="margin-right:8px;"></i> Submit Application for Industry-Sponsored Training
         </button>
       </form>
     </div>
@@ -2016,22 +2071,22 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="projectClientName">Contact Person Name *</label>
-            <input type="text" id="projectClientName" class="form-input" placeholder="e.g. Suresh Kapoor" required>
+            <input type="text" id="projectClientName" class="form-input" placeholder="Project Lead / Authorized Name" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="projectOrg">Company / Organization *</label>
-            <input type="text" id="projectOrg" class="form-input" placeholder="e.g. BharatPay Smart Solutions" required>
+            <input type="text" id="projectOrg" class="form-input" placeholder="Company / Organization Name" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="projectEmail">Email *</label>
-            <input type="email" id="projectEmail" class="form-input" placeholder="name@company.com" required>
+            <input type="email" id="projectEmail" class="form-input" placeholder="Business Email Address" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="projectPhone">Phone</label>
-            <input type="tel" id="projectPhone" class="form-input" placeholder="+91 98765 43210">
+            <input type="tel" id="projectPhone" class="form-input" placeholder="10-Digit Mobile / WhatsApp (+91)">
           </div>
         </div>
 
@@ -2061,7 +2116,7 @@
 
         <div class="form-group">
           <label class="form-label" for="projectTitle">Project Title / Scope Name *</label>
-          <input type="text" id="projectTitle" class="form-input" placeholder="e.g. AI-Powered Medical Telehealth &amp; EHR Platform" required>
+          <input type="text" id="projectTitle" class="form-input" placeholder="Project Title (e.g. ERP, Mobile App, Cloud Portal)" required>
         </div>
 
         <div class="form-row">
@@ -2095,7 +2150,7 @@
     <div class="modal-window">
       <button class="modal-close-btn" onclick="closeModal('staffingModal')" aria-label="Close Modal">&times;</button>
       <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-        <span class="course-code-badge" style="background:rgba(16,185,129,0.15); color:var(--accent-emerald); border-color:rgba(16,185,129,0.3);">⚡ Rapid 48h Deployment</span>
+        <span class="course-code-badge" style="background:rgba(16,185,129,0.15); color:var(--accent-emerald); border-color:rgba(16,185,129,0.3);"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Rapid 48h Deployment</span>
         <span style="font-size:0.75rem; color:#34d399;">1-Week Risk-Free Trial</span>
       </div>
       <h3 id="modalStaffingTitle" style="font-size:1.5rem; margin-bottom:6px;">Hire Dedicated Worker for Client</h3>
@@ -2107,22 +2162,22 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="staffingClientName">Client Contact Person *</label>
-            <input type="text" id="staffingClientName" class="form-input" placeholder="e.g. Vikramaditya Reddy" required>
+            <input type="text" id="staffingClientName" class="form-input" placeholder="Client / Hiring Manager Full Name" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="staffingCompany">Company / Client Organization *</label>
-            <input type="text" id="staffingCompany" class="form-input" placeholder="e.g. Apex Tech Solutions USA" required>
+            <input type="text" id="staffingCompany" class="form-input" placeholder="Company / Enterprise Legal Name" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="staffingEmail">Business Email *</label>
-            <input type="email" id="staffingEmail" class="form-input" placeholder="client@company.com" required>
+            <input type="email" id="staffingEmail" class="form-input" placeholder="Corporate Work Email Address" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="staffingPhone">Phone / WhatsApp *</label>
-            <input type="tel" id="staffingPhone" class="form-input" placeholder="+91 98765 43210" required>
+            <input type="tel" id="staffingPhone" class="form-input" placeholder="10-Digit Mobile / WhatsApp (+91)" required>
           </div>
         </div>
 
@@ -2200,7 +2255,7 @@
     <div class="modal-window">
       <button class="modal-close-btn" onclick="closeModal('consultationModal')" aria-label="Close Modal">&times;</button>
       <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
-        <span class="course-code-badge">🏛️ Jammalamadugu HQ &amp; Global Advisory</span>
+        <span class="course-code-badge"><i class="fa-solid fa-landmark"></i> Jammalamadugu HQ &amp; Global Advisory</span>
       </div>
       <h3 id="modalConsultTitle" style="font-size:1.5rem; margin-bottom:6px;">Book Enterprise IT Advisory / Campus Visit</h3>
       <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:20px;">
@@ -2211,18 +2266,18 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="modalConsultName">Full Name *</label>
-            <input type="text" id="modalConsultName" class="form-input" placeholder="e.g. S. Ramakrishna" required>
+            <input type="text" id="modalConsultName" class="form-input" placeholder="Contact Person Full Name" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="modalConsultOrg">Company / College / Organization *</label>
-            <input type="text" id="modalConsultOrg" class="form-input" placeholder="e.g. Global MedTech / SV University" required>
+            <input type="text" id="modalConsultOrg" class="form-input" placeholder="Organization / Institution Name" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="modalConsultEmail">Corporate Email *</label>
-            <input type="email" id="modalConsultEmail" class="form-input" placeholder="contact@domain.com" required>
+            <input type="email" id="modalConsultEmail" class="form-input" placeholder="Official Work Email" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="modalConsultPhone">Contact Phone *</label>
@@ -2279,9 +2334,9 @@
           <p id="modalSyllabusDesc" style="color:var(--text-secondary); font-size:0.9rem; max-width:580px;"></p>
           
           <div class="syllabus-meta-strip">
-            <span>⏱️ <strong id="modalSyllabusDuration">16 Weeks</strong></span>
-            <span>📍 <strong id="modalSyllabusMode">Hybrid</strong></span>
-            <span>📚 <strong id="modalSyllabusModulesCount">6 Comprehensive Modules</strong></span>
+            <span><i class="fa-solid fa-clock"></i> <strong id="modalSyllabusDuration">16 Weeks</strong></span>
+            <span><i class="fa-solid fa-location-dot" style="color:var(--accent-rose);"></i> <strong id="modalSyllabusMode">Hybrid</strong></span>
+            <span><i class="fa-solid fa-book-open"></i> <strong id="modalSyllabusModulesCount">6 Comprehensive Modules</strong></span>
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:8px;">
@@ -2289,7 +2344,7 @@
             Apply for this Track
           </button>
           <button class="btn btn-secondary btn-sm" onclick="printOrDownloadSyllabus()">
-            🖨️ Print / Save Syllabus
+            <i class="fa-solid fa-print"></i> Print / Save Syllabus
           </button>
         </div>
       </div>
@@ -2312,7 +2367,7 @@
   <div class="command-palette-overlay" id="commandPaletteOverlay" role="dialog" aria-modal="true" aria-label="Spotlight Command Search">
     <div class="command-palette-window" onclick="event.stopPropagation()">
       <div class="command-input-row">
-        <span style="font-size:1.2rem; color:var(--accent-cyan);">🔍</span>
+        <span style="font-size:1.2rem; color:var(--accent-cyan);"><i class="fa-solid fa-magnifying-glass"></i></span>
         <input type="text" id="commandSearchInput" class="command-search-input" placeholder="Type a command or search courses, projects, tools..." autocomplete="off">
         <span class="command-kbd-badge">ESC to close</span>
       </div>
@@ -2332,14 +2387,14 @@
   <!-- Floating Action Button -->
   <button class="chat-widget-fab" id="techBotFab" onclick="toggleTechBot()" aria-label="Open NVN AI TechBot Assistant">
     <span class="chat-fab-pulse"></span>
-    <span>💬 NVN TechBot</span>
+    <span><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> NVN TechBot</span>
   </button>
 
   <!-- High-Tech Chat Drawer Window -->
   <div class="chat-widget-window" id="techBotWindow" role="region" aria-label="NVN TechBot Assistant Window">
     <div class="chat-header">
       <div class="chat-header-title">
-        <div class="chat-avatar">🤖</div>
+        <div class="chat-avatar"><i class="fa-solid fa-robot"></i></div>
         <div>
           <h4 style="font-size:0.95rem; margin-bottom:2px; font-weight:700;">NVN TechBot AI</h4>
           <span style="font-size:0.72rem; color:#34d399; display:flex; align-items:center; gap:4px;">
@@ -2353,7 +2408,7 @@
     <!-- Scrollable Messages Container -->
     <div class="chat-messages-container" id="chatMessagesContainer">
       <div class="chat-bubble chat-bubble-bot">
-        👋 Hello! I am the <strong>NVN India Intelligent TechBot</strong>. How can I assist you today?
+        <i class="fa-solid fa-hand"></i> Hello! I am the <strong>NVN India Intelligent TechBot</strong>. How can I assist you today?
         <br><br>
         Ask me anything about our <strong>100% Free Trainee Academy</strong>, <strong>IT Consultancy</strong>, <strong>Sector Projects</strong>, or <strong>Live Database</strong>.
       </div>
@@ -2361,17 +2416,17 @@
 
     <!-- Quick Question Chips -->
     <div class="chat-quick-suggestions" id="chatQuickSuggestions">
-      <button class="chat-chip-btn" onclick="askTechBot('Are academy courses really 100% free?')">🎓 Free Courses?</button>
-      <button class="chat-chip-btn" onclick="askTechBot('What IT consultancy services do you offer?')">💼 IT Consultancy</button>
-      <button class="chat-chip-btn" onclick="askTechBot('Show me healthcare and fintech projects')">🏥 Sector Projects</button>
-      <button class="chat-chip-btn" onclick="askTechBot('How do I track my trainee status?')">🔍 Track Application</button>
-      <button class="chat-chip-btn" onclick="askTechBot('What is NVN India corporate contact?')">📞 Contact Details</button>
+      <button class="chat-chip-btn" onclick="askTechBot('Tell me about the Training Academy courses')"><i class="fa-solid fa-graduation-cap"></i> Training Academy</button>
+      <button class="chat-chip-btn" onclick="askTechBot('What IT consultancy services do you offer?')"><i class="fa-solid fa-briefcase"></i> IT Consultancy</button>
+      <button class="chat-chip-btn" onclick="askTechBot('Show me healthcare and fintech projects')"><i class="fa-solid fa-hospital"></i> Sector Projects</button>
+      <button class="chat-chip-btn" onclick="askTechBot('How do I track my trainee status?')"><i class="fa-solid fa-magnifying-glass"></i> Track Application</button>
+      <button class="chat-chip-btn" onclick="askTechBot('What is NVN India corporate contact?')"><i class="fa-solid fa-phone" style="margin-right:4px;"></i> Contact Details</button>
     </div>
 
     <!-- Input Box -->
     <form class="chat-input-bar" id="techBotForm" onsubmit="handleTechBotSubmit(event)">
       <input type="text" id="techBotInput" class="chat-input" placeholder="Ask NVN TechBot..." autocomplete="off">
-      <button type="submit" class="chat-send-btn" aria-label="Send Message">➤</button>
+      <button type="submit" class="chat-send-btn" aria-label="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
     </form>
   </div>
 
@@ -2380,25 +2435,25 @@
        ========================================================================= -->
   <nav class="quick-dock" aria-label="Quick Access Dock">
     <a href="#academy" class="dock-link" title="Explore Trainee Academy">
-      <span>🎓</span> <span>Academy</span>
+      <span><i class="fa-solid fa-graduation-cap"></i></span> <span>Academy</span>
     </a>
     <a href="#statusTracker" class="dock-link" title="Track Application Status">
-      <span>🔍</span> <span>Tracker</span>
+      <span><i class="fa-solid fa-magnifying-glass"></i></span> <span>Tracker</span>
     </a>
     <a href="#consultancy" class="dock-link" title="Enterprise IT Consultancy">
-      <span>💼</span> <span>Consultancy</span>
+      <span><i class="fa-solid fa-briefcase"></i></span> <span>Consultancy</span>
     </a>
     <a href="#projects" class="dock-link" title="Sector IT Solutions">
-      <span>🌐</span> <span>Projects</span>
+      <span><i class="fa-solid fa-globe"></i></span> <span>Projects</span>
     </a>
     <a href="#livePlayground" class="dock-link" title="Live Code Terminal">
-      <span>💻</span> <span>Terminal</span>
+      <span><i class="fa-solid fa-laptop-code"></i></span> <span>Terminal</span>
     </a>
     <a href="#projectEstimator" class="dock-link" title="Architecture Estimator">
-      <span>⚡</span> <span>Estimator</span>
+      <span><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i></span> <span>Estimator</span>
     </a>
-    <a href="#adminSection" class="dock-link" title="SQLite Database Console">
-      <span>🗄️</span> <span>Database</span>
+    <a href="/admin" class="dock-link" title="SQLite Database Console">
+      <span><i class="fa-solid fa-database"></i></span> <span>Database</span>
     </a>
   </nav>
 
@@ -2406,6 +2461,13 @@
   <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
   <!-- Custom Client Script -->
-  <script src="js/app.js?v=2"></script>
+  <script src="js/app.js?v=10"></script>
+
+<!-- Floating WhatsApp Quick Connect Widget -->
+<a href="https://wa.me/918639092368?text=Hello%20NVN%20India%20Team%2C%20I%20am%20interested%20in%20your%20services%20and%20tech%20courses." target="_blank" id="floatingWhatsAppBtn" aria-label="Chat on WhatsApp" style="position:fixed; bottom:28px; right:28px; width:58px; height:58px; background:#25D366; color:#ffffff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; box-shadow:0 10px 25px rgba(37,211,102,0.45); z-index:9990; text-decoration:none; transition:all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span style="position:absolute; right:68px; background:rgba(9,13,22,0.92); backdrop-filter:blur(10px); color:#ffffff; padding:6px 14px; border-radius:8px; font-size:12px; font-weight:700; white-space:nowrap; border:1px solid rgba(37,211,102,0.3); box-shadow:0 4px 15px rgba(0,0,0,0.3); pointer-events:none;">Chat with Us</span>
+</a>
+
 </body>
 </html>

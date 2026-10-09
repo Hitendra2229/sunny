@@ -8,9 +8,10 @@ import sys
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import database
+import email_service
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = os.path.join(BASE_DIR, "static")
+STATIC_DIR = os.path.join(BASE_DIR, "wwwroot") if os.path.exists(os.path.join(BASE_DIR, "wwwroot")) else os.path.join(BASE_DIR, "static")
 
 app = Flask(__name__, static_folder=STATIC_DIR)
 CORS(app)  # Allow cross-origin requests for API flexibility
@@ -23,6 +24,26 @@ database.init_db()
 @app.route("/")
 def serve_index():
     return send_from_directory(STATIC_DIR, "index.html")
+
+
+@app.route("/admin")
+@app.route("/admin/")
+def serve_admin():
+    return send_from_directory(STATIC_DIR, "admin.html")
+
+@app.route("/api/admin/test-email", methods=["POST"])
+def admin_test_email():
+    try:
+        email_service.notify_new_enquiry(
+            enquiry_type="System Test Alert",
+            applicant_name="Admin Diagnostic Test",
+            applicant_email="nvnindiapvtltd@gmail.com",
+            applicant_phone="+91 86390 92368",
+            extra_details={"Test Type": "Cloud Trigger", "Engine": "Flask + SMTP"}
+        )
+        return jsonify({"success": True, "message": "Test notification email dispatched successfully to nvnindiapvtltd@gmail.com!"}), 200
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
 
 @app.route("/<path:filename>")
 def serve_static(filename):
@@ -73,6 +94,24 @@ def trainees_handler():
                 return jsonify({"success": False, "error": "Full Name, Email, and Phone are required."}), 400
 
             new_id = database.add_trainee(data)
+
+            # Trigger real-time email notification
+            try:
+                email_service.notify_new_enquiry(
+                    enquiry_type="Trainee Admission Application",
+                    applicant_name=data.get("full_name"),
+                    applicant_email=data.get("email"),
+                    applicant_phone=data.get("phone"),
+                    extra_details={
+                        "Course Selected": data.get("course_name"),
+                        "Education Qualification": data.get("education"),
+                        "Batch Learning Mode": data.get("batch_mode", "Online"),
+                        "Experience": data.get("experience_level", "Fresher"),
+                        "Statement of Purpose": data.get("statement", "None provided")
+                    }
+                )
+            except Exception as notify_err:
+                print(f"[Warning] Failed to trigger email alert: {notify_err}")
             return jsonify({
                 "success": True,
                 "message": "Student application successfully submitted to NVN Tech Academy!",
@@ -118,6 +157,24 @@ def consultations_handler():
                 return jsonify({"success": False, "error": "Client Name, Email, and Requirements are required."}), 400
 
             new_id = database.add_consultation(data)
+
+            # Trigger real-time email notification
+            try:
+                email_service.notify_new_enquiry(
+                    enquiry_type="IT Consultancy Booking",
+                    applicant_name=f'{data.get("client_name")} ({data.get("organization")})',
+                    applicant_email=data.get("email"),
+                    applicant_phone=data.get("phone"),
+                    extra_details={
+                        "Organization": data.get("organization"),
+                        "Consultancy Domain": data.get("consultancy_domain"),
+                        "Preferred Date": data.get("preferred_date", "Earliest available"),
+                        "Budget Range": data.get("budget_range", "Flexible"),
+                        "Technical Requirements": data.get("requirements")
+                    }
+                )
+            except Exception as notify_err:
+                print(f"[Warning] Failed to trigger email alert: {notify_err}")
             return jsonify({
                 "success": True,
                 "message": "Consultation booking request received. Our senior IT architects will connect shortly.",
@@ -209,6 +266,21 @@ def inquiries_handler():
                 return jsonify({"success": False, "error": "Name, Email, and Message are required."}), 400
 
             new_id = database.add_inquiry(data)
+
+            # Trigger real-time email notification
+            try:
+                email_service.notify_new_enquiry(
+                    enquiry_type="General Website Inquiry",
+                    applicant_name=data.get("sender_name"),
+                    applicant_email=data.get("email"),
+                    applicant_phone=data.get("phone"),
+                    extra_details={
+                        "Subject": data.get("subject"),
+                        "Message": data.get("message")
+                    }
+                )
+            except Exception as notify_err:
+                print(f"[Warning] Failed to trigger email alert: {notify_err}")
             return jsonify({
                 "success": True,
                 "message": "Thank you! Your message has been stored in our system.",
@@ -279,6 +351,27 @@ def staffing_handler():
                 return jsonify({"success": False, "error": "Client Name, Email, and Required Role are required."}), 400
 
             new_id = database.add_staffing_request(data)
+
+            # Trigger real-time email notification
+            try:
+                email_service.notify_new_enquiry(
+                    enquiry_type="Worker for Client Staffing Request",
+                    applicant_name=f'{data.get("client_name")} ({data.get("company_name")})',
+                    applicant_email=data.get("email"),
+                    applicant_phone=data.get("phone"),
+                    extra_details={
+                        "Company / Client": data.get("company_name"),
+                        "Role Required": data.get("role_required"),
+                        "Experience Level": data.get("experience_level", "Mid-Level"),
+                        "Engagement Model": data.get("engagement_model", "Dedicated Worker"),
+                        "Number of Developers": str(data.get("developers_count", 1)),
+                        "Contract Duration": f'{data.get("duration_months", 6)} Months',
+                        "Budget": data.get("budget_range", "Standard"),
+                        "Requirements Scope": data.get("requirements")
+                    }
+                )
+            except Exception as notify_err:
+                print(f"[Warning] Failed to trigger email alert: {notify_err}")
             return jsonify({
                 "success": True,
                 "message": "Staffing inquiry received! Our talent acquisition team in Jammalamadugu will share vetted developer profiles within 24-48 hours.",

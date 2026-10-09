@@ -7,3 +7,4 @@ tools/cloudflared.exe
 *.suo
 .vs/
 *.bak
+__pycache__/

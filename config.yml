@@ -1,0 +1,7 @@
+tunnel: e877b26a-1310-4f62-a447-e4d94def12c4
+ingress:
+  - hostname: www.nvnindia.com
+    service: http://localhost:5000
+  - hostname: nvnindia.com
+    service: http://localhost:5000
+  - service: http://localhost:5000

@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVN India Private LTD | Enterprise IT Software Solutions, Tech Academy & Consultancy</title>
+  <meta name="description" content="NVN India Private LTD is a premier IT solutions provider offering specialized student tech training, enterprise IT consultancy, and custom software development across healthcare, fintech, e-commerce, manufacturing, and all industry sectors.">
+  <meta name="keywords" content="NVN India, IT Software Solutions, Student IT Training, IT Consultancy, Software Development, Trainee Academy, Cloud Architecture, Full Stack Development, India IT Company">
+  <meta name="author" content="NVN India Private LTD">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Brand Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" href="images/nvn-logo-favicon.png">
+  <link rel="apple-touch-icon" href="images/nvn-logo-emblem.jpg">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement / Live Database Status Bar -->
+  <!-- Top Corporate Credentials & Direct Helpline Bar -->
+  <aside class="top-notice-bar" aria-label="Corporate Registration and Official Contact">
+    <div class="container notice-content">
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span style="display:inline-flex; align-items:center; gap:6px;">
+          🇮🇳 <strong>Govt. Registered Enterprise:</strong> CIN: U72900AP2024PTC189000 • Jammalamadugu, AP
+        </span>
+        <span id="dbConnectionStatus" class="db-status-badge">
+          <span class="pulse-indicator"></span> Connecting to Relational Database...
+        </span>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <a href="tel:+918639092368" style="color:inherit; text-decoration:none;"><span>📞 Mobile: +91 86390 92368</span></a>
+        <a href="mailto:nvnindiapvtltd@gmail.com" style="color:inherit; text-decoration:none;"><span>✉️ nvnindiapvtltd@gmail.com</span></a>
+        <a href="#adminSection" class="btn btn-sm btn-admin" style="padding:2px 10px; font-size:0.75rem;">Portal Engine</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-logo" id="navBrandLogo">
+          <img src="images/nvn-logo-realistic.jpg" alt="NVN India Private Limited Official Insignia" class="brand-logo-img" width="46" height="46">
+          <div class="brand-text-block">
+            <span class="brand-name">NVN INDIA</span>
+            <span class="brand-sub">PRIVATE LIMITED • JAMMALAMADUGU</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#clientWorkers" class="nav-link">Worker for Client</a></li>
+          <li><a href="#projects" class="nav-link">Software Projects</a></li>
+          <li><a href="#academy" class="nav-link">IT Training Academy</a></li>
+          <li><a href="#placementStories" class="nav-link">Placements Wall</a></li>
+          <li><a href="#jammalamaduguHub" class="nav-link">Campus Hub</a></li>
+          <li><a href="#about" class="nav-link">About Company</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Action CTAs -->
+        <div class="nav-actions">
+          <button class="btn btn-sm btn-secondary" onclick="openCommandPalette()" style="display:inline-flex; align-items:center; gap:6px;" title="Quick Search (Ctrl+K)">
+            <span>🔍</span> <span>Search</span> <span class="command-kbd-badge" style="font-size:0.65rem; padding:1px 5px;">Ctrl+K</span>
+          </button>
+          <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">☀️</button>
+          <button class="btn btn-emerald" onclick="openStaffingModal()" style="display:inline-flex; align-items:center; gap:6px; padding:8px 16px; font-size:0.88rem;">
+            <span>👥</span> Hire Developers
+          </button>
+          <button class="btn btn-primary" onclick="openEnrollmentModal()" style="padding:8px 16px; font-size:0.88rem;">Apply for Training</button>
+          <button id="mobileMenuToggle" class="mobile-menu-btn" aria-label="Toggle Mobile Menu">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <!-- ==========================================================================
+       GRAND HERO CENTERPIECE: NVN INDIA PRIVATE LIMITED AS THE MAIN THING
+       WITH PHOTOREALISTIC 3-PANEL INTERACTIVE FACILITY & TEAM SHOWCASE
+       ========================================================================== -->
+  <section class="grand-hero-stage" id="hero">
+    <div class="container">
+      
+      <!-- 1. The Main Brand Centerpiece Masthead -->
+      <div class="grand-hero-masthead">
+        <div class="grand-gov-capsule">
+          <span class="capsule-flag">🇮🇳</span>
+          <span class="capsule-live-dot"></span>
+          <span class="capsule-text">GOVERNMENT REGISTERED SOFTWARE ENTERPRISE • JAMMALAMADUGU, AP</span>
+          <span class="capsule-cin">CIN: U72900AP2024PTC189000</span>
+        </div>
+
+        <h1 class="grand-brand-heading">
+          <span class="brand-title-lead">NVN INDIA</span>
+          <span class="brand-title-sub">PRIVATE LIMITED</span>
+        </h1>
+
+        <p class="grand-brand-mission">
+          <strong>Jammalamadugu's Landmark Software Startup &amp; Global IT Engineering Powerhouse.</strong>
+          Delivering Turnkey Software Projects, Pre-Vetted Dedicated <em>"Worker for Client"</em> Teams in 48h, and All-Courses IT Training with 100% Placement Guarantee across Rayalaseema &amp; Beyond.
+        </p>
+
+        <!-- Trust & Credentials Ribbon -->
+        <div class="grand-trust-ribbon">
+          <div class="trust-ribbon-pill">
+            📍 <strong>Campus:</strong> D.No. 1/674, Opposite to Town Church, Upstairs, Jammalamadugu - 516434
+          </div>
+          <span class="trust-ribbon-dot">•</span>
+          <div class="trust-ribbon-pill">
+            ⚡ <strong>48h SLA:</strong> Pre-Vetted Dedicated Workers for Client
+          </div>
+          <span class="trust-ribbon-dot">•</span>
+          <div class="trust-ribbon-pill">
+            🎓 <strong>100% Placements:</strong> Top MNCs &amp; Zero Upfront Tuition
+          </div>
+          <span class="trust-ribbon-dot">•</span>
+          <div class="trust-ribbon-pill">
+            💻 <strong>Turnkey Projects:</strong> Web, Cloud, AI &amp; Enterprise Apps
+          </div>
+        </div>
+
+        <!-- Grand CTA Action Bar -->
+        <div class="grand-hero-cta-group">
+          <button class="btn-hero btn-hero-primary" onclick="openStaffingModal()">
+            <span>👥</span> Hire Worker for Client
+          </button>
+          <button class="btn-hero btn-hero-brand" onclick="openEnrollmentModal()">
+            <span>🎓</span> All Courses IT Training (100% Placement)
+          </button>
+          <a href="#projects" class="btn-hero btn-hero-glass">
+            <span>💻</span> Explore Software Projects
+          </a>
+          <a href="tel:+918639092368" class="btn-hero btn-hero-call">
+            <span>📞</span> +91 86390 92368
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Interactive Photorealistic Facility & Operations Showcase -->
+      <div class="real-showcase-wrapper">
+        <div class="showcase-tabs">
+          <button class="showcase-tab-btn active" data-tab="campus" onclick="switchShowcaseTab('campus')">
+            <span class="tab-icon">🏛️</span>
+            <span class="tab-text">
+              <strong>Corporate Tech Headquarters</strong>
+              <small>Jammalamadugu, AP • 50k Sq. Ft. Facility</small>
+            </span>
+          </button>
+          <button class="showcase-tab-btn" data-tab="workers" onclick="switchShowcaseTab('workers')">
+            <span class="tab-icon">👥</span>
+            <span class="tab-text">
+              <strong>"Worker for Client" Tech Squads</strong>
+              <small>Pre-Vetted Dedicated Developers in 48h</small>
+            </span>
+          </button>
+          <button class="showcase-tab-btn" data-tab="academy" onclick="switchShowcaseTab('academy')">
+            <span class="tab-icon">🎓</span>
+            <span class="tab-text">
+              <strong>Tech Academy &amp; Placement Lab</strong>
+              <small>100% Job Guarantee &amp; MNC Drives</small>
+            </span>
+          </button>
+        </div>
+
+        <div class="showcase-viewport">
+          <!-- Panel 1: Jammalamadugu Corporate Campus -->
+          <div class="showcase-panel active" id="panel-campus">
+            <div class="showcase-img-box">
+              <img src="images/campus.jpg" alt="NVN India Private Limited Corporate Headquarters in Jammalamadugu Andhra Pradesh" class="showcase-img">
+              <div class="showcase-badge-overlay top-left">
+                <span class="overlay-icon">🏢</span>
+                <div>
+                  <strong>NVN Corporate IT Headquarters</strong>
+                  <span>1/674 Opposite to Town Church (Upstairs), Jammalamadugu - 516434</span>
+                </div>
+              </div>
+              <div class="showcase-badge-overlay bottom-right">
+                <span class="overlay-icon">⚡</span>
+                <div>
+                  <strong>500+ Developer Workstations</strong>
+                  <span>Fiber Gigabit Labs • 24/7 Power • Tier-3 DC Backup</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-caption">
+              <div class="caption-info">
+                <h3>Jammalamadugu Landmark Software Campus</h3>
+                <p>Our 4-storey glass technology headquarters in Jammalamadugu houses enterprise software engineers, R&amp;D innovation labs, and dedicated client development pods serving global and domestic clients with production-grade engineering.</p>
+              </div>
+              <div class="caption-actions">
+                <button class="btn btn-sm btn-primary" onclick="openConsultationModal()">Schedule Campus Visit</button>
+                <a href="#campusTour" class="btn btn-sm btn-secondary">Explore Campus</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Dedicated Workers for Client Squads -->
+          <div class="showcase-panel" id="panel-workers">
+            <div class="showcase-img-box">
+              <img src="images/engineers.jpg" alt="NVN India Dedicated Software Engineers for Clients" class="showcase-img">
+              <div class="showcase-badge-overlay top-left">
+                <span class="overlay-icon">👥</span>
+                <div>
+                  <strong>Dedicated Software Engineers</strong>
+                  <span>Full-Stack .NET, React, Python AI &amp; Cloud</span>
+                </div>
+              </div>
+              <div class="showcase-badge-overlay bottom-right">
+                <span class="overlay-icon">🛡️</span>
+                <div>
+                  <strong>Deployed in 48 Hours</strong>
+                  <span>Strict NDA, Full IP Transfer &amp; Agile Integration</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-caption">
+              <div class="caption-info">
+                <h3>"Worker for Client" Staff Augmentation</h3>
+                <p>Scale your tech sprints instantly without recruitment delays. Our pre-vetted engineers work directly inside your Slack, Jira, GitHub, and daily standups starting at ₹35,000/mo ($12/hr) with a 1-week risk-free trial.</p>
+              </div>
+              <div class="caption-actions">
+                <button class="btn btn-sm btn-emerald" onclick="openStaffingModal()">Hire Dedicated Worker</button>
+                <a href="#clientWorkers" class="btn btn-sm btn-secondary">Calculate Worker Cost</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Tech Academy & Placement Lab -->
+          <div class="showcase-panel" id="panel-academy">
+            <div class="showcase-img-box">
+              <img src="images/academy.jpg" alt="NVN India Tech Academy Training Lab Jammalamadugu" class="showcase-img">
+              <div class="showcase-badge-overlay top-left">
+                <span class="overlay-icon">🎓</span>
+                <div>
+                  <strong>NVN India Tech Academy</strong>
+                  <span>8 Career Tracks with 100% Placement Support</span>
+                </div>
+              </div>
+              <div class="showcase-badge-overlay bottom-right">
+                <span class="overlay-icon">🏆</span>
+                <div>
+                  <strong>528+ Alumni Placed</strong>
+                  <span>TCS, Infosys, Wipro, Cognizant, Tech Mahindra</span>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-caption">
+              <div class="caption-info">
+                <h3>All-Courses IT Training &amp; 100% Placement Support</h3>
+                <p>16-week intensive software engineering bootcamps with hands-on coding, live enterprise capstone projects, and guaranteed job placement drives with top MNCs and high-growth tech startups. Zero upfront tuition fee merit track available.</p>
+              </div>
+              <div class="caption-actions">
+                <button class="btn btn-sm btn-primary" onclick="openEnrollmentModal()">Enroll in Training</button>
+                <a href="#academy" class="btn btn-sm btn-secondary">View 8 Syllabi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hiring Partners & Corporate Clients Marquee -->
+  <div class="partners-marquee-bar">
+    <div class="container">
+      <div class="partners-marquee-title">Top MNC Hiring Partners &amp; Enterprise Clients</div>
+      <ul class="partners-marquee-list">
+        <li class="partner-tag">Tata Consultancy Services (TCS)</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Infosys Limited</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Wipro Technologies</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Cognizant</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Tech Mahindra</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">HCL Technologies</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Accenture</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">Capgemini</li>
+        <li class="partner-tag">•</li>
+        <li class="partner-tag">FinTech Startups</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Real-Time Metrics Bar -->
+  <section class="stats-bar-section" aria-label="Key Performance Indicators">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="statTrainees">2,850+</div>
+          <div class="stat-label">Students &amp; Trainees Mentored</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statConsultations">140+</div>
+          <div class="stat-label">Enterprise IT Consultations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statProjects">95+</div>
+          <div class="stat-label">Cross-Sector Software Deployments</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="statDelivered">99.4%</div>
+          <div class="stat-label">On-Time Delivery &amp; SLA Success</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars (The 4 Strategic Mandates of NVN India Private Limited) -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Jammalamadugu Tech Startup &amp; IT Solutions</span>
+        <h2 class="section-title">The Four Pillars of <span class="gradient-text">NVN India Private Limited</span></h2>
+        <p class="section-desc">
+          We bring software engineering excellence, elite job placements, bespoke client development, and dedicated developer staffing together under one world-class ecosystem in Jammalamadugu, Andhra Pradesh.
+        </p>
+      </div>
+
+      <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <!-- Pillar 1: Trainee Academy & All Courses Training -->
+        <article class="pillar-card">
+          <div class="pillar-icon-box">🎓</div>
+          <h3 class="pillar-title">1. All Courses Training &amp; 100% Placement</h3>
+          <p class="pillar-desc">
+            Transforming students and freshers into hireable software engineers. Full-stack curricula, live capstone projects, and guaranteed placement drives with top tier MNCs and high-growth startups.
+          </p>
+          <ul class="pillar-features">
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Full Stack, Python AI, Java, DevOps, QA, Mobile</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>100% Placement Support with 85+ hiring partners</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Mock technical interviews &amp; resume optimization</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Zero-fee merit tracks &amp; corporate certifications</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" onclick="openEnrollmentModal()">Enroll in All Courses</button>
+        </article>
+
+        <!-- Pillar 2: Software Projects for Clients -->
+        <article class="pillar-card">
+          <div class="pillar-icon-box">💻</div>
+          <h3 class="pillar-title">2. Software Projects &amp; Custom Solutions</h3>
+          <p class="pillar-desc">
+            End-to-end software development for businesses of all scales. We architect, build, test, and deploy resilient digital products across healthcare, fintech, e-commerce, and enterprise automation.
+          </p>
+          <ul class="pillar-features">
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Full-Stack Web Apps &amp; Native Mobile Applications</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>FinTech, HealthTech, IoT &amp; E-Commerce platforms</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>AI Integration, LLM agents &amp; workflow automation</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Turnkey development with guaranteed SLA delivery</span>
+            </li>
+          </ul>
+          <button class="btn btn-secondary" onclick="openProjectModal()">Propose a Project</button>
+        </article>
+
+        <!-- Pillar 3: Worker for Client (Staff Augmentation) -->
+        <article class="pillar-card" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.04);">
+          <div class="pillar-icon-box" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">👥</div>
+          <h3 class="pillar-title">3. Worker for Client (Staff Augmentation)</h3>
+          <p class="pillar-desc">
+            Instantly hire dedicated developers, QA testers, and cloud engineers from NVN India. Pre-vetted, fluent in English, and ready to deploy into your client teams within 48 hours.
+          </p>
+          <ul class="pillar-features">
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Deploy pre-vetted engineers in 48 hours</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>1-Week 100% Risk-Free Trial Period</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Dedicated monthly resource, hourly or team squads</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Strict NDA, IP protection &amp; daily agile standups</span>
+            </li>
+          </ul>
+          <button class="btn btn-emerald" onclick="openStaffingModal()">Hire Worker for Client</button>
+        </article>
+
+        <!-- Pillar 4: Enterprise IT Consultancy -->
+        <article class="pillar-card">
+          <div class="pillar-icon-box">🛡️</div>
+          <h3 class="pillar-title">4. IT Consultancy &amp; Cloud Security</h3>
+          <p class="pillar-desc">
+            High-level technological guidance for modern enterprises. Cloud migration (AWS/Azure/GCP), Kubernetes containerization, DevOps automation, and VAPT cybersecurity audits.
+          </p>
+          <ul class="pillar-features">
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Cloud Migration &amp; Cost Optimization (AWS/Azure)</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>DevSecOps, CI/CD pipelines &amp; Kubernetes clusters</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Cybersecurity audits, VAPT &amp; ISO/SOC compliance</span>
+            </li>
+            <li>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Enterprise microservices architecture refactoring</span>
+            </li>
+          </ul>
+          <button class="btn btn-secondary" onclick="openConsultationModal()">Book IT Advisory</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainee & Student Tech Academy Section -->
+  <section class="section" id="academy" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">100% Industry-Sponsored Merit Tracks • Zero Tuition Fee</span>
+        <h2 class="section-title">NVN Tech Academy &amp; <span class="gradient-text">Full Industrial Curricula</span></h2>
+        <p class="section-desc">
+          Zero tuition fees. All flagship tracks are 100% company-sponsored and merit-based. Trainees build enterprise systems, submit pull requests to production codebases, and earn authentic corporate experience with placement support.
+        </p>
+      </div>
+
+      <!-- Course Search & Category Filter Toolbar -->
+      <div class="course-filter-toolbar">
+        <div class="search-input-wrapper">
+          <span class="search-icon-decor">🔍</span>
+          <input type="text" id="courseSearchInput" class="course-search-input" placeholder="Search track by tech (e.g. React, Python, Kubernetes, AWS)..." oninput="filterCoursesBySearch(this.value)">
+        </div>
+        <div class="course-cat-pills" id="courseCategoryPills">
+          <button class="course-cat-pill active" data-cat="all" onclick="filterCoursesByCategory('all', this)">All Specializations</button>
+          <button class="course-cat-pill" data-cat="Software Engineering" onclick="filterCoursesByCategory('Software Engineering', this)">Software Eng</button>
+          <button class="course-cat-pill" data-cat="Artificial Intelligence" onclick="filterCoursesByCategory('Artificial Intelligence', this)">AI &amp; Data</button>
+          <button class="course-cat-pill" data-cat="Cloud & Infrastructure" onclick="filterCoursesByCategory('Cloud & Infrastructure', this)">Cloud &amp; DevOps</button>
+          <button class="course-cat-pill" data-cat="Security & Compliance" onclick="filterCoursesByCategory('Security & Compliance', this)">Cyber Security</button>
+          <button class="course-cat-pill" data-cat="Enterprise Systems" onclick="filterCoursesByCategory('Enterprise Systems', this)">Java Systems</button>
+          <button class="course-cat-pill" data-cat="Mobile Development" onclick="filterCoursesByCategory('Mobile Development', this)">Mobile</button>
+          <button class="course-cat-pill" data-cat="Quality Assurance" onclick="filterCoursesByCategory('Quality Assurance', this)">QA &amp; Testing</button>
+          <button class="course-cat-pill" data-cat="Data & Analytics" onclick="filterCoursesByCategory('Data & Analytics', this)">Data Science</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Course Cards Loaded from SQLite DB -->
+      <div class="courses-grid" id="coursesContainer">
+        <!-- Rendered dynamically by app.js with full syllabus triggers and zero fee badges -->
+      </div>
+
+      <!-- =====================================================================
+           INTERACTIVE 1: LIVE TRAINEE APPLICATION & INTERNSHIP STATUS TRACKER
+           ===================================================================== -->
+      <div class="status-tracker-section" id="statusTracker">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;">
+          <div>
+            <span class="section-tag" style="font-size:0.75rem;">Real-Time Lifecycle Tracking</span>
+            <h3 style="font-size:1.6rem; margin-top:6px;">Check Your Admission &amp; Internship Status</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; max-width:600px;">
+              Enter your registered email address or Application ID (e.g. <code>aarav.sharma@example.com</code> or <code>1</code>) to check screening results, assigned mentor, and upcoming batch milestones.
+            </p>
+          </div>
+          <div style="background:rgba(0,242,254,0.1); border:1px solid rgba(0,242,254,0.3); padding:8px 16px; border-radius:var(--radius-full); font-size:0.8rem; color:var(--accent-cyan);">
+            ⚡ Live Relational Lookup
+          </div>
+        </div>
+
+        <div class="tracker-search-bar">
+          <input type="text" id="trackerQueryInput" class="form-input" placeholder="Enter Registered Email or Application ID (#)..." style="font-size:0.95rem;">
+          <button class="btn btn-primary" onclick="lookupTraineeStatus()">Track Application</button>
+        </div>
+
+        <!-- Dynamic Stepper Visualizer Container -->
+        <div id="trackerResultBox" style="display:none;">
+          <!-- Injected dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           INTERACTIVE 2: 60-SECOND TRAINEE CAREER TRACK MATCHER QUIZ
+           ===================================================================== -->
+      <div class="quiz-wrapper" id="careerQuiz">
+        <div>
+          <span class="section-tag" style="font-size:0.75rem;">Interactive Skills Matcher</span>
+          <h3 style="font-size:1.6rem; margin:8px 0 12px;">Not Sure Which Track Fits You Best?</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:20px; line-height:1.6;">
+            Answer 3 quick questions about your coding interests and career ambition. Our algorithm will match you with the highest-impact industrial curriculum and auto-fill your application.
+          </p>
+
+          <div id="quizQuestionBox">
+            <h4 class="quiz-q-title" id="quizQuestionTitle">Step 1 of 3: What domain excites you most?</h4>
+            <div class="quiz-answers-grid" id="quizAnswersGrid">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-result-box" id="quizResultBox">
+          <div style="font-size:2.8rem; margin-bottom:10px;">🎯</div>
+          <h4 style="font-size:1.25rem; margin-bottom:8px;">Ready for Your Tech Career?</h4>
+          <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:16px;">
+            Select your preferences on the left to reveal your tailored specialization.
+          </p>
+          <span style="font-size:0.8rem; color:var(--accent-cyan);">100% Industry Sponsored • Zero Tuition Barrier</span>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE 4: 6-STAGE TRAINEE CAREER ACCELERATION ROADMAP -->
+      <div style="margin-top: 56px;" id="careerRoadmap">
+        <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+          <span class="section-tag">Zero-to-Hero Trajectory</span>
+          <h3 style="font-size: 1.8rem; margin: 8px 0 10px;">The 6-Stage <span class="gradient-text">Industrial Engineering Lifecycle</span></h3>
+          <p style="color: var(--text-secondary); max-width: 720px; font-size: 0.92rem;">
+            From fundamental syntax to deploying multi-tenant enterprise architectures. Every student at NVN India Academy undergoes this rigorous 16-week company-sponsored sprint with dedicated senior mentors.
+          </p>
+        </div>
+
+        <div class="roadmap-timeline-grid">
+          <div class="roadmap-step-card">
+            <span class="roadmap-week-tag">Weeks 1 - 2</span>
+            <h4 class="roadmap-step-title">1. Systems &amp; CS Core</h4>
+            <p class="roadmap-step-desc">Computer architecture, memory models, Linux kernel shell scripts, Git trunk branching &amp; clean code principles.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <span class="roadmap-week-tag">Weeks 3 - 6</span>
+            <h4 class="roadmap-step-title">2. Deep Engineering</h4>
+            <p class="roadmap-step-desc">Advanced data structures, relational/NoSQL schemas, async IO runtimes, design patterns &amp; test-driven development (TDD).</p>
+          </div>
+          <div class="roadmap-step-card">
+            <span class="roadmap-week-tag">Weeks 7 - 10</span>
+            <h4 class="roadmap-step-title">3. Micro-Architecture</h4>
+            <p class="roadmap-step-desc">Building decoupled microservices, gRPC &amp; REST APIs, Redis caching layers, WebSockets &amp; distributed queues.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <span class="roadmap-week-tag">Weeks 11 - 14</span>
+            <h4 class="roadmap-step-title">4. Live Client Internship</h4>
+            <p class="roadmap-step-desc">Embedded in real NVN India consultancy project teams. Writing production pull requests for FinTech, MedTech or IoT clients.</p>
+          </div>
+          <div class="roadmap-step-card">
+            <span class="roadmap-week-tag">Weeks 15 - 16</span>
+            <h4 class="roadmap-step-title">5. Production Audits</h4>
+            <p class="roadmap-step-desc">Penetration testing, OWASP Top 10 hardening, CI/CD automated deployment pipelines, Docker containerization &amp; Kubernetes orchestration.</p>
+          </div>
+          <div class="roadmap-step-card" style="border-color: rgba(0, 242, 254, 0.4); background: rgba(0, 242, 254, 0.05);">
+            <span class="roadmap-week-tag" style="color: var(--accent-emerald);">Graduation</span>
+            <h4 class="roadmap-step-title" style="color: #67e8f9;">6. Placement Drive</h4>
+            <p class="roadmap-step-desc">Direct corporate campus recruitment, system design portfolio reviews, GitHub profile optimization, and immediate placement offers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE 5: PLACED STUDENTS SUCCESS STORIES (HALL OF FAME) -->
+      <div style="margin-top: 56px;" id="placementStories">
+        <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+          <span class="section-tag">Alumni Hall of Fame</span>
+          <h3 style="font-size: 1.8rem; margin: 8px 0 10px;">Where Our Trainees <span class="gradient-text">Make Their Mark</span></h3>
+          <p style="color: var(--text-secondary); max-width: 720px; font-size: 0.92rem;">
+            1,200+ engineering graduates have launched high-growth tech careers through NVN India’s 100% industry-sponsored training programs.
+          </p>
+        </div>
+
+        <div class="placements-grid" id="placementsContainer">
+          <div class="placement-card">
+            <div class="placed-avatar-row">
+              <div class="placed-avatar">RV</div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 2px;">Rahul Verma</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Cloud Solutions Architect</span>
+              </div>
+            </div>
+            <span class="placed-company-badge">AWS Partner Network • ₹14.5 LPA</span>
+            <p class="placed-quote">
+              "The hands-on Kubernetes and Terraform automation during the NVN Cloud DevOps track was 100x more valuable than 4 years of college theory. I cleared the client technical round on day 1."
+            </p>
+          </div>
+
+          <div class="placement-card">
+            <div class="placed-avatar-row">
+              <div class="placed-avatar">PS</div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 2px;">Priya Sharma</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Senior Full Stack Engineer</span>
+              </div>
+            </div>
+            <span class="placed-company-badge">TCS Digital Hub • ₹12.0 LPA</span>
+            <p class="placed-quote">
+              "Zero fees and real enterprise project codebase access! At NVN India, I worked on a live healthcare E-Prescription microservice that prepared me directly for high-scale enterprise engineering."
+            </p>
+          </div>
+
+          <div class="placement-card">
+            <div class="placed-avatar-row">
+              <div class="placed-avatar">AN</div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 2px;">Ankit Nair</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">AI &amp; Computer Vision Engineer</span>
+              </div>
+            </div>
+            <span class="placed-company-badge">Infosys Applied AI • ₹15.2 LPA</span>
+            <p class="placed-quote">
+              "Building real YOLO defect-detection models for manufacturing IoT clients gave my GitHub repo immense credibility. NVN mentors held daily code reviews that sharpened my engineering mindset."
+            </p>
+          </div>
+
+          <div class="placement-card">
+            <div class="placed-avatar-row">
+              <div class="placed-avatar">SD</div>
+              <div>
+                <h4 style="font-size: 1rem; margin-bottom: 2px;">Sneha Deshmukh</h4>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">DevSecOps &amp; Security Lead</span>
+              </div>
+            </div>
+            <span class="placed-company-badge">Capgemini Cloud Ops • ₹13.8 LPA</span>
+            <p class="placed-quote">
+              "The SQLite and relational database internals we learned at NVN along with OWASP security auditing gave me a decisive edge. NVN's placement team arranged 5 interview calls within two weeks of graduation."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academy Benefits Banner -->
+      <div style="margin-top: 48px; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Are you a College Training &amp; Placement Officer (TPO)?</h3>
+          <p style="color: var(--text-secondary); max-width: 650px;">
+            We offer institutional tie-ups, campus bootcamps, and semester-long industrial internship programs with live industry projects and corporate certification.
+          </p>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('consultationModal')">Partner With NVN India</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- IT Consultancy Section -->
+  <section class="section" id="consultancy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Enterprise Advisory</span>
+        <h2 class="section-title">Strategic <span class="gradient-text">IT Consultancy Works</span></h2>
+        <p class="section-desc">
+          Accelerate your technology roadmap. We consult across complex architectural challenges, legacy cloud transitions, cybersecurity hardening, and team augmentation.
+        </p>
+      </div>
+
+      <div class="consultancy-wrapper">
+        <div class="consultancy-grid">
+          <!-- Left: Consultancy Highlights -->
+          <div>
+            <h3 style="font-size: 1.7rem; margin-bottom: 16px;">Transforming Enterprise IT with Architectural Precision</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+              Our senior consultants bring decades of collective experience designing distributed systems, ensuring zero downtime, and certifying compliance for international standards.
+            </p>
+
+            <div class="consult-domain-cards">
+              <div class="domain-card">
+                <div class="domain-icon">☁️</div>
+                <h4 class="domain-title">Cloud Infrastructure</h4>
+                <p class="domain-desc">AWS, Azure &amp; GCP multi-cloud strategy, cost optimization, automated IaC with Terraform.</p>
+              </div>
+              <div class="domain-card">
+                <div class="domain-icon">🛡️</div>
+                <h4 class="domain-title">Cyber Security &amp; VAPT</h4>
+                <p class="domain-desc">Penetration testing, threat modeling, SOC 2, HIPAA, ISO 27001 compliance readiness.</p>
+              </div>
+              <div class="domain-card">
+                <div class="domain-icon">🔄</div>
+                <h4 class="domain-title">DevOps &amp; CI/CD</h4>
+                <p class="domain-desc">Docker containerization, Kubernetes cluster management, automated release pipelines.</p>
+              </div>
+              <div class="domain-card">
+                <div class="domain-icon">⚡</div>
+                <h4 class="domain-title">High-Scale Architecture</h4>
+                <p class="domain-desc">Microservices decomposition, Kafka event streaming, database indexing &amp; sharding.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Direct In-Page Consultation Booking Form -->
+          <div class="form-box">
+            <h3 class="form-title">Book an IT Advisory Session</h3>
+            <p class="form-subtitle">Connect with our Principal Solution Architects (Direct SQLite Record)</p>
+
+            <form id="consultationForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="consultClientName">Full Name *</label>
+                  <input type="text" id="consultClientName" class="form-input" placeholder="e.g. Rajesh Varma" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="consultOrganization">Organization / Company *</label>
+                  <input type="text" id="consultOrganization" class="form-input" placeholder="e.g. Apex Health Systems" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="consultEmail">Corporate Email *</label>
+                  <input type="email" id="consultEmail" class="form-input" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="consultPhone">Contact Phone *</label>
+                  <input type="tel" id="consultPhone" class="form-input" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="consultDomain">Consultancy Domain *</label>
+                  <select id="consultDomain" class="form-select" required>
+                    <option value="Cloud Migration">Cloud Migration &amp; Optimization</option>
+                    <option value="Cybersecurity Audit">Cybersecurity Audit &amp; Pen-Testing</option>
+                    <option value="Enterprise Architecture">Enterprise System Architecture</option>
+                    <option value="DevOps Automation">DevOps &amp; Kubernetes Automation</option>
+                    <option value="AI Integration">Enterprise AI &amp; LLM Integration</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="consultBudget">Estimated Project Budget</label>
+                  <select id="consultBudget" class="form-select">
+                    <option value="INR 3L - 6L">INR 3 Lakhs - 6 Lakhs</option>
+                    <option value="INR 6L - 15L">INR 6 Lakhs - 15 Lakhs</option>
+                    <option value="INR 15L - 35L">INR 15 Lakhs - 35 Lakhs</option>
+                    <option value="INR 35L+">INR 35 Lakhs+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="consultDate">Preferred Consultation Date</label>
+                <input type="date" id="consultDate" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="consultRequirements">Brief Requirements / Challenges *</label>
+                <textarea id="consultRequirements" class="form-textarea" placeholder="Describe the current architecture, problems you're experiencing, or goals..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                Submit Consultation Request to Database
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       WORKER FOR CLIENT (STAFF AUGMENTATION & DEDICATED DEVELOPERS) SECTION
+       ========================================================================= -->
+  <section class="section" id="clientWorkers" style="background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);">
+          ⚡ Dedicated Tech Talent On-Demand
+        </span>
+        <h2 class="section-title">
+          Worker for Client: <span class="gradient-text" style="background: linear-gradient(135deg, #10b981 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hire Dedicated Software Engineers</span>
+        </h2>
+        <p class="section-desc">
+          Eliminate recruitment overhead, long notice periods, and hiring uncertainty. NVN India Private Limited deploys pre-assessed, production-tested software developers, QA engineers, and cloud architects directly into your client sprints within 48 hours.
+        </p>
+      </div>
+
+      <!-- Trust & Service Guarantees Strip -->
+      <div class="worker-guarantees-grid">
+        <div class="worker-guarantee-card">
+          <div class="guarantee-icon">⚡</div>
+          <h4>48-Hour Rapid Onboarding</h4>
+          <p>Hand-picked, vetted candidates ready for immediate technical screening and sprint deployment.</p>
+        </div>
+        <div class="worker-guarantee-card">
+          <div class="guarantee-icon">🛡️</div>
+          <h4>1-Week Risk-Free Trial</h4>
+          <p>Assess our engineer directly in your codebase for 5 working days before any long-term commitment.</p>
+        </div>
+        <div class="worker-guarantee-card">
+          <div class="guarantee-icon">🔐</div>
+          <h4>100% IP &amp; Strict NDA</h4>
+          <p>Full assignment of intellectual property rights, non-disclosure contracts, and secure access protocols.</p>
+        </div>
+        <div class="worker-guarantee-card">
+          <div class="guarantee-icon">🌐</div>
+          <h4>Timezone Aligned &amp; Fluent</h4>
+          <p>Seamless overlap with US (EST/PST), UK/EU (GMT/CET), and India (IST) time zones with daily agile standups.</p>
+        </div>
+      </div>
+
+      <!-- Worker Roles Cards Grid -->
+      <div style="margin-top: 48px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+          <div>
+            <h3 style="font-size:1.6rem; margin-bottom:4px;">Available Tech Talent Profiles</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem;">Pre-vetted developers from our Jammalamadugu innovation center ready to start immediately</p>
+          </div>
+          <button class="btn btn-emerald" onclick="openStaffingModal()">
+            <span>📋</span> Post Custom Staffing Requirement
+          </button>
+        </div>
+
+        <div class="worker-profiles-grid">
+          <!-- Profile 1 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge">Full Stack Web</span>
+                <h4 class="worker-role-title">Full Stack Engineer</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹65k - ₹95k</span>
+                <span class="rate-period">/ month (or $1,200/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">Builds end-to-end scalable web applications, responsive user interfaces, RESTful microservices, and secure relational databases.</p>
+            <div class="worker-skills-tags">
+              <span>React 18</span><span>Node.js</span><span>TypeScript</span><span>Python FastAPI</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('Full Stack Developer', 1)">Hire Full Stack Worker</button>
+          </div>
+
+          <!-- Profile 2 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge" style="background:rgba(99,102,241,0.15); color:var(--accent-indigo);">AI &amp; Data</span>
+                <h4 class="worker-role-title">Python &amp; AI / ML Engineer</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹75k - ₹1.1L</span>
+                <span class="rate-period">/ month (or $1,400/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">Architects predictive models, Generative AI pipelines, LangChain RAG agents, computer vision models, and data transformation scripts.</p>
+            <div class="worker-skills-tags">
+              <span>Python</span><span>PyTorch</span><span>LangChain</span><span>FastAPI</span><span>ChromaDB</span><span>OpenAI API</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('Python & AI Engineer', 1)">Hire Python AI Worker</button>
+          </div>
+
+          <!-- Profile 3 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge" style="background:rgba(245,158,11,0.15); color:var(--accent-amber);">Backend Core</span>
+                <h4 class="worker-role-title">Enterprise Java Specialist</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹70k - ₹1.05L</span>
+                <span class="rate-period">/ month (or $1,350/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">Heavyweight backend systems for banking, fintech ledgers, high-throughput Kafka streaming, and robust Spring Boot microservices.</p>
+            <div class="worker-skills-tags">
+              <span>Java 21</span><span>Spring Boot 3</span><span>Kafka</span><span>PostgreSQL</span><span>Hibernate</span><span>Microservices</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('Java Microservices Lead', 1)">Hire Java Worker</button>
+          </div>
+
+          <!-- Profile 4 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge" style="background:rgba(244,63,94,0.15); color:var(--accent-rose);">Quality Engineering</span>
+                <h4 class="worker-role-title">QA Automation / SDET</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹55k - ₹80k</span>
+                <span class="rate-period">/ month (or $1,050/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">End-to-end automation frameworks with Playwright and Selenium, API test suites with REST Assured, and JMeter load testing.</p>
+            <div class="worker-skills-tags">
+              <span>Playwright</span><span>Selenium 4</span><span>Cypress</span><span>Postman</span><span>JMeter</span><span>GitHub CI</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('QA Automation Engineer', 1)">Hire QA Worker</button>
+          </div>
+
+          <!-- Profile 5 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge" style="background:rgba(0,242,254,0.15); color:var(--accent-cyan);">Cloud &amp; SRE</span>
+                <h4 class="worker-role-title">Cloud DevOps &amp; K8s Engineer</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹80k - ₹1.2L</span>
+                <span class="rate-period">/ month (or $1,500/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">Orchestrates automated CI/CD pipelines, Docker container clusters, Terraform IaC, Prometheus observability, and AWS/Azure architecture.</p>
+            <div class="worker-skills-tags">
+              <span>AWS</span><span>Kubernetes</span><span>Docker</span><span>Terraform</span><span>GitHub Actions</span><span>Grafana</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('Cloud/DevOps Specialist', 1)">Hire DevOps Worker</button>
+          </div>
+
+          <!-- Profile 6 -->
+          <div class="worker-card">
+            <div class="worker-card-header">
+              <div>
+                <span class="worker-role-badge" style="background:rgba(168,85,247,0.15); color:#c084fc);">Mobile Native</span>
+                <h4 class="worker-role-title">Mobile App Developer</h4>
+              </div>
+              <div class="worker-rate-box">
+                <span class="rate-val">₹65k - ₹95k</span>
+                <span class="rate-period">/ month (or $1,200/mo)</span>
+              </div>
+            </div>
+            <p class="worker-role-desc">Builds responsive, 60/120 FPS mobile apps for iOS and Android using Flutter &amp; React Native with offline sync and hardware integration.</p>
+            <div class="worker-skills-tags">
+              <span>Flutter</span><span>Dart</span><span>React Native</span><span>Firebase</span><span>iOS / Android</span><span>REST APIs</span>
+            </div>
+            <div class="worker-meta-row">
+              <span>⏱️ Ready in 48h</span>
+              <span>⭐ Mid/Sr Level</span>
+              <span>🎯 160 hrs/mo</span>
+            </div>
+            <button class="btn btn-outline-emerald" onclick="openStaffingModal('Mobile App Engineer', 1)">Hire Mobile Worker</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Worker for Client Cost & Team Estimator -->
+      <div class="worker-calc-box" id="workerCalculator">
+        <div class="worker-calc-header">
+          <div>
+            <span class="section-tag" style="font-size:0.75rem;">Interactive Team Builder</span>
+            <h3 style="font-size:1.5rem; margin-top:6px;">Estimate Your Dedicated Worker / Team Cost</h3>
+            <p style="color:var(--text-secondary); font-size:0.88rem;">Select your requirements below to see transparent monthly rates and estimated savings</p>
+          </div>
+          <div style="background:rgba(16,185,129,0.15); color:var(--accent-emerald); padding:6px 14px; border-radius:var(--radius-full); font-size:0.82rem; font-weight:600;">
+            💰 Saves up to 65% vs Local Hiring
+          </div>
+        </div>
+
+        <div class="worker-calc-grid">
+          <div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="calcWorkerRole">Primary Role Required</label>
+                <select id="calcWorkerRole" class="form-select" onchange="updateWorkerCalculation()">
+                  <option value="Full Stack Developer">Full Stack Web Developer</option>
+                  <option value="Python & AI Engineer">Python &amp; AI / ML Engineer</option>
+                  <option value="Java Microservices Lead">Enterprise Java Specialist</option>
+                  <option value="QA Automation Engineer">QA Automation / SDET</option>
+                  <option value="Cloud/DevOps Specialist">Cloud DevOps &amp; Kubernetes</option>
+                  <option value="Mobile App Engineer">Mobile App Developer (Flutter/RN)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calcWorkerLevel">Seniority Level</label>
+                <select id="calcWorkerLevel" class="form-select" onchange="updateWorkerCalculation()">
+                  <option value="Mid-Level">Mid-Level (3 - 5 Years Experience)</option>
+                  <option value="Senior">Senior Engineer (5 - 8 Years Experience)</option>
+                  <option value="Junior">Associate / Junior (1 - 2 Years Experience)</option>
+                  <option value="Lead">Principal / Tech Lead (8+ Years)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Number of Dedicated Workers: <strong id="calcWorkersCountDisplay" style="color:var(--accent-emerald);">2</strong></label>
+                <input type="range" id="calcWorkersCount" min="1" max="10" value="2" class="form-range" oninput="updateWorkerCalculation()" style="width:100%;">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calcWorkerModel">Engagement Model</label>
+                <select id="calcWorkerModel" class="form-select" onchange="updateWorkerCalculation()">
+                  <option value="Dedicated Full-Time Worker">Dedicated Full-Time Worker (160 hrs/mo)</option>
+                  <option value="Hourly Contract">Hourly Flexible Contract</option>
+                  <option value="Managed Agile Squad">Managed Agile Squad (Developers + QA + Lead)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calcWorkerDuration">Expected Contract Duration</label>
+              <select id="calcWorkerDuration" class="form-select" onchange="updateWorkerCalculation()">
+                <option value="3 Months">3 Months (Pilot &amp; MVP)</option>
+                <option value="6 Months" selected>6 Months (Standard Sprint Phase)</option>
+                <option value="12 Months">12 Months (Long-Term Scaling - 10% Discount)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Calculated Output Card -->
+          <div class="worker-calc-summary">
+            <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">Estimated Dedicated Investment</span>
+            <div class="calc-cost-display">
+              <span class="calc-cost-inr" id="calcCostInr">₹1,30,000</span>
+              <span class="calc-cost-sub">/ month</span>
+            </div>
+            <div style="font-size:0.9rem; color:var(--accent-cyan); margin-bottom:14px;" id="calcCostUsd">
+              Approx. $1,560 USD / month
+            </div>
+
+            <div class="calc-spec-list">
+              <div class="spec-row">
+                <span>Selected Talent:</span>
+                <strong id="calcSummaryRole">2x Mid-Level Full Stack</strong>
+              </div>
+              <div class="spec-row">
+                <span>Monthly Hours:</span>
+                <strong id="calcSummaryHours">320 Total Engineering Hours</strong>
+              </div>
+              <div class="spec-row">
+                <span>Deployment Speed:</span>
+                <strong style="color:#34d399;">Ready within 48 Hours</strong>
+              </div>
+              <div class="spec-row">
+                <span>Trial Guarantee:</span>
+                <strong style="color:#34d399;">5-Day Risk-Free Evaluation</strong>
+              </div>
+            </div>
+
+            <button class="btn btn-emerald" style="width:100%; margin-top:16px;" onclick="applyWorkerCalcToModal()">
+              <span>🚀</span> Book These Workers for Client
+            </button>
+            <div style="text-align:center; font-size:0.75rem; color:var(--text-muted); margin-top:8px;">
+              Direct from NVN India Jammalamadugu Innovation Center • No Recruiters
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Sector Software Projects Section -->
+  <section class="section" id="projects" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cross-Industry Software Delivery</span>
+        <h2 class="section-title">Projects Across <span class="gradient-text">Any Sector Requiring IT</span></h2>
+        <p class="section-desc">
+          We don't limit ourselves to one vertical. If your sector needs automated intelligence, secure cloud architecture, or custom user applications, NVN India Private LTD has the proven code and architectural expertise.
+        </p>
+      </div>
+
+      <!-- Sector Filter Bar -->
+      <div class="sector-filter-bar" role="tablist" aria-label="Sector Filter Options">
+        <button class="filter-btn active" data-sector="all">All Sectors</button>
+        <button class="filter-btn" data-sector="Healthcare">Healthcare &amp; MedTech</button>
+        <button class="filter-btn" data-sector="FinTech">FinTech &amp; Banking</button>
+        <button class="filter-btn" data-sector="E-Commerce">E-Commerce &amp; Retail</button>
+        <button class="filter-btn" data-sector="Manufacturing">Manufacturing &amp; IoT</button>
+        <button class="filter-btn" data-sector="EdTech">EdTech &amp; LMS</button>
+        <button class="filter-btn" data-sector="Government">Gov &amp; Smart Cities</button>
+      </div>
+
+      <!-- Dynamic Projects Grid Loaded from SQLite DB -->
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- =====================================================================
+           INTERACTIVE 3: ENTERPRISE IT ARCHITECTURE & PROJECT ESTIMATOR
+           ===================================================================== -->
+      <div class="estimator-wrapper" id="projectEstimator">
+        <div style="margin-bottom:24px;">
+          <span class="section-tag" style="font-size:0.75rem;">Client Engineering Tool</span>
+          <h3 style="font-size:1.7rem; margin-top:6px;">Interactive Architecture &amp; Project Spec Estimator</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; max-width:720px;">
+            Configure your technical requirements below to instantly generate a recommended microservices architecture, engineering team structure, and delivery roadmap.
+          </p>
+        </div>
+
+        <div class="estimator-grid">
+          <!-- Left: Configuration Selectors -->
+          <div>
+            <!-- Step 1: Sector -->
+            <div class="estimator-selector-group">
+              <div class="estimator-group-title"><span>1.</span> Select Industry Vertical</div>
+              <div class="estimator-options-row" id="estimatorSectorOptions">
+                <button class="option-select-btn active" data-type="sector" data-val="Healthcare">Healthcare &amp; MedTech</button>
+                <button class="option-select-btn" data-type="sector" data-val="FinTech">FinTech &amp; Banking</button>
+                <button class="option-select-btn" data-type="sector" data-val="E-Commerce">E-Commerce &amp; Retail</button>
+                <button class="option-select-btn" data-type="sector" data-val="Manufacturing">Manufacturing IoT</button>
+                <button class="option-select-btn" data-type="sector" data-val="EdTech">EdTech &amp; LMS</button>
+                <button class="option-select-btn" data-type="sector" data-val="Government">Gov &amp; Smart City</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Architecture Scope -->
+            <div class="estimator-selector-group">
+              <div class="estimator-group-title"><span>2.</span> Solution Architecture</div>
+              <div class="estimator-options-row" id="estimatorScopeOptions">
+                <button class="option-select-btn active" data-type="scope" data-val="Cloud SaaS">Cloud Web SaaS Platform</button>
+                <button class="option-select-btn" data-type="scope" data-val="Mobile Ecosystem">iOS &amp; Android Apps</button>
+                <button class="option-select-btn" data-type="scope" data-val="Distributed Microservices">Distributed Microservices</button>
+                <button class="option-select-btn" data-type="scope" data-val="Enterprise AI">AI Agent / LLM Pipeline</button>
+                <button class="option-select-btn" data-type="scope" data-val="IoT Pipeline">IoT Telemetry &amp; SCADA</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Security & Regulatory Standard -->
+            <div class="estimator-selector-group">
+              <div class="estimator-group-title"><span>3.</span> Security &amp; Compliance Requirement</div>
+              <div class="estimator-options-row" id="estimatorSecurityOptions">
+                <button class="option-select-btn active" data-type="security" data-val="Standard">Standard Enterprise Security</button>
+                <button class="option-select-btn" data-type="security" data-val="HIPAA">HIPAA Compliant (Health)</button>
+                <button class="option-select-btn" data-type="security" data-val="RBI / PCI">RBI &amp; PCI-DSS (FinTech)</button>
+                <button class="option-select-btn" data-type="security" data-val="ISO 27001">ISO 27001 / SOC 2 Type II</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Dynamic Architecture Blueprint Card -->
+          <div class="estimator-spec-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+              <span class="course-code-badge" id="specBadge">NVN-ARCH-SPEC</span>
+              <span style="font-size:0.75rem; color:#34d399;">✓ Architecture Generated</span>
+            </div>
+
+            <h4 style="font-size:1.2rem; margin-bottom:6px;" id="specTitle">HIPAA Telehealth &amp; EHR Platform</h4>
+            <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:16px;" id="specSummary">
+              End-to-end encrypted microservices cluster with WebRTC video, digital health records, and automated audit logs.
+            </p>
+
+            <div class="spec-row">
+              <span style="color:var(--text-secondary);">Estimated Timeline</span>
+              <span class="spec-val-highlight" id="specTimeline">12 - 16 Weeks</span>
+            </div>
+            <div class="spec-row">
+              <span style="color:var(--text-secondary);">Core Team Composition</span>
+              <span class="spec-val-highlight" id="specTeam">1 Architect, 3 SDEs, 1 QA</span>
+            </div>
+            <div class="spec-row">
+              <span style="color:var(--text-secondary);">Deployment Target</span>
+              <span class="spec-val-highlight" id="specCloud">AWS Multi-AZ (HIPAA Hardened)</span>
+            </div>
+
+            <div style="margin-top:14px;">
+              <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); display:block; margin-bottom:6px;">Recommended Tech Stack:</span>
+              <div class="spec-tech-pills" id="specTechPills">
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">Python FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">AWS EC2/S3</span>
+              </div>
+            </div>
+
+            <button class="btn btn-emerald" style="width:100%; margin-top:10px;" onclick="applyEstimatorSpecToModal()">
+              <span>📝</span> Submit Proposal with this Architecture Spec
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div style="text-align: center; margin-top: 50px;">
+        <button class="btn btn-lg btn-secondary" onclick="openProjectModal()">
+          <span>📝</span> Propose a Custom Bespoke IT Project
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE LIVE CODE & ARCHITECTURE PLAYGROUND
+       ========================================================================= -->
+  <section class="playground-section" id="livePlayground">
+    <div class="container">
+      <div class="playground-grid">
+        <!-- Left Explanatory Column -->
+        <div>
+          <span class="section-tag" style="background:rgba(0,242,254,0.1); color:var(--accent-cyan);">Developer Sandbox</span>
+          <h2 class="section-title" style="margin: 12px 0 16px;">
+            Inspect Production <br><span class="gradient-text">Architectures &amp; Code</span>
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+            Explore battle-tested code templates used across NVN India's enterprise software consultancy works and mastered by our academy trainees. Switch runtimes, examine production microservices, and run simulated cluster executions.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+            <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
+              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span><strong>FastAPI Asynchronous Microservices:</strong> High-throughput, sub-millisecond I/O APIs.</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
+              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span><strong>React 18 Concurrent UI:</strong> Reactive state management, glassmorphism design tokens.</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
+              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span><strong>Kubernetes Cloud-Native Orchestration:</strong> Zero-downtime rolling updates &amp; auto-scaling.</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px; font-size:0.9rem;">
+              <span style="color:var(--accent-cyan); font-weight:bold;">✓</span>
+              <span><strong>PyTorch Neural Networks:</strong> Real-time industrial computer vision &amp; predictive analytics.</span>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <button class="btn btn-primary" onclick="simulatePlaygroundRun()">
+              <span>▶</span> Run Simulation in Sandbox
+            </button>
+            <button class="btn btn-secondary" onclick="copyPlaygroundSnippet()">
+              <span>📋</span> Copy Snippet
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Live Code Terminal Card -->
+        <div class="playground-editor-card">
+          <!-- Terminal Tabs -->
+          <div class="playground-tabs-bar">
+            <button class="playground-tab-btn active" id="tabFastAPI" onclick="switchPlaygroundTab('fastapi')">
+              <span>🐍</span> main.py (FastAPI)
+            </button>
+            <button class="playground-tab-btn" id="tabReact" onclick="switchPlaygroundTab('react')">
+              <span>⚛️</span> Dashboard.tsx (React 18)
+            </button>
+            <button class="playground-tab-btn" id="tabK8s" onclick="switchPlaygroundTab('k8s')">
+              <span>☸️</span> deployment.yaml (K8s)
+            </button>
+            <button class="playground-tab-btn" id="tabPyTorch" onclick="switchPlaygroundTab('pytorch')">
+              <span>🧠</span> train_model.py (PyTorch)
+            </button>
+          </div>
+
+          <!-- Code Preview Display -->
+          <div class="code-preview-area" id="codePreviewArea">
+            <!-- Populated dynamically by app.js -->
+          </div>
+
+          <!-- Terminal Status Footer -->
+          <div class="code-terminal-footer">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="pulse-indicator" style="background:#10b981; width:8px; height:8px;"></span>
+              <span id="playgroundStatusText">Cluster Status: Healthy • Pods: 12/12 Ready</span>
+            </div>
+            <div style="color:var(--text-muted); font-size:0.75rem;">
+              Memory: 256MB • Latency: 3.8ms
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About NVN India Private LTD Section -->
+  <!-- About NVN India Private Limited Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+        <div>
+          <span class="section-tag">Corporate Profile</span>
+          <h2 class="section-title" style="margin-top: 10px;">About <span class="gradient-text">NVN India Private Limited</span></h2>
+
+          <!-- Official Corporate Brand Identity Card -->
+          <div class="about-brand-card">
+            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Official 3D Master Corporate Logo" class="about-brand-emblem">
+            <div>
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;">
+                <h4 style="font-size: 1.18rem; color: var(--text-primary); margin-bottom: 0;">NVN India Private Limited</h4>
+                <span class="badge badge-cyan" style="font-size:0.7rem; padding:2px 8px;">3D Master Insignia</span>
+              </div>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0;">
+                Registered Indian IT Enterprise • Headquarters: Jammalamadugu, Andhra Pradesh • MCA CIN: U72900AP2024PTC189000
+              </p>
+            </div>
+          </div>
+
+          <p style="color: var(--text-secondary); margin-bottom: 18px; font-size: 1.05rem;">
+            Incorporated as a high-growth technology company in Andhra Pradesh, <strong>NVN India Private Limited</strong> was founded in <strong>Jammalamadugu</strong> with a transformative dual vision: to turn Rayalaseema and tier-2/rural India into a global software powerhouse while providing world-class, cost-effective software engineering and dedicated worker staffing to clients worldwide.
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem;">
+            Our hybrid ecosystem enables ambitious students to train on production codebases side-by-side with senior tech leads, while giving enterprises access to vetted software engineering teams and custom turnkey software delivery.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background: var(--bg-card); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h4 style="color: var(--accent-cyan); font-size: 1.1rem; margin-bottom: 6px;">Vision</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">To position Jammalamadugu on the global tech map by training 10,000+ engineers with 100% placement outcomes and architecting scalable digital products for global enterprises.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+              <h4 style="color: var(--accent-emerald); font-size: 1.1rem; margin-bottom: 6px;">Values</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Clean code architecture, radical transparency with clients, zero tuition barrier for deserving talent, and client workforce excellence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-lg);">
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Why Enterprises &amp; Trainees Trust NVN India</h3>
+          
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="font-size: 1.8rem; color: var(--accent-cyan);">01</div>
+            <div>
+              <h4 style="font-size: 1rem; margin-bottom: 4px;">Clean, Proper Code &amp; Relational Architecture</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Every module follows modern design patterns, SOLID principles, full test coverage, and strict relational schemas.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="font-size: 1.8rem; color: var(--accent-emerald);">02</div>
+            <div>
+              <h4 style="font-size: 1rem; margin-bottom: 4px;">Hands-On Production Code Experience</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Our trainees don't just watch videos—they submit git pull requests, resolve merge conflicts, and deploy microservices.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-bottom: 20px;">
+            <div style="font-size: 1.8rem; color: var(--accent-indigo);">03</div>
+            <div>
+              <h4 style="font-size: 1rem; margin-bottom: 4px;">Worker for Client Staffing Capability</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Pre-vetted software developers and QA automation engineers ready to deploy in 48 hours directly into your sprint teams.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <div style="font-size: 1.8rem; color: #38bdf8;">04</div>
+            <div>
+              <h4 style="font-size: 1rem; margin-bottom: 4px;">100% Placement Support &amp; Jammalamadugu Roots</h4>
+              <p style="color: var(--text-secondary); font-size: 0.85rem;">Proving that world-class software careers and top MNC packages (up to 14.5 LPA) start right here in Jammalamadugu, Andhra Pradesh.</p>
+            </div>
+          </div>
+
+          <!-- Master 3D Brand Insignia Showcase Box -->
+          <div style="margin-top: 24px; padding: 20px; background: rgba(7, 11, 20, 0.7); border: 1.5px solid rgba(0, 242, 254, 0.35); border-radius: var(--radius-md); display: flex; align-items: center; gap: 20px;">
+            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Master Brand 3D Insignia" style="width: 84px; height: 84px; border-radius: 16px; object-fit: cover; border: 1.5px solid rgba(0, 242, 254, 0.5); box-shadow: 0 0 24px rgba(0, 242, 254, 0.4); flex-shrink: 0;">
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-cyan); font-weight: 700; margin-bottom: 4px;">Official Master Corporate Insignia</div>
+              <h5 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 4px; font-family: var(--font-heading);">The NVN Hex-Nexus 3D Emblem</h5>
+              <p style="color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">
+                Forged from brushed titanium and refractive sapphire crystal prisms, symbolizing our convergence of Software Engineering, Client Staff Augmentation, and Placement Training.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       JAMMALAMADUGU TECHNOLOGY CAMPUS & HEADQUARTERS SECTION
+       ========================================================================= -->
+  <section class="section" id="jammalamaduguHub" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(0,242,254,0.12); color: var(--accent-cyan); border-color: rgba(0,242,254,0.3);">
+          📍 Innovation Campus &amp; Headquarters
+        </span>
+        <h2 class="section-title">
+          Our Technology Campus in <span class="gradient-text">Jammalamadugu, Andhra Pradesh</span>
+        </h2>
+        <p class="section-desc">
+          Rooted in the historic city of Jammalamadugu (YSR Kadapa District), NVN India Private Limited bridges rural &amp; semi-urban tech talent with global software engineering contracts. We provide state-of-the-art infrastructure for training, software delivery, and client developer deployment.
+        </p>
+      </div>
+
+      <!-- Campus Features Grid -->
+      <div class="jmd-campus-grid">
+        <div class="jmd-facility-card">
+          <div class="jmd-icon-box">🚀</div>
+          <h4 style="font-size:1.15rem; margin-bottom:8px;">Gigabit Fiber Coding Labs</h4>
+          <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+            100+ developer workstations equipped with high-speed leased line internet, dual-monitor programming terminals, and Linux/Unix development environments.
+          </p>
+        </div>
+
+        <div class="jmd-facility-card">
+          <div class="jmd-icon-box">☁️</div>
+          <h4 style="font-size:1.15rem; margin-bottom:8px;">Cloud Sandbox &amp; Microservices Clusters</h4>
+          <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+            Local bare-metal clusters and simulated AWS/Azure clouds allowing trainees and project engineers to build, test, and stress-test high-traffic systems.
+          </p>
+        </div>
+
+        <div class="jmd-facility-card">
+          <div class="jmd-icon-box">🎙️</div>
+          <h4 style="font-size:1.15rem; margin-bottom:8px;">Dedicated Placement &amp; Interview Studios</h4>
+          <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+            Acoustic-isolated pods for remote technical interviews, system design presentations, and live coding assessments with MNC technical panels.
+          </p>
+        </div>
+
+        <div class="jmd-facility-card">
+          <div class="jmd-icon-box">🌐</div>
+          <h4 style="font-size:1.15rem; margin-bottom:8px;">Global Client Telepresence Suite</h4>
+          <p style="color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+            High-definition video conference rooms for daily scrum standups, client architecture walkthroughs, and sprint demos for international clients.
+          </p>
+        </div>
+      </div>
+
+      <!-- Campus Location Card with Interactive Details & Map -->
+      <div class="jmd-location-wrapper" style="margin-top:40px; background:var(--bg-card); border:1px solid var(--border-glass); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-lg);">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:36px; align-items:center;">
+          <div>
+            <span class="section-tag" style="font-size:0.75rem;">Official Headquarters Details</span>
+            <h3 style="font-size:1.6rem; margin:8px 0 12px;">Visit NVN India in Jammalamadugu</h3>
+            
+            <div style="margin-bottom:20px;">
+              <strong style="color:var(--accent-cyan); display:block; margin-bottom:4px; font-size:1rem;">Campus Address:</strong>
+              <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">
+                <strong>NVN India Private Limited</strong><br>
+                Tech Innovation Campus &amp; Software Training Center,<br>
+                D.No. 1/674, Opposite to Town Church, Upstairs,<br>
+                Jammalamadugu, YSR Kadapa District, Andhra Pradesh - 516434, India.
+              </p>
+            </div>
+
+            <div style="margin-bottom:20px;">
+              <strong style="color:var(--accent-emerald); display:block; margin-bottom:4px; font-size:1rem;">Transit &amp; Regional Connectivity:</strong>
+              <ul style="color:var(--text-secondary); font-size:0.88rem; line-height:1.8; list-style:none; padding-left:0;">
+                <li>🚗 <strong>From Proddatur:</strong> 18 km (20 mins via SH 28)</li>
+                <li>🚗 <strong>From Kadapa (YSR District HQ):</strong> 65 km (1 hr 15 mins via NH 67)</li>
+                <li>🚗 <strong>From Kurnool:</strong> 105 km (2 hrs via NH 40)</li>
+                <li>🚆 <strong>From Hyderabad &amp; Bengaluru:</strong> Direct overnight trains &amp; luxury buses to Jammalamadugu / Yerraguntla junction.</li>
+              </ul>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:24px;">
+              <a href="https://maps.google.com/?q=Jammalamadugu,+Andhra+Pradesh+516434" target="_blank" class="btn btn-secondary" style="display:inline-flex; align-items:center; gap:6px;">
+                <span>📍</span> Open Google Maps Directions
+              </a>
+              <a href="https://wa.me/918639092368?text=Hello%20NVN%20India%20Jammalamadugu%2C%20I%20would%20like%20to%20schedule%20a%20campus%20visit" target="_blank" class="btn btn-emerald" style="display:inline-flex; align-items:center; gap:6px;">
+                <span>💬</span> WhatsApp (+91 86390 92368)
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Styled Map Visualization Box -->
+          <div class="jmd-map-card" style="background:rgba(15,23,42,0.9); border:1px solid rgba(0,242,254,0.3); border-radius:var(--radius-md); padding:24px; position:relative; overflow:hidden;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span class="pulse-indicator" style="background:#00f2fe; width:10px; height:10px;"></span>
+                <strong style="color:#f8fafc; font-size:0.95rem;">Jammalamadugu Innovation Center</strong>
+              </div>
+              <span style="font-size:0.75rem; color:#94a3b8; background:rgba(255,255,255,0.06); padding:3px 8px; border-radius:4px;">YSR Kadapa Dist, AP</span>
+            </div>
+
+            <!-- Stylized Coordinates / Map graphic -->
+            <div style="background:rgba(2,132,199,0.08); border:1px dashed rgba(0,242,254,0.4); border-radius:var(--radius-sm); padding:20px; text-align:center; margin-bottom:16px;">
+              <div style="font-size:2.5rem; margin-bottom:6px;">🏛️</div>
+              <h4 style="color:#00f2fe; font-size:1.1rem; margin-bottom:4px;">NVN India Tech Campus</h4>
+              <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:0;">
+                Coordinates: 14.8340° N, 78.3846° E • Elevation: 169m<br>
+                Opposite to Town Church (Upstairs), Jammalamadugu
+              </p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:0.82rem; color:#cbd5e1; margin-bottom:16px;">
+              <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:6px;">
+                <strong>🕒 Working Hours:</strong><br>
+                Mon - Sat: 9:00 AM - 7:30 PM IST
+              </div>
+              <div style="background:rgba(255,255,255,0.04); padding:10px; border-radius:6px;">
+                <strong>📞 Desk Helpline / Mobile:</strong><br>
+                +91 86390 92368
+              </div>
+            </div>
+
+            <button class="btn btn-primary" style="width:100%;" onclick="openConsultationModal()">
+              <span>📅</span> Schedule a Campus Tour &amp; Career Counseling
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ENTERPRISE OPERATIONS & SECURE DATA GOVERNANCE CONSOLE
+       ========================================================================= -->
+  <section class="admin-section" id="adminSection" aria-label="Database Management Console">
+    <div class="container">
+      <div class="admin-header-row">
+        <div>
+          <span class="admin-badge">🛡️ ISO/IEC 27001 &amp; SOC-2 AUDIT SUITE • REAL-TIME OPERATIONS</span>
+          <h2 style="font-size: 2rem; margin-top: 8px;">Enterprise Operations &amp; Relational Transaction Engine</h2>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            Secure administrative telemetry and relational database inspector for NVN India Private Limited (Jammalamadugu Innovation Center). Live tracking of student applications, dedicated client staffing, turnkey RFPs, and system audit logs.
+          </p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button id="btnExportDatabase" class="btn btn-secondary">
+            <span>💾</span> Export System Snapshot (JSON)
+          </button>
+          <button onclick="exportTableToCSV('traineesAdminTable', 'nvn_trainees.csv')" class="btn btn-secondary">
+            <span>📊</span> Export Trainee Registry (CSV)
+          </button>
+          <button id="btnResetDatabase" class="btn btn-admin">
+            <span>🔄</span> Sync &amp; Re-Seed Database
+          </button>
+        </div>
+      </div>
+
+      <!-- Real-Time Metrics Strip -->
+      <div class="admin-stats-strip">
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountTrainees">5</div>
+          <div class="admin-stat-lbl">Trainee Applications</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountConsultations">4</div>
+          <div class="admin-stat-lbl">Consultancy Requests</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountProjects">6</div>
+          <div class="admin-stat-lbl">Sector Projects</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountStaffing" style="color:var(--accent-emerald);">3</div>
+          <div class="admin-stat-lbl">Worker for Client</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountPlacements" style="color:#38bdf8;">8</div>
+          <div class="admin-stat-lbl">Placed Alumni</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" id="adminCountInquiries">3</div>
+          <div class="admin-stat-lbl">Direct Inquiries</div>
+        </div>
+        <div class="admin-stat-box">
+          <div class="admin-stat-num" style="color:var(--accent-emerald);">SQLite 3</div>
+          <div class="admin-stat-lbl">Jammalamadugu DB</div>
+        </div>
+      </div>
+
+      <!-- Admin Tabs Navigation -->
+      <div class="admin-tabs-nav" role="tablist">
+        <button class="admin-tab-btn active" data-target="adminTabTrainees">1. Trainees &amp; Admissions</button>
+        <button class="admin-tab-btn" data-target="adminTabStaffing">2. Worker for Client Requests</button>
+        <button class="admin-tab-btn" data-target="adminTabPlacements">3. Placements Hall of Fame</button>
+        <button class="admin-tab-btn" data-target="adminTabProjects">4. Sector Projects</button>
+        <button class="admin-tab-btn" data-target="adminTabConsultations">5. IT Consultations</button>
+        <button class="admin-tab-btn" data-target="adminTabInquiries">6. General Inquiries</button>
+        <button class="admin-tab-btn" data-target="adminTabDiagnostics">7. DB Schema &amp; Status</button>
+        <button class="admin-tab-btn" data-target="adminTabSqlRunner">8. Live SQL Runner</button>
+      </div>
+
+      <!-- Tab Panel 1: Trainees Table -->
+      <div class="admin-tab-panel active" id="adminTabTrainees">
+        <div class="table-container">
+          <table class="admin-table" id="traineesAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Applicant &amp; Email</th>
+                <th>Phone</th>
+                <th>Course / Mode</th>
+                <th>Education</th>
+                <th>Application Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="traineesTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel 2: Consultations Table -->
+      <div class="admin-tab-panel" id="adminTabConsultations">
+        <div class="table-container">
+          <table class="admin-table" id="consultationsAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Client &amp; Org</th>
+                <th>Contact</th>
+                <th>Consultancy Domain</th>
+                <th>Preferred Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="consultationsTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel 3: Sector Projects Table -->
+      <div class="admin-tab-panel" id="adminTabProjects">
+        <div class="table-container">
+          <table class="admin-table" id="projectsAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Project Title &amp; Org</th>
+                <th>Sector</th>
+                <th>Client Lead</th>
+                <th>Timeline</th>
+                <th>Lifecycle Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="projectsTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel 4: Inquiries Table -->
+      <div class="admin-tab-panel" id="adminTabInquiries">
+        <div class="table-container">
+          <table class="admin-table" id="inquiriesAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Sender &amp; Email</th>
+                <th>Subject</th>
+                <th>Message Content</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inquiriesTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel: Worker for Client Staffing Requests -->
+      <div class="admin-tab-panel" id="adminTabStaffing">
+        <div class="table-container">
+          <table class="admin-table" id="staffingAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Client &amp; Company</th>
+                <th>Contact</th>
+                <th>Required Role</th>
+                <th>Count &amp; Model</th>
+                <th>Duration &amp; Budget</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="staffingTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel: Placements Hall of Fame -->
+      <div class="admin-tab-panel" id="adminTabPlacements">
+        <div class="table-container">
+          <table class="admin-table" id="placementsAdminTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Student &amp; Hometown</th>
+                <th>Course Completed</th>
+                <th>Placed Company</th>
+                <th>Role &amp; Package</th>
+                <th>Location</th>
+                <th>Year</th>
+                <th>Testimonial</th>
+              </tr>
+            </thead>
+            <tbody id="placementsTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab Panel: SQL Schema & Diagnostics -->
+      <div class="admin-tab-panel" id="adminTabDiagnostics">
+        <pre class="diagnostics-box" id="sqlDiagnosticsBox">Loading SQLite engine diagnostics...</pre>
+      </div>
+
+      <!-- Tab Panel: Interactive Live SQL Runner & Sandbox -->
+      <div class="admin-tab-panel" id="adminTabSqlRunner">
+        <div class="sql-sandbox-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:12px;">
+            <div>
+              <h4 style="font-size:1.15rem; color:var(--accent-cyan); margin-bottom:2px;">Live SQLite Query Console</h4>
+              <p style="font-size:0.8rem; color:var(--text-secondary);">Direct interactive read-only SQL engine connected to <code>nvn_india.db</code>.</p>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="runCustomSqlQuery()">▶ Execute Query</button>
+          </div>
+
+          <!-- Query Presets -->
+          <div class="sql-presets-strip">
+            <span style="font-size:0.75rem; color:var(--text-muted); align-self:center;">Presets:</span>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT id, full_name, email, course_name, status FROM trainees;')">All Trainees</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT id, client_name, company_name, role_required, status FROM staffing_requests;')">Staffing Requests</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT student_name, company_placed, package_ctc, hometown FROM placements;')">Placements</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT code, title, duration, training_model FROM courses;')">All Courses</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT id, client_name, sector, project_title, status FROM projects;')">All Projects</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT status, COUNT(*) as count FROM trainees GROUP BY status;')">Trainees by Status</button>
+            <button class="sql-preset-btn" onclick="setQueryPreset('SELECT consultancy_domain, COUNT(*) as bookings FROM consultations GROUP BY consultancy_domain;')">Consultancy by Domain</button>
+          </div>
+
+          <textarea id="sqlQueryInput" class="sql-editor-input" spellcheck="false">SELECT id, full_name, email, course_name, status, next_milestone FROM trainees;</textarea>
+
+          <div id="sqlResultStatus" style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:8px;"></div>
+          <div class="sql-result-container" id="sqlResultContainer">
+            <div style="padding:16px; color:var(--text-muted); text-align:center; font-size:0.85rem;">Click 'Execute Query' or select a preset to inspect live database records.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Global Headquarters Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reach Out</span>
+        <h2 class="section-title">Connect with <span class="gradient-text">NVN India Private Limited</span></h2>
+        <p class="section-desc">
+          Have an inquiry regarding student industrial training &amp; 100% placement, hiring a dedicated worker for client, or bespoke software engineering? Our Jammalamadugu center is ready to assist.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px;">
+        <!-- Left: Office & Contact Info -->
+        <div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Corporate Headquarters &amp; Operations</h3>
+
+          <!-- Jammalamadugu HQ -->
+          <div style="margin-bottom: 24px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: var(--radius-md); padding: 22px;">
+            <div style="display:inline-block; background:rgba(0,242,254,0.15); color:var(--accent-cyan); font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:4px; margin-bottom:8px;">
+              OFFICIAL CORPORATE HEADQUARTERS &amp; TECH CAMPUS
+            </div>
+            <h4 style="color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 8px;">📍 Jammalamadugu Innovation Center</h4>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">
+              <strong>NVN India Private Limited</strong><br>
+              D.No. 1/674, Opposite to Town Church, Upstairs,<br>
+              Jammalamadugu, YSR Kadapa District, Andhra Pradesh - 516434, India.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a href="https://wa.me/918639092368?text=Hello%20NVN%20India%2C%20I%20am%20interested%20in%20visiting%20your%20Jammalamadugu%20campus" target="_blank" class="btn btn-sm btn-emerald" style="display:inline-flex; align-items:center; gap:6px;">
+                <span>💬</span> WhatsApp: +91 86390 92368
+              </a>
+              <a href="tel:+918639092368" class="btn btn-sm btn-secondary" style="display:inline-flex; align-items:center; gap:6px;">
+                <span>📞</span> Call: +91 86390 92368
+              </a>
+            </div>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 20px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <span style="font-size:1.4rem;">📞</span>
+              <div>
+                <strong style="display:block; font-size:0.95rem;">Direct Helpline / Mobile</strong>
+                <span style="color:var(--text-secondary); font-size:0.85rem;"><a href="tel:+918639092368" style="color:inherit; text-decoration:none;">+91 86390 92368</a></span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="font-size:1.4rem;">✉️</span>
+              <div>
+                <strong style="display:block; font-size:0.95rem;">Official Email Communication</strong>
+                <span style="color:var(--text-secondary); font-size:0.85rem;"><a href="mailto:nvnindiapvtltd@gmail.com" style="color:inherit; text-decoration:none;">nvnindiapvtltd@gmail.com</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Message Form -->
+        <div class="form-box">
+          <h3 class="form-title">Send a Direct Message</h3>
+          <p class="form-subtitle">Messages are logged directly into our relational database (SQLite)</p>
+
+          <form id="generalContactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="e.g. Ramesh Chandran" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="name@domain.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98112 33445">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactSubject">Subject *</label>
+                <input type="text" id="contactSubject" class="form-input" placeholder="e.g. Training Inquiry or Project RFP" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message *</label>
+              <textarea id="contactMessage" class="form-textarea" placeholder="How can NVN India Private LTD assist you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              Send Message to NVN Database
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1 -->
+        <div>
+          <a href="#" class="brand-logo">
+            <img src="images/nvn-logo-realistic.jpg" alt="NVN India Private Limited Insignia" class="brand-logo-img" width="48" height="48">
+            <div class="brand-text-block">
+              <span class="brand-name">NVN INDIA</span>
+              <span class="brand-sub">PRIVATE LIMITED • JAMMALAMADUGU, AP</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            NVN India Private Limited is committed to delivering state-of-the-art enterprise software, mentoring next-generation engineers with 100% placement assurance, and deploying dedicated client developer squads across global industries.
+          </p>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="footer-col-title">Tech Academy</h4>
+          <ul class="footer-links">
+            <li><a href="#academy">Full Stack Web &amp; Cloud</a></li>
+            <li><a href="#academy">Applied AI &amp; Data Science</a></li>
+            <li><a href="#academy">Cloud DevOps &amp; Kubernetes</a></li>
+            <li><a href="#academy">Cyber Security &amp; VAPT</a></li>
+            <li><a href="#academy">Mobile App Engineering</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="footer-col-title">Enterprise Services</h4>
+          <ul class="footer-links">
+            <li><a href="#clientWorkers">Worker for Client (Staffing)</a></li>
+            <li><a href="#projects">Turnkey Software Projects</a></li>
+            <li><a href="#consultancy">Cloud Migration (AWS/Azure)</a></li>
+            <li><a href="#consultancy">DevSecOps &amp; Automation</a></li>
+            <li><a href="#consultancy">Cyber Security &amp; VAPT</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4 class="footer-col-title">Corporate Governance</h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">
+            NVN India Private Limited is incorporated under the Companies Act, Ministry of Corporate Affairs (MCA), Government of India.
+          </p>
+          <div style="font-size:0.75rem; color:var(--text-muted); line-height:1.7;">
+            <strong>CIN:</strong> U72900AP2024PTC189000<br>
+            <strong>Campus:</strong> 1/674 Opposite to Town Church, Upstairs, Jammalamadugu - 516434<br>
+            <strong>Core:</strong> ASP.NET Core &amp; Microsoft SQL Architecture
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>NVN India Private Limited</strong>. All Rights Reserved. Jammalamadugu Innovation Campus, Andhra Pradesh.
+        </div>
+        <div style="display:flex; gap:16px;">
+          <a href="#hero">Privacy Policy</a>
+          <a href="#hero">Terms of Service</a>
+          <a href="#adminSection">Enterprise Console</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL 1: STUDENT TRAINEE ADMISSION MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="enrollmentModal" role="dialog" aria-modal="true" aria-labelledby="modalTraineeTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('enrollmentModal')" aria-label="Close Modal">&times;</button>
+      <h3 id="modalTraineeTitle" style="font-size:1.5rem; margin-bottom:6px;">Join NVN Tech Trainee Academy</h3>
+      <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:20px;">
+        Register your application. All submissions are stored directly in the relational SQLite database.
+      </p>
+
+      <form id="traineeEnrollForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="traineeFullName">Full Name *</label>
+            <input type="text" id="traineeFullName" class="form-input" placeholder="e.g. Aarav Sharma" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="traineeEmail">Email Address *</label>
+            <input type="email" id="traineeEmail" class="form-input" placeholder="aarav@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="traineePhone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="traineePhone" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="traineeEducation">Current Education / Degree *</label>
+            <input type="text" id="traineeEducation" class="form-input" placeholder="e.g. B.Tech CSE (3rd/4th Year) or BCA" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalCourseSelect">Desired Training Specialization *</label>
+          <select id="modalCourseSelect" class="form-select" required>
+            <option value="">Select Training Specialization...</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="traineeMode">Preferred Learning Mode</label>
+            <select id="traineeMode" class="form-select">
+              <option value="Hybrid (Online + Lab)">Hybrid (Online + Tech Lab)</option>
+              <option value="Online Interactive">Online Live Interactive</option>
+              <option value="Classroom Intensive">Classroom / Offline Intensive</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="traineeExp">Experience Level</label>
+            <select id="traineeExp" class="form-select">
+              <option value="Student / Fresher">Student / Fresher</option>
+              <option value="Career Transition">Career Transition / Self-Taught</option>
+              <option value="Working Professional">Working Professional (1-2 yrs)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="traineeStatement">Career Goal / Brief Note</label>
+          <textarea id="traineeStatement" class="form-textarea" placeholder="Tell us why you want to join NVN Tech Academy and what you hope to build..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          Submit Application to SQLite Database
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: CUSTOM SECTOR PROJECT RFP MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('projectModal')" aria-label="Close Modal">&times;</button>
+      <h3 id="modalProjectTitle" style="font-size:1.5rem; margin-bottom:6px;">Propose a Sector Project / RFP</h3>
+      <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:20px;">
+        Submit your project requirements in any industry sector where IT solutions are needed.
+      </p>
+
+      <form id="projectRFPForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="projectClientName">Contact Person Name *</label>
+            <input type="text" id="projectClientName" class="form-input" placeholder="e.g. Suresh Kapoor" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="projectOrg">Company / Organization *</label>
+            <input type="text" id="projectOrg" class="form-input" placeholder="e.g. BharatPay Smart Solutions" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="projectEmail">Email *</label>
+            <input type="email" id="projectEmail" class="form-input" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="projectPhone">Phone</label>
+            <input type="tel" id="projectPhone" class="form-input" placeholder="+91 98765 43210">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="projectSectorSelect">Industry Sector *</label>
+            <select id="projectSectorSelect" class="form-select" required>
+              <option value="Healthcare">Healthcare &amp; MedTech</option>
+              <option value="FinTech">FinTech &amp; Banking</option>
+              <option value="E-Commerce">E-Commerce &amp; Retail</option>
+              <option value="Manufacturing">Manufacturing &amp; Industrial IoT</option>
+              <option value="EdTech">EdTech &amp; LMS</option>
+              <option value="Government">Government &amp; Smart Cities</option>
+              <option value="Logistics">Logistics &amp; Supply Chain</option>
+              <option value="Other">Other Specialized Sector</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="projectTimeline">Expected Timeline</label>
+            <select id="projectTimeline" class="form-select">
+              <option value="1 - 2 Months">1 - 2 Months (Rapid MVP)</option>
+              <option value="3 - 4 Months">3 - 4 Months (Full Platform)</option>
+              <option value="6+ Months">6+ Months (Enterprise Scale)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="projectTitle">Project Title / Scope Name *</label>
+          <input type="text" id="projectTitle" class="form-input" placeholder="e.g. AI-Powered Medical Telehealth &amp; EHR Platform" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="projectBudget">Budget Range</label>
+            <select id="projectBudget" class="form-select">
+              <option value="INR 5L - 10L">INR 5L - 10L</option>
+              <option value="INR 10L - 25L">INR 10L - 25L</option>
+              <option value="INR 25L - 50L">INR 25L - 50L</option>
+              <option value="INR 50L+">INR 50L+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="projectScope">Detailed Scope Description *</label>
+          <textarea id="projectScope" class="form-textarea" placeholder="Describe the system workflow, integrations required, and key deliverables..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-emerald" style="width:100%;">
+          Submit Project Proposal to Database
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: WORKER FOR CLIENT (STAFF AUGMENTATION DEPLOYMENT)
+       ========================================================================= -->
+  <div class="modal-overlay" id="staffingModal" role="dialog" aria-modal="true" aria-labelledby="modalStaffingTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('staffingModal')" aria-label="Close Modal">&times;</button>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span class="course-code-badge" style="background:rgba(16,185,129,0.15); color:var(--accent-emerald); border-color:rgba(16,185,129,0.3);">⚡ Rapid 48h Deployment</span>
+        <span style="font-size:0.75rem; color:#34d399;">1-Week Risk-Free Trial</span>
+      </div>
+      <h3 id="modalStaffingTitle" style="font-size:1.5rem; margin-bottom:6px;">Hire Dedicated Worker for Client</h3>
+      <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:20px;">
+        Deploy pre-vetted software engineers from our Jammalamadugu Innovation Center into your client sprints. Stored directly in relational SQLite database.
+      </p>
+
+      <form id="staffingRequestModalForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="staffingClientName">Client Contact Person *</label>
+            <input type="text" id="staffingClientName" class="form-input" placeholder="e.g. Vikramaditya Reddy" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="staffingCompany">Company / Client Organization *</label>
+            <input type="text" id="staffingCompany" class="form-input" placeholder="e.g. Apex Tech Solutions USA" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="staffingEmail">Business Email *</label>
+            <input type="email" id="staffingEmail" class="form-input" placeholder="client@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="staffingPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="staffingPhone" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="staffingRole">Primary Role Required *</label>
+            <select id="staffingRole" class="form-select" required>
+              <option value="Full Stack Developer">Full Stack Developer (React / Node / Python)</option>
+              <option value="Python & AI Engineer">Python &amp; AI / ML Engineer (FastAPI / RAG)</option>
+              <option value="Enterprise Java Specialist">Enterprise Java Specialist (Spring Boot / Kafka)</option>
+              <option value="QA Automation Engineer">QA Automation / SDET (Playwright / Selenium)</option>
+              <option value="Cloud/DevOps Specialist">Cloud DevOps &amp; Kubernetes (AWS / IaC)</option>
+              <option value="Mobile App Engineer">Mobile App Developer (Flutter / React Native)</option>
+              <option value="Data Scientist">Data Scientist &amp; Analytics Specialist</option>
+              <option value="Other">Other Custom Engineering Role</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="staffingWorkersCount">Number of Workers</label>
+            <select id="staffingWorkersCount" class="form-select">
+              <option value="1">1 Dedicated Engineer</option>
+              <option value="2" selected>2 Dedicated Engineers</option>
+              <option value="3">3 Dedicated Engineers</option>
+              <option value="4">4 Dedicated Engineers</option>
+              <option value="5+">5+ (Full Agile Squad)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="staffingModel">Engagement Model</label>
+            <select id="staffingModel" class="form-select">
+              <option value="Dedicated Full-Time Worker">Dedicated Full-Time (160 hrs/mo)</option>
+              <option value="Hourly Flexible Contract">Hourly Flexible Contract</option>
+              <option value="Managed Agile Squad">Managed Agile Squad (Dev + QA + Lead)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="staffingDuration">Expected Contract Duration</label>
+            <select id="staffingDuration" class="form-select">
+              <option value="3 Months">3 Months (Pilot Phase)</option>
+              <option value="6 Months" selected>6 Months (Standard Sprint Phase)</option>
+              <option value="12 Months">12 Months (Long-Term Scaling - 10% Discount)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="staffingBudget">Estimated Monthly Budget Range</label>
+          <select id="staffingBudget" class="form-select">
+            <option value="INR 50,000 - 80,000">INR 50,000 - 80,000 / month ($700 - $1,000)</option>
+            <option value="INR 80,000 - 1,50,000" selected>INR 80,000 - 1,50,000 / month ($1,000 - $1,800)</option>
+            <option value="INR 1,50,000 - 3,00,000">INR 1,50,000 - 3,00,000 / month ($1,800 - $3,600)</option>
+            <option value="INR 3,00,000+">INR 3,00,000+ / month ($3,600+)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="staffingScope">Technical Stack &amp; Sprint Deliverables *</label>
+          <textarea id="staffingScope" class="form-textarea" placeholder="List specific libraries, APIs, repositories or systems the engineer will contribute to..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-emerald" style="width:100%;">
+          Deploy Worker for Client (Direct SQLite Record)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: ENTERPRISE IT CONSULTATION & CAMPUS VISIT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="modalConsultTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeModal('consultationModal')" aria-label="Close Modal">&times;</button>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+        <span class="course-code-badge">🏛️ Jammalamadugu HQ &amp; Global Advisory</span>
+      </div>
+      <h3 id="modalConsultTitle" style="font-size:1.5rem; margin-bottom:6px;">Book Enterprise IT Advisory / Campus Visit</h3>
+      <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:20px;">
+        Schedule a strategic architecture session with our Principal Architects or book a walkthrough of our Jammalamadugu Tech Campus.
+      </p>
+
+      <form id="consultationModalForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="modalConsultName">Full Name *</label>
+            <input type="text" id="modalConsultName" class="form-input" placeholder="e.g. S. Ramakrishna" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalConsultOrg">Company / College / Organization *</label>
+            <input type="text" id="modalConsultOrg" class="form-input" placeholder="e.g. Global MedTech / SV University" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="modalConsultEmail">Corporate Email *</label>
+            <input type="email" id="modalConsultEmail" class="form-input" placeholder="contact@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalConsultPhone">Contact Phone *</label>
+            <input type="tel" id="modalConsultPhone" class="form-input" placeholder="+91 86390 92368" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="modalConsultDomain">Consultancy Domain / Visit Type *</label>
+            <select id="modalConsultDomain" class="form-select" required>
+              <option value="Jammalamadugu Campus Tour & Counseling">Jammalamadugu Campus Tour &amp; Counseling</option>
+              <option value="College Training & Placement Tie-Up">College Training &amp; Placement Tie-Up</option>
+              <option value="Cloud Migration (AWS/Azure)">Cloud Migration (AWS/Azure)</option>
+              <option value="Cybersecurity Audit & VAPT">Cybersecurity Audit &amp; VAPT</option>
+              <option value="Enterprise Architecture Consulting">Enterprise Architecture Consulting</option>
+              <option value="DevOps & Kubernetes Automation">DevOps &amp; Kubernetes Automation</option>
+              <option value="Worker for Client Staffing">Worker for Client Staffing</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="modalConsultDate">Preferred Date</label>
+            <input type="date" id="modalConsultDate" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="modalConsultReq">Discussion Topics &amp; Requirements *</label>
+          <textarea id="modalConsultReq" class="form-textarea" placeholder="Detail your architecture challenges, student cohort size, or project goals..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          Confirm Booking with NVN India
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 3: FULL COURSE SYLLABUS ACCORDION MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="syllabusModal" role="dialog" aria-modal="true" aria-labelledby="syllabusModalTitle">
+    <div class="modal-window syllabus-modal-window">
+      <button class="modal-close-btn" onclick="closeModal('syllabusModal')" aria-label="Close Modal">&times;</button>
+      
+      <!-- Syllabus Header & Overview -->
+      <div class="syllabus-header-card">
+        <div>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <span class="course-code-badge" id="modalSyllabusCode">NVN-FS-01</span>
+            <span class="course-model-badge">100% Industry Sponsored</span>
+          </div>
+          <h3 id="syllabusModalTitle" style="font-size:1.5rem; margin-bottom:8px;">Full Course Curriculum</h3>
+          <p id="modalSyllabusDesc" style="color:var(--text-secondary); font-size:0.9rem; max-width:580px;"></p>
+          
+          <div class="syllabus-meta-strip">
+            <span>⏱️ <strong id="modalSyllabusDuration">16 Weeks</strong></span>
+            <span>📍 <strong id="modalSyllabusMode">Hybrid</strong></span>
+            <span>📚 <strong id="modalSyllabusModulesCount">6 Comprehensive Modules</strong></span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <button class="btn btn-primary" id="btnApplyFromSyllabus" onclick="applyFromCurrentSyllabus()">
+            Apply for this Track
+          </button>
+          <button class="btn btn-secondary btn-sm" onclick="printOrDownloadSyllabus()">
+            🖨️ Print / Save Syllabus
+          </button>
+        </div>
+      </div>
+
+      <!-- Module by Module Accordion List -->
+      <div style="margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
+        <h4 style="font-size:1.1rem; color:var(--text-primary);">Module-by-Module Curriculum Breakdown:</h4>
+        <button class="btn btn-sm btn-secondary" onclick="toggleAllAccordionModules()">Expand / Collapse All</button>
+      </div>
+
+      <div class="modules-accordion-list" id="syllabusAccordionList">
+        <!-- Rendered dynamically by app.js with topics, labs, and tools -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SPOTLIGHT COMMAND PALETTE MODAL (Ctrl + K / Cmd + K)
+       ========================================================================= -->
+  <div class="command-palette-overlay" id="commandPaletteOverlay" role="dialog" aria-modal="true" aria-label="Spotlight Command Search">
+    <div class="command-palette-window" onclick="event.stopPropagation()">
+      <div class="command-input-row">
+        <span style="font-size:1.2rem; color:var(--accent-cyan);">🔍</span>
+        <input type="text" id="commandSearchInput" class="command-search-input" placeholder="Type a command or search courses, projects, tools..." autocomplete="off">
+        <span class="command-kbd-badge">ESC to close</span>
+      </div>
+      <ul class="command-results-list" id="commandResultsList">
+        <!-- Rendered dynamically by app.js -->
+      </ul>
+      <div style="padding:10px 16px; border-top:1px solid var(--border-glass); background:rgba(0,0,0,0.3); display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--text-muted);">
+        <span>Navigation: <kbd class="command-kbd-badge">↑</kbd> <kbd class="command-kbd-badge">↓</kbd> to select • <kbd class="command-kbd-badge">↵</kbd> to execute</span>
+        <span>NVN India Spotlight</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SMART FLOATING AI TECHBOT ASSISTANT
+       ========================================================================= -->
+  <!-- Floating Action Button -->
+  <button class="chat-widget-fab" id="techBotFab" onclick="toggleTechBot()" aria-label="Open NVN AI TechBot Assistant">
+    <span class="chat-fab-pulse"></span>
+    <span>💬 NVN TechBot</span>
+  </button>
+
+  <!-- High-Tech Chat Drawer Window -->
+  <div class="chat-widget-window" id="techBotWindow" role="region" aria-label="NVN TechBot Assistant Window">
+    <div class="chat-header">
+      <div class="chat-header-title">
+        <div class="chat-avatar">🤖</div>
+        <div>
+          <h4 style="font-size:0.95rem; margin-bottom:2px; font-weight:700;">NVN TechBot AI</h4>
+          <span style="font-size:0.72rem; color:#34d399; display:flex; align-items:center; gap:4px;">
+            <span class="pulse-indicator" style="width:6px; height:6px;"></span> Enterprise Assistant • Online
+          </span>
+        </div>
+      </div>
+      <button class="modal-close-btn" onclick="toggleTechBot()" style="font-size:1.2rem; padding:4px;" aria-label="Close Assistant">&times;</button>
+    </div>
+
+    <!-- Scrollable Messages Container -->
+    <div class="chat-messages-container" id="chatMessagesContainer">
+      <div class="chat-bubble chat-bubble-bot">
+        👋 Hello! I am the <strong>NVN India Intelligent TechBot</strong>. How can I assist you today?
+        <br><br>
+        Ask me anything about our <strong>100% Free Trainee Academy</strong>, <strong>IT Consultancy</strong>, <strong>Sector Projects</strong>, or <strong>Live Database</strong>.
+      </div>
+    </div>
+
+    <!-- Quick Question Chips -->
+    <div class="chat-quick-suggestions" id="chatQuickSuggestions">
+      <button class="chat-chip-btn" onclick="askTechBot('Are academy courses really 100% free?')">🎓 Free Courses?</button>
+      <button class="chat-chip-btn" onclick="askTechBot('What IT consultancy services do you offer?')">💼 IT Consultancy</button>
+      <button class="chat-chip-btn" onclick="askTechBot('Show me healthcare and fintech projects')">🏥 Sector Projects</button>
+      <button class="chat-chip-btn" onclick="askTechBot('How do I track my trainee status?')">🔍 Track Application</button>
+      <button class="chat-chip-btn" onclick="askTechBot('What is NVN India corporate contact?')">📞 Contact Details</button>
+    </div>
+
+    <!-- Input Box -->
+    <form class="chat-input-bar" id="techBotForm" onsubmit="handleTechBotSubmit(event)">
+      <input type="text" id="techBotInput" class="chat-input" placeholder="Ask NVN TechBot..." autocomplete="off">
+      <button type="submit" class="chat-send-btn" aria-label="Send Message">➤</button>
+    </form>
+  </div>
+
+  <!-- =========================================================================
+       FLOATING QUICK-ACCESS DOCK (Bottom-Center)
+       ========================================================================= -->
+  <nav class="quick-dock" aria-label="Quick Access Dock">
+    <a href="#academy" class="dock-link" title="Explore Trainee Academy">
+      <span>🎓</span> <span>Academy</span>
+    </a>
+    <a href="#statusTracker" class="dock-link" title="Track Application Status">
+      <span>🔍</span> <span>Tracker</span>
+    </a>
+    <a href="#consultancy" class="dock-link" title="Enterprise IT Consultancy">
+      <span>💼</span> <span>Consultancy</span>
+    </a>
+    <a href="#projects" class="dock-link" title="Sector IT Solutions">
+      <span>🌐</span> <span>Projects</span>
+    </a>
+    <a href="#livePlayground" class="dock-link" title="Live Code Terminal">
+      <span>💻</span> <span>Terminal</span>
+    </a>
+    <a href="#projectEstimator" class="dock-link" title="Architecture Estimator">
+      <span>⚡</span> <span>Estimator</span>
+    </a>
+    <a href="#adminSection" class="dock-link" title="SQLite Database Console">
+      <span>🗄️</span> <span>Database</span>
+    </a>
+  </nav>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Custom Client Script -->
+  <script src="js/app.js?v=2"></script>
+</body>
+</html>

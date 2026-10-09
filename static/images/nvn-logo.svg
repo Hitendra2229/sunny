@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="100%" height="100%">
+  <defs>
+    <!-- Titanium & Metallic Gradients -->
+    <linearGradient id="fullMetalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#94a3b8" />
+      <stop offset="70%" stop-color="#475569" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Electric Cyan Glow -->
+    <linearGradient id="fullCyanPrism" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Emerald Glow -->
+    <linearGradient id="fullEmeraldGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="fullBloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Emblem Group (Isometric 3D Hexagon & NVN) -->
+  <g transform="translate(15, 10)">
+    <!-- Base Squircle -->
+    <rect x="0" y="0" width="118" height="118" rx="28" fill="#080d1a" stroke="rgba(0, 242, 254, 0.4)" stroke-width="2"/>
+    
+    <!-- Outer Hexagon -->
+    <polygon points="59,14 98,37 98,81 59,104 20,81 20,37" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.5" stroke-dasharray="4 2"/>
+
+    <!-- Inner 3D NVN Monogram with Neon Glow -->
+    <g filter="url(#fullBloom)" transform="translate(4, 2)">
+      <!-- Left Stem -->
+      <polygon points="26,38 36,30 36,88 26,80" fill="url(#fullMetalGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="0.6"/>
+      <polygon points="36,30 48,42 58,74 46,64" fill="url(#fullCyanPrism)"/>
+
+      <!-- Center V Apex -->
+      <polygon points="46,36 55,28 59,88 52,94" fill="url(#fullCyanPrism)" stroke="rgba(0, 242, 254, 0.9)" stroke-width="1"/>
+      <polygon points="59,88 52,94 72,36 63,28" fill="url(#fullEmeraldGlow)" stroke="rgba(16, 185, 129, 0.9)" stroke-width="1"/>
+      
+      <!-- Right Stem -->
+      <polygon points="63,28 72,36 82,74 70,64" fill="url(#fullCyanPrism)"/>
+      <polygon points="70,64 82,74 92,38 82,30" fill="url(#fullMetalGrad)"/>
+      <polygon points="82,30 92,38 92,88 82,80" fill="url(#fullMetalGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="0.6"/>
+
+      <!-- Top Specular Bevel Line -->
+      <polyline points="26,38 36,30 55,28 63,28 82,30 92,38" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Typography Group -->
+  <g transform="translate(155, 30)">
+    <!-- Primary Title: NVN INDIA -->
+    <text x="0" y="44" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="-0.5px">
+      NVN <tspan fill="url(#fullCyanPrism)">INDIA</tspan>
+    </text>
+
+    <!-- Subtitle: PRIVATE LIMITED -->
+    <text x="2" y="68" font-family="'Inter', -apple-system, sans-serif" font-weight="700" font-size="13" fill="#38bdf8" letter-spacing="4px">
+      PRIVATE LIMITED
+    </text>
+
+    <!-- Location & Purpose Ribbon -->
+    <text x="2" y="88" font-family="'Inter', -apple-system, sans-serif" font-weight="500" font-size="11" fill="#94a3b8" letter-spacing="1px">
+      JAMMALAMADUGU • SOFTWARE PROJECTS • TRAINING &amp; PLACEMENT • CLIENT WORKER
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+bin/
+obj/
+publish/
+publish_cloud/
+tools/cloudflared.exe
+*.user
+*.suo
+.vs/
+*.bak

@@ -1,0 +1,22 @@
+﻿Category,ID,Name/Applicant,Company/Org,Email,Phone,Details/Course/Title,Status,Date
+Contact Message,3,Sunil Narang,,sunil.narang@yahoo.com,+91 97112 44556,Corporate Training for Engineering Team: Looking for 40 hours of advanced Docker and Kubernetes corporate training for our 15 software developers.,New,2026-09-30 06:00:53
+Contact Message,2,Ramesh Chandran,,chandran@techcorp.co,+91 98112 33445,Need Quotation for Cloud Migration: We have 12 Linux physical servers running PostgreSQL and Java apps. We want migration to AWS Mumbai region.,New,2026-09-30 06:00:53
+Contact Message,1,Tanvi Deshmukh,,tanvi.d@gmail.com,+91 99112 23344,Inquiry regarding Campus Internship Drive: Does NVN India provide tie-up internship programs for 8th semester college students with live project certificates?,New,2026-09-30 06:00:53
+Trainee Application,5,Vikram Malhotra,B.Tech Electronics & Comm,vikram.m@example.com,+91 99887 76655,Full Stack Enterprise Web & Cloud Development,Placed,2026-09-30 06:00:53
+Trainee Application,4,Sneha Reddy,MCA (2023),sneha.reddy@example.com,+91 98456 12345,Cyber Security Analyst & Ethical Hacking,Enrolled,2026-09-30 06:00:53
+Trainee Application,3,Rohan Iyer,B.E. Information Technology,rohan.iyer@example.com,+91 97123 45678,Cloud DevOps & Kubernetes Infrastructure,Under Review,2026-09-30 06:00:53
+Trainee Application,2,Priya Patel,BCA (2024),priya.p@example.com,+91 98234 56789,"Applied AI, Machine Learning & Data Science",Applied,2026-09-30 06:00:53
+Trainee Application,1,Aarav Sharma,B.Tech Computer Science (2025),aarav.sharma@example.com,+91 98765 43210,Full Stack Enterprise Web & Cloud Development,Enrolled,2026-09-30 06:00:53
+Worker For Client,3,David Lindqvist,Nordic Health Systems,d.lindqvist@nordichealth.se,+46 8 123 4567,QA Automation Engineer (Playwright & API) (Mid-Level (3-5 yrs)),Profiles Shared,2026-09-30 06:00:53
+Worker For Client,2,Anita Singhal,FinPay Technologies India,anita@finpaytech.in,+91 98334 11223,Python & AI Engineer (Mid-Level (3-5 yrs)),Interview Scheduled,2026-09-30 06:00:53
+Worker For Client,1,Marcus Vance,CloudVentures USA,m.vance@cloudventures.io,+1 (415) 890-3412,Full Stack Developer (React & Node.js) (Senior (5+ yrs)),Worker Deployed,2026-09-30 06:00:53
+IT Advisory,4,Deepak Singhania,Metro Retail Logistics,deepak@metrologistics.com,+91 98444 55566,DevOps Automation,Completed,2026-09-30 06:00:53
+IT Advisory,3,Arjun Nair,Kerala AgroLogix Ltd,arjun@agrologix.co.in,+91 98333 44455,Enterprise Architecture,Pending,2026-09-30 06:00:53
+IT Advisory,2,Meera Sen,FinTech Dynamics India,meera.sen@fintechdyn.com,+91 98222 33344,Cybersecurity Audit,In Progress,2026-09-30 06:00:53
+IT Advisory,1,Rajesh Varma,Apex Health Systems Pvt Ltd,rajesh.v@apexhealth.in,+91 98111 22233,Cloud Migration,Scheduled,2026-09-30 06:00:53
+Software Project,6,D. R. Mohan (IAS Retd.),Municipal Smart Civic Services,admin@civicsmart.gov.in,+91 98222 66677,Government: Citizen Grievance Redressal & Smart City Utility Tracker,Proposal Received,2026-09-30 06:00:53
+Software Project,5,Prof. Vandana Kulkarni,VidyaSetu Education Trust,trustee@vidyasetu.org,+91 98333 55566,EdTech: Cloud LMS with AI-Powered Proctoring & Automated Grading,Scoping Call,2026-09-30 06:00:53
+Software Project,4,Karthik Subramanian,Precision Forge & Castings,karthik@precisionforge.in,+91 98444 44455,Manufacturing: Industrial IoT Predictive Maintenance & SCADA Dashboard,Under Development,2026-09-30 06:00:53
+Software Project,3,Ananya Joshi,CraftBazaar Global,ananya@craftbazaarglobal.com,+91 98555 33344,E-Commerce: B2B Multi-Vendor Artisan Marketplace & Logistics Engine,Delivered,2026-09-30 06:00:53
+Software Project,2,Suresh Kapoor,BharatPay Smart Solutions,suresh@bharatpaysmart.in,+91 98666 22233,FinTech: Unified Micro-Lending & Instant Credit Disbursal Engine,Delivered,2026-09-30 06:00:53
+Software Project,1,Dr. Alok Nath,MediPulse Healthcare Tech,contact@medipulse.in,+91 98777 11122,Healthcare: Telehealth Consultation & Remote Patient Vitals Suite,Under Development,2026-09-30 06:00:53

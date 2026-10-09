@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Titanium & Dark Metallic Gradients -->
+    <linearGradient id="metalBevelTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#94a3b8" />
+      <stop offset="70%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="titaniumBrushed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="50%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Glowing Electric Cyan Prism -->
+    <linearGradient id="prismCyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="45%" stop-color="#00f2fe" />
+      <stop offset="85%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+
+    <!-- Deep Refractive Cobalt / Sapphire -->
+    <linearGradient id="sapphireRefraction" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="35%" stop-color="#2563eb" />
+      <stop offset="75%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Subtle Emerald Rim Neon -->
+    <linearGradient id="emeraldNeonEdge" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Obsidian Carbon Fiber Squircle Background -->
+    <radialGradient id="obsidianBase" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="55%" stop-color="#080d1a" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Outer Rim Stroke Gradient -->
+    <linearGradient id="rimStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.9)" />
+      <stop offset="50%" stop-color="rgba(56, 189, 248, 0.3)" />
+      <stop offset="100%" stop-color="rgba(16, 185, 129, 0.7)" />
+    </linearGradient>
+
+    <!-- High-Impact Neon Bloom Filter -->
+    <filter id="neonGlowEffect" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.5" result="blurGlow"/>
+      <feMerge>
+        <feMergeNode in="blurGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Premium Obsidian Beveled Badge Base -->
+  <rect x="8" y="8" width="184" height="184" rx="44" fill="url(#obsidianBase)" stroke="url(#rimStroke)" stroke-width="2.5" />
+
+  <!-- Outer Isometric Hexagonal Tech Shield -->
+  <polygon points="100,22 165,58 165,142 100,178 35,142 35,58" 
+           fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="2" stroke-dasharray="6 3" />
+
+  <!-- Inner Metallic Hexagon -->
+  <polygon points="100,28 158,61 158,139 100,172 42,139 42,61" 
+           fill="rgba(15, 23, 42, 0.6)" stroke="url(#metalBevelTop)" stroke-width="1.8" />
+
+  <!-- 3D INTERLINKED 'NVN' PRISM MONOGRAM -->
+  <g filter="url(#neonGlowEffect)">
+    <!-- LEFT 'N' STEM (Brushed Titanium & Sapphire Inner) -->
+    <!-- Left outer vertical blade -->
+    <polygon points="48,64 64,52 64,136 48,124" fill="url(#titaniumBrushed)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+    <!-- Left top bevel facet -->
+    <polygon points="48,64 64,52 82,68 66,78" fill="url(#metalBevelTop)"/>
+    <!-- Left N diagonal ray -->
+    <polygon points="64,52 82,68 98,118 80,104" fill="url(#sapphireRefraction)" stroke="rgba(56, 189, 248, 0.6)" stroke-width="0.8"/>
+    <!-- Left N bottom fold -->
+    <polygon points="80,104 98,118 100,146 82,134" fill="url(#prismCyanGlow)"/>
+
+    <!-- CENTER 'V' PRISM APEX (Electric Cyan & Neon Emerald) -->
+    <!-- Center V descent blade -->
+    <polygon points="78,54 94,42 100,140 88,148" fill="url(#prismCyanGlow)" stroke="rgba(0, 242, 254, 0.9)" stroke-width="1.2"/>
+    <!-- Center V ascent blade -->
+    <polygon points="100,140 88,148 122,54 108,42" fill="url(#emeraldNeonEdge)" stroke="rgba(16, 185, 129, 0.85)" stroke-width="1.2"/>
+    <!-- Center Apex Crown Diamond -->
+    <polygon points="94,42 100,32 108,42 101,48" fill="#e0f2fe"/>
+
+    <!-- RIGHT 'N' STEM (Titanium Edge & Sapphire Core) -->
+    <!-- Right N diagonal connection -->
+    <polygon points="108,42 122,54 136,104 120,92" fill="url(#sapphireRefraction)" stroke="rgba(56, 189, 248, 0.6)" stroke-width="0.8"/>
+    <!-- Right N inner facet -->
+    <polygon points="120,92 136,104 152,64 136,52" fill="url(#prismCyanGlow)"/>
+    <!-- Right outer vertical blade -->
+    <polygon points="136,52 152,64 152,136 136,124" fill="url(#titaniumBrushed)" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+    <!-- Right bottom fold -->
+    <polygon points="136,124 152,136 118,146 108,136" fill="url(#prismCyanGlow)"/>
+
+    <!-- Dynamic Specular Highlights & Laser Edge Line -->
+    <polyline points="48,64 64,52 94,42 100,32 108,42 136,52 152,64" 
+              fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+    <polyline points="48,124 64,136 100,158 136,136 152,124" 
+              fill="none" stroke="url(#prismCyanGlow)" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+  </g>
+
+  <!-- Radiant Light Flare at Center V Crest -->
+  <circle cx="100" cy="144" r="3" fill="#00f2fe" filter="url(#neonGlowEffect)" />
+</svg>
